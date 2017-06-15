@@ -1,3 +1,4 @@
+import ObjectiveC
 import Foundation
 
 /// Returns a range equivalent to the given `NSRange`,
@@ -158,3 +159,13 @@ public extension NSRegularExpression /* NamedCaptureGroupsSupport */ {
     return nsRanges
     }
   }
+
+// public extension NSTextCheckingResult {
+//   public func range( withName groupName: String? ) -> NSRange {
+//     guard let groupName = groupName else {
+//       return rangeAt( 0 )
+//       }
+
+//     // TODO: Remaining logic
+//     }
+//   }
