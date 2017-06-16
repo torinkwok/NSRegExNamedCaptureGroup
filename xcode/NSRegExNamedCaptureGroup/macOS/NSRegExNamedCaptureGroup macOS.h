@@ -16,4 +16,4 @@ FOUNDATION_EXPORT const unsigned char NSRegExNamedCaptureGroup_macOSVersionStrin
 
 // In this header, you should import all the public headers of your framework using statements like #import <NSRegExNamedCaptureGroup_macOS/PublicHeader.h>
 
-#import <NSRegExNamedCaptureGroup/NSRegExNamedCaptureGroup.h>
+#import <NSRegExNamedCaptureGroup/NSRegEx+NamedCaptureGroup.h>

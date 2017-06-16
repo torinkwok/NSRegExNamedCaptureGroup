@@ -18,7 +18,6 @@
 		8344BA8C1EF40E70001B5012 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA7E1EF40CEB001B5012 /* Info.plist */; };
 		8344BA8D1EF40E74001B5012 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA7E1EF40CEB001B5012 /* Info.plist */; };
 		8344BA8F1EF40EB4001B5012 /* NSRegExNamedCaptureGroup macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA8E1EF40EB4001B5012 /* NSRegExNamedCaptureGroup macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8344BA951EF40F17001B5012 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8344BA931EF40F17001B5012 /* Info.plist */; };
 		8344BAA01EF40F4B001B5012 /* NSRegExNamedCaptureGroup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8344BA651EF40CC2001B5012 /* NSRegExNamedCaptureGroup.framework */; };
 		8344BAA61EF40F7B001B5012 /* NSRegExNamedCaptureGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA921EF40F17001B5012 /* NSRegExNamedCaptureGroupTests.swift */; };
 		8344BAA71EF4103F001B5012 /* NSRegExNamedCaptureGroup iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA901EF40ED9001B5012 /* NSRegExNamedCaptureGroup iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -273,7 +272,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8344BA951EF40F17001B5012 /* Info.plist in Resources */,
 				8344BA841EF40CEB001B5012 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
