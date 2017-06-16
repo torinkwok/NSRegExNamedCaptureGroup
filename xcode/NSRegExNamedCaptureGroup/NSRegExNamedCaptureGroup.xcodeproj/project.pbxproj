@@ -8,21 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		8344BA821EF40CEB001B5012 /* _Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA7C1EF40CEB001B5012 /* _Core.swift */; };
-		8344BA841EF40CEB001B5012 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8344BA7E1EF40CEB001B5012 /* Info.plist */; };
 		8344BA851EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA7F1EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8344BA861EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA801EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.m */; };
 		8344BA881EF40E16001B5012 /* NSRegEx+NamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA7F1EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8344BA891EF40E19001B5012 /* NSRegEx+NamedCaptureGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA801EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.m */; };
 		8344BA8A1EF40E5B001B5012 /* _Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA7C1EF40CEB001B5012 /* _Core.swift */; };
-		8344BA8B1EF40E66001B5012 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8344BA7E1EF40CEB001B5012 /* Info.plist */; };
-		8344BA8C1EF40E70001B5012 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA7E1EF40CEB001B5012 /* Info.plist */; };
-		8344BA8D1EF40E74001B5012 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA7E1EF40CEB001B5012 /* Info.plist */; };
 		8344BA8F1EF40EB4001B5012 /* NSRegExNamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA8E1EF40EB4001B5012 /* NSRegExNamedCaptureGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8344BAA01EF40F4B001B5012 /* NSRegExNamedCaptureGroup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8344BA651EF40CC2001B5012 /* NSRegExNamedCaptureGroup.framework */; };
 		8344BAA61EF40F7B001B5012 /* NSRegExNamedCaptureGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA921EF40F17001B5012 /* NSRegExNamedCaptureGroupTests.swift */; };
 		8344BAA71EF4103F001B5012 /* NSRegExNamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA901EF40ED9001B5012 /* NSRegExNamedCaptureGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8344BAB11EF418D9001B5012 /* NSRegExNamedCaptureGroup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8344BA731EF40CD6001B5012 /* NSRegExNamedCaptureGroup.framework */; };
 		8344BAB71EF41923001B5012 /* NSRegExNamedCaptureGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA921EF40F17001B5012 /* NSRegExNamedCaptureGroupTests.swift */; };
+		8344BAB81EF41A26001B5012 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8344BA9F1EF40F4B001B5012 /* Info.plist */; };
+		8344BAB91EF41A2D001B5012 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8344BAB01EF418D9001B5012 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,13 +44,11 @@
 		8344BA651EF40CC2001B5012 /* NSRegExNamedCaptureGroup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8344BA731EF40CD6001B5012 /* NSRegExNamedCaptureGroup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8344BA7C1EF40CEB001B5012 /* _Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Core.swift; sourceTree = "<group>"; };
-		8344BA7E1EF40CEB001B5012 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8344BA7F1EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRegEx+NamedCaptureGroup.h"; sourceTree = "<group>"; };
 		8344BA801EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRegEx+NamedCaptureGroup.m"; sourceTree = "<group>"; };
 		8344BA8E1EF40EB4001B5012 /* NSRegExNamedCaptureGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSRegExNamedCaptureGroup.h; path = ../macOS/NSRegExNamedCaptureGroup.h; sourceTree = "<group>"; };
 		8344BA901EF40ED9001B5012 /* NSRegExNamedCaptureGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSRegExNamedCaptureGroup.h; path = ../iOS/NSRegExNamedCaptureGroup.h; sourceTree = "<group>"; };
 		8344BA921EF40F17001B5012 /* NSRegExNamedCaptureGroupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSRegExNamedCaptureGroupTests.swift; path = ../../Tests/NSRegExNamedCaptureGroupTests.swift; sourceTree = "<group>"; };
-		8344BA931EF40F17001B5012 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Tests/Info.plist; sourceTree = "<group>"; };
 		8344BA9B1EF40F4B001B5012 /* NSRegExNamedCaptureGroup macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSRegExNamedCaptureGroup macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8344BA9F1EF40F4B001B5012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8344BAAC1EF418D9001B5012 /* NSRegExNamedCaptureGroup iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSRegExNamedCaptureGroup iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,7 +136,6 @@
 		8344BA7B1EF40CEB001B5012 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8344BA7E1EF40CEB001B5012 /* Info.plist */,
 				8344BA7C1EF40CEB001B5012 /* _Core.swift */,
 				8344BA7F1EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.h */,
 				8344BA801EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.m */,
@@ -152,7 +147,6 @@
 		8344BA961EF40F1A001B5012 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				8344BA931EF40F17001B5012 /* Info.plist */,
 				8344BA921EF40F17001B5012 /* NSRegExNamedCaptureGroupTests.swift */,
 			);
 			name = Tests;
@@ -325,7 +319,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8344BA841EF40CEB001B5012 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +326,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8344BA8B1EF40E66001B5012 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8344BAB81EF41A26001B5012 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8344BAB91EF41A2D001B5012 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +352,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8344BA8C1EF40E70001B5012 /* Info.plist in Sources */,
 				8344BA821EF40CEB001B5012 /* _Core.swift in Sources */,
 				8344BA861EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.m in Sources */,
 			);
@@ -368,7 +361,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8344BA8D1EF40E74001B5012 /* Info.plist in Sources */,
 				8344BA8A1EF40E5B001B5012 /* _Core.swift in Sources */,
 				8344BA891EF40E19001B5012 /* NSRegEx+NamedCaptureGroup.m in Sources */,
 			);
@@ -472,7 +464,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = ../../Sources/Info.plist;
+				INFOPLIST_FILE = macOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -532,7 +524,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = ../../Sources/Info.plist;
+				INFOPLIST_FILE = macOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -596,7 +588,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = ../../Sources/Info.plist;
+				INFOPLIST_FILE = iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -655,7 +647,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = ../../Sources/Info.plist;
+				INFOPLIST_FILE = iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -716,7 +708,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = ../../Tests/Info.plist;
+				INFOPLIST_FILE = "NSRegExNamedCaptureGroup macOS Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -767,7 +759,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = ../../Tests/Info.plist;
+				INFOPLIST_FILE = "NSRegExNamedCaptureGroup macOS Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
