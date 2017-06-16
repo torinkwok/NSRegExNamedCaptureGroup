@@ -17,7 +17,20 @@
 		8344BA051EF3D323001B5012 /* Info-iOS.plist in Sources */ = {isa = PBXBuildFile; fileRef = 8344B9911EF3CBA1001B5012 /* Info-iOS.plist */; };
 		8344BA061EF3D355001B5012 /* NSRegExNamedCaptureGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8344B9F11EF3D030001B5012 /* NSRegExNamedCaptureGroup.m */; };
 		8344BA071EF3D35C001B5012 /* NSRegExNamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344B9EE1EF3D021001B5012 /* NSRegExNamedCaptureGroup.h */; };
+		8344BA251EF3EDD4001B5012 /* NSRegExNamedCaptureGroup_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8344B9E21EF3CE82001B5012 /* NSRegExNamedCaptureGroup_macOS.framework */; };
+		8344BA381EF3EECF001B5012 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8344BA351EF3EECF001B5012 /* Info.plist */; };
+		8344BA3B1EF3EEDD001B5012 /* NSRegExNamedCaptureGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA371EF3EECF001B5012 /* NSRegExNamedCaptureGroupTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8344BA261EF3EDD4001B5012 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8344B7C01EF3C6CD001B5012 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8344B9E11EF3CE82001B5012;
+			remoteInfo = NSRegExNamedCaptureGroup_macOS;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8344B9901EF3CBA1001B5012 /* _Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _Core.swift; sourceTree = "<group>"; };
@@ -29,6 +42,10 @@
 		8344B9F11EF3D030001B5012 /* NSRegExNamedCaptureGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRegExNamedCaptureGroup.m; sourceTree = "<group>"; };
 		8344B9FC1EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8344B9FE1EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSRegExNamedCaptureGroup_iOS.h; sourceTree = "<group>"; };
+		8344BA201EF3EDD4001B5012 /* NSRegExNamedCaptureGroup_macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSRegExNamedCaptureGroup_macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8344BA241EF3EDD4001B5012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8344BA351EF3EECF001B5012 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8344BA371EF3EECF001B5012 /* NSRegExNamedCaptureGroupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRegExNamedCaptureGroupTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,18 +63,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8344BA1D1EF3EDD4001B5012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8344BA251EF3EDD4001B5012 /* NSRegExNamedCaptureGroup_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		8344B7BF1EF3C6CD001B5012 = {
 			isa = PBXGroup;
 			children = (
+				8344BA341EF3EECF001B5012 /* Tests */,
 				8344B98F1EF3CBA1001B5012 /* Sources */,
 				8344B9E31EF3CE82001B5012 /* NSRegExNamedCaptureGroup_macOS */,
 				8344B9FD1EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS */,
+				8344BA211EF3EDD4001B5012 /* NSRegExNamedCaptureGroup_macOS Tests */,
 				8344B9DC1EF3CE60001B5012 /* Products */,
 				8344B9E21EF3CE82001B5012 /* NSRegExNamedCaptureGroup_macOS.framework */,
 				8344B9FC1EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS.framework */,
+				8344BA201EF3EDD4001B5012 /* NSRegExNamedCaptureGroup_macOS Tests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +123,24 @@
 				8344B9FE1EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS.h */,
 			);
 			path = NSRegExNamedCaptureGroup_iOS;
+			sourceTree = "<group>";
+		};
+		8344BA211EF3EDD4001B5012 /* NSRegExNamedCaptureGroup_macOS Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8344BA241EF3EDD4001B5012 /* Info.plist */,
+			);
+			path = "NSRegExNamedCaptureGroup_macOS Tests";
+			sourceTree = "<group>";
+		};
+		8344BA341EF3EECF001B5012 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8344BA351EF3EECF001B5012 /* Info.plist */,
+				8344BA371EF3EECF001B5012 /* NSRegExNamedCaptureGroupTests.swift */,
+			);
+			name = Tests;
+			path = ../Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +203,24 @@
 			productReference = 8344B9FC1EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		8344BA1F1EF3EDD4001B5012 /* NSRegExNamedCaptureGroup_macOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8344BA281EF3EDD4001B5012 /* Build configuration list for PBXNativeTarget "NSRegExNamedCaptureGroup_macOS Tests" */;
+			buildPhases = (
+				8344BA1C1EF3EDD4001B5012 /* Sources */,
+				8344BA1D1EF3EDD4001B5012 /* Frameworks */,
+				8344BA1E1EF3EDD4001B5012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8344BA271EF3EDD4001B5012 /* PBXTargetDependency */,
+			);
+			name = "NSRegExNamedCaptureGroup_macOS Tests";
+			productName = "NSRegExNamedCaptureGroup_macOS Tests";
+			productReference = 8344BA201EF3EDD4001B5012 /* NSRegExNamedCaptureGroup_macOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -172,6 +236,11 @@
 						ProvisioningStyle = Automatic;
 					};
 					8344B9FB1EF3D2D8001B5012 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 89BSC2UYH8;
+						ProvisioningStyle = Automatic;
+					};
+					8344BA1F1EF3EDD4001B5012 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 89BSC2UYH8;
 						ProvisioningStyle = Automatic;
@@ -192,6 +261,7 @@
 			targets = (
 				8344B9E11EF3CE82001B5012 /* NSRegExNamedCaptureGroup_macOS */,
 				8344B9FB1EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS */,
+				8344BA1F1EF3EDD4001B5012 /* NSRegExNamedCaptureGroup_macOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -201,10 +271,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8344BA381EF3EECF001B5012 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8344B9FA1EF3D2D8001B5012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8344BA1E1EF3EDD4001B5012 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -234,7 +312,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8344BA1C1EF3EDD4001B5012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8344BA3B1EF3EEDD001B5012 /* NSRegExNamedCaptureGroupTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8344BA271EF3EDD4001B5012 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8344B9E11EF3CE82001B5012 /* NSRegExNamedCaptureGroup_macOS */;
+			targetProxy = 8344BA261EF3EDD4001B5012 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8344B7C41EF3C6CD001B5012 /* Debug */ = {
@@ -502,6 +596,111 @@
 			};
 			name = Release;
 		};
+		8344BA291EF3EDD4001B5012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 89BSC2UYH8;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "NSRegExNamedCaptureGroup_macOS Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "indiv.TorinKwok.NSRegExNamedCaptureGroup-macOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8344BA2A1EF3EDD4001B5012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 89BSC2UYH8;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "NSRegExNamedCaptureGroup_macOS Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "indiv.TorinKwok.NSRegExNamedCaptureGroup-macOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -528,6 +727,14 @@
 			buildConfigurations = (
 				8344BA021EF3D2D8001B5012 /* Debug */,
 				8344BA031EF3D2D8001B5012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8344BA281EF3EDD4001B5012 /* Build configuration list for PBXNativeTarget "NSRegExNamedCaptureGroup_macOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8344BA291EF3EDD4001B5012 /* Debug */,
+				8344BA2A1EF3EDD4001B5012 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
