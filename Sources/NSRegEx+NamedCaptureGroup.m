@@ -22,10 +22,10 @@
 
 @implementation NSRegularExpression ( NSRegExNamedCaptureGroup )
 
-- ( NSDictionary<NSString*, NSNumber*>* ) indicesOfNamedCaptureGroups {
+- ( NSDictionary<NSString*, NSNumber*>* ) indicesOfNamedCaptureGroupsWithError: ( NSError** )error {
   NSMutableDictionary* groupNames = [ NSMutableDictionary dictionary ];
 
-  [ [ self _textCheckingResultsOfNamedCaptureGroups_objcAndReturnError: nil ]
+  [ [ self _textCheckingResultsOfNamedCaptureGroups_objcAndReturnError: error ]
     enumerateKeysAndObjectsUsingBlock:
       ^( NSString* subexpr, _ObjCGroupNamesSearchResult* result, BOOL* stopToken ) {
       groupNames[ subexpr ] = @( result._index + 1 );
@@ -34,10 +34,10 @@
   return groupNames;
   }
 
-- ( NSDictionary<NSString*, NSValue*>* ) rangesOfNamedCaptureGroupsInMatch: ( NSTextCheckingResult* )match {
+- ( NSDictionary<NSString*, NSValue*>* ) rangesOfNamedCaptureGroupsInMatch: ( NSTextCheckingResult* )match error: ( NSError** )error {
   NSMutableDictionary* groupNames = [ NSMutableDictionary dictionary ];
 
-  [ [ self _textCheckingResultsOfNamedCaptureGroups_objcAndReturnError: nil ]
+  [ [ self _textCheckingResultsOfNamedCaptureGroups_objcAndReturnError: error ]
     enumerateKeysAndObjectsUsingBlock:
       ^( NSString* subexpr, _ObjCGroupNamesSearchResult* result, BOOL* stopToken ) {
       groupNames[ subexpr ] = [ NSValue valueWithRange: [ match rangeAtIndex: result._index + 1 ] ];

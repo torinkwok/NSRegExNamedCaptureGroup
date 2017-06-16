@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// - Returns: A dictionary containing the Named Capture Group expressions
 ///   plucked out and their corresponding indices.
-- ( NSDictionary<NSString*, NSNumber*>* ) indicesOfNamedCaptureGroups;
+- ( nullable NSDictionary<NSString*, NSNumber*>* ) indicesOfNamedCaptureGroupsWithError: ( NSError** )error;
 
 /// Returns a dictionary, after introspecting regex's own pattern, 
 /// containing all the Named Capture Group expressions found in
@@ -56,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// - Returns: A dictionary containing the Named Capture Group expressions
 ///   plucked out and the range of those expressions.
-- ( NSDictionary<NSString*, NSValue*>* ) rangesOfNamedCaptureGroupsInMatch: ( NSTextCheckingResult* )match;
+- ( nullable NSDictionary<NSString*, NSValue*>* ) rangesOfNamedCaptureGroupsInMatch: ( NSTextCheckingResult* )match error: ( NSError** )error;
 
 @end
 
