@@ -30,7 +30,7 @@ class NSRegExNamedCaptureGroupTests: XCTestCase {
       guard let checkingResult = checkingResult else { stopToken.pointee = true; return }
 
       do {
-        let rangesOfCaptured = try TestSamples_Group1.USAPhoneNumberPattern.rangesOfNamedCaptureGroups( in: checkingResult )
+        let rangesOfCaptured = try TestSamples_Group1.USAPhoneNumberPattern.rangesOfNamedCaptureGroups( inMatch: checkingResult )
         XCTAssertEqual( rangesOfCaptured.count, checkingResult.numberOfRanges - 1 )
 
         // Tests whether NSRegExNamedCaptureGroup can extract 

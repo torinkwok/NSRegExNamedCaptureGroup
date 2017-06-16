@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8344B9D31EF3CE54001B5012"
-               BuildableName = "NSRegExNamedCaptureGroup_iOS.framework"
+               BlueprintIdentifier = "8344B9FB1EF3D2D8001B5012"
+               BuildableName = "NSRegExNamedCaptureGroup.framework"
                BlueprintName = "NSRegExNamedCaptureGroup_iOS"
                ReferencedContainer = "container:NSRegExNamedCaptureGroup.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8344B9D31EF3CE54001B5012"
-            BuildableName = "NSRegExNamedCaptureGroup_iOS.framework"
+            BlueprintIdentifier = "8344B9FB1EF3D2D8001B5012"
+            BuildableName = "NSRegExNamedCaptureGroup.framework"
             BlueprintName = "NSRegExNamedCaptureGroup_iOS"
             ReferencedContainer = "container:NSRegExNamedCaptureGroup.xcodeproj">
          </BuildableReference>
@@ -63,8 +63,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8344B9D31EF3CE54001B5012"
-            BuildableName = "NSRegExNamedCaptureGroup_iOS.framework"
+            BlueprintIdentifier = "8344B9FB1EF3D2D8001B5012"
+            BuildableName = "NSRegExNamedCaptureGroup.framework"
             BlueprintName = "NSRegExNamedCaptureGroup_iOS"
             ReferencedContainer = "container:NSRegExNamedCaptureGroup.xcodeproj">
          </BuildableReference>

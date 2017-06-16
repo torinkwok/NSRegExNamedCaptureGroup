@@ -7,11 +7,7 @@
 //
 
 @import Foundation;
-// #if os(macOS)
-#import "NSRegExNamedCaptureGroup_macOS/NSRegExNamedCaptureGroup_macOS-Swift.h"
-// #elseif os(iOS)
-// #import "NSRegExNamedCaptureGroup_iOS/NSRegExNamedCaptureGroup_iOS-Swift.h"
-// #endif
+#import "NSRegExNamedCaptureGroup/NSRegExNamedCaptureGroup-Swift.h"
 
 @implementation NSTextCheckingResult ( NSRegExNamedCaptureGroup )
 

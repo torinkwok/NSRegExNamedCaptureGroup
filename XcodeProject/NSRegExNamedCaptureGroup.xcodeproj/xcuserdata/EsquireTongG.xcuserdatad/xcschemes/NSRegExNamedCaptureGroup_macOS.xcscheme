@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8344B9E11EF3CE82001B5012"
-               BuildableName = "NSRegExNamedCaptureGroup_macOS.framework"
+               BuildableName = "NSRegExNamedCaptureGroup.framework"
                BlueprintName = "NSRegExNamedCaptureGroup_macOS"
                ReferencedContainer = "container:NSRegExNamedCaptureGroup.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8344B9E11EF3CE82001B5012"
-            BuildableName = "NSRegExNamedCaptureGroup_macOS.framework"
+            BuildableName = "NSRegExNamedCaptureGroup.framework"
             BlueprintName = "NSRegExNamedCaptureGroup_macOS"
             ReferencedContainer = "container:NSRegExNamedCaptureGroup.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8344B9E11EF3CE82001B5012"
-            BuildableName = "NSRegExNamedCaptureGroup_macOS.framework"
+            BuildableName = "NSRegExNamedCaptureGroup.framework"
             BlueprintName = "NSRegExNamedCaptureGroup_macOS"
             ReferencedContainer = "container:NSRegExNamedCaptureGroup.xcodeproj">
          </BuildableReference>

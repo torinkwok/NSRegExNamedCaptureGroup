@@ -7,23 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8344B9E61EF3CE82001B5012 /* NSRegExNamedCaptureGroup_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344B9E41EF3CE82001B5012 /* NSRegExNamedCaptureGroup_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8344B9EB1EF3CEA5001B5012 /* _Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344B9901EF3CBA1001B5012 /* _Core.swift */; };
 		8344B9ED1EF3CFBE001B5012 /* Info-macOS.plist in Sources */ = {isa = PBXBuildFile; fileRef = 8344B9921EF3CBA1001B5012 /* Info-macOS.plist */; };
-		8344B9F01EF3D021001B5012 /* NSRegExNamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344B9EE1EF3D021001B5012 /* NSRegExNamedCaptureGroup.h */; };
-		8344B9F31EF3D030001B5012 /* NSRegExNamedCaptureGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8344B9F11EF3D030001B5012 /* NSRegExNamedCaptureGroup.m */; };
-		8344BA001EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344B9FE1EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8344B9F01EF3D021001B5012 /* NSRegEx+NamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344B9EE1EF3D021001B5012 /* NSRegEx+NamedCaptureGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8344B9F31EF3D030001B5012 /* NSRegEx+NamedCaptureGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8344B9F11EF3D030001B5012 /* NSRegEx+NamedCaptureGroup.m */; };
 		8344BA041EF3D323001B5012 /* _Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344B9901EF3CBA1001B5012 /* _Core.swift */; };
 		8344BA051EF3D323001B5012 /* Info-iOS.plist in Sources */ = {isa = PBXBuildFile; fileRef = 8344B9911EF3CBA1001B5012 /* Info-iOS.plist */; };
-		8344BA061EF3D355001B5012 /* NSRegExNamedCaptureGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8344B9F11EF3D030001B5012 /* NSRegExNamedCaptureGroup.m */; };
-		8344BA071EF3D35C001B5012 /* NSRegExNamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344B9EE1EF3D021001B5012 /* NSRegExNamedCaptureGroup.h */; };
-		8344BA251EF3EDD4001B5012 /* NSRegExNamedCaptureGroup_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8344B9E21EF3CE82001B5012 /* NSRegExNamedCaptureGroup_macOS.framework */; };
+		8344BA061EF3D355001B5012 /* NSRegEx+NamedCaptureGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8344B9F11EF3D030001B5012 /* NSRegEx+NamedCaptureGroup.m */; };
 		8344BA381EF3EECF001B5012 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8344BA351EF3EECF001B5012 /* Info.plist */; };
-		8344BA3B1EF3EEDD001B5012 /* NSRegExNamedCaptureGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA371EF3EECF001B5012 /* NSRegExNamedCaptureGroupTests.swift */; };
+		8344BA401EF3F2A1001B5012 /* NSRegEx+NamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344B9EE1EF3D021001B5012 /* NSRegEx+NamedCaptureGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8344BA411EF3F2AA001B5012 /* NSRegExNamedCaptureGroup_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA3C1EF3F116001B5012 /* NSRegExNamedCaptureGroup_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8344BA541EF407EA001B5012 /* NSRegExNamedCaptureGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA371EF3EECF001B5012 /* NSRegExNamedCaptureGroupTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8344BA261EF3EDD4001B5012 /* PBXContainerItemProxy */ = {
+		8344BA4E1EF407B9001B5012 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8344B7C01EF3C6CD001B5012 /* Project object */;
 			proxyType = 1;
@@ -36,16 +34,14 @@
 		8344B9901EF3CBA1001B5012 /* _Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _Core.swift; sourceTree = "<group>"; };
 		8344B9911EF3CBA1001B5012 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		8344B9921EF3CBA1001B5012 /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
-		8344B9E21EF3CE82001B5012 /* NSRegExNamedCaptureGroup_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8344B9E41EF3CE82001B5012 /* NSRegExNamedCaptureGroup_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSRegExNamedCaptureGroup_macOS.h; sourceTree = "<group>"; };
-		8344B9EE1EF3D021001B5012 /* NSRegExNamedCaptureGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRegExNamedCaptureGroup.h; sourceTree = "<group>"; };
-		8344B9F11EF3D030001B5012 /* NSRegExNamedCaptureGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRegExNamedCaptureGroup.m; sourceTree = "<group>"; };
-		8344B9FC1EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8344B9FE1EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSRegExNamedCaptureGroup_iOS.h; sourceTree = "<group>"; };
-		8344BA201EF3EDD4001B5012 /* NSRegExNamedCaptureGroup_macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSRegExNamedCaptureGroup_macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8344BA241EF3EDD4001B5012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8344B9EE1EF3D021001B5012 /* NSRegEx+NamedCaptureGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRegEx+NamedCaptureGroup.h"; sourceTree = "<group>"; };
+		8344B9F11EF3D030001B5012 /* NSRegEx+NamedCaptureGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRegEx+NamedCaptureGroup.m"; sourceTree = "<group>"; };
 		8344BA351EF3EECF001B5012 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8344BA371EF3EECF001B5012 /* NSRegExNamedCaptureGroupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRegExNamedCaptureGroupTests.swift; sourceTree = "<group>"; };
+		8344BA3C1EF3F116001B5012 /* NSRegExNamedCaptureGroup_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSRegExNamedCaptureGroup_macOS.h; sourceTree = "<group>"; };
+		8344BA531EF407CE001B5012 /* NSRegExNamedCaptureGroup_macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSRegExNamedCaptureGroup_macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8344BA551EF408C1001B5012 /* NSRegExNamedCaptureGroup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8344BA561EF408C1001B5012 /* NSRegExNamedCaptureGroup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +59,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8344BA1D1EF3EDD4001B5012 /* Frameworks */ = {
+		8344BA461EF407B8001B5012 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8344BA251EF3EDD4001B5012 /* NSRegExNamedCaptureGroup_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,15 +72,11 @@
 		8344B7BF1EF3C6CD001B5012 = {
 			isa = PBXGroup;
 			children = (
-				8344BA341EF3EECF001B5012 /* Tests */,
 				8344B98F1EF3CBA1001B5012 /* Sources */,
-				8344B9E31EF3CE82001B5012 /* NSRegExNamedCaptureGroup_macOS */,
-				8344B9FD1EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS */,
-				8344BA211EF3EDD4001B5012 /* NSRegExNamedCaptureGroup_macOS Tests */,
-				8344B9DC1EF3CE60001B5012 /* Products */,
-				8344B9E21EF3CE82001B5012 /* NSRegExNamedCaptureGroup_macOS.framework */,
-				8344B9FC1EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS.framework */,
-				8344BA201EF3EDD4001B5012 /* NSRegExNamedCaptureGroup_macOS Tests.xctest */,
+				8344BA341EF3EECF001B5012 /* Tests */,
+				8344BA531EF407CE001B5012 /* NSRegExNamedCaptureGroup_macOS Tests.xctest */,
+				8344BA551EF408C1001B5012 /* NSRegExNamedCaptureGroup.framework */,
+				8344BA561EF408C1001B5012 /* NSRegExNamedCaptureGroup.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,44 +84,14 @@
 			isa = PBXGroup;
 			children = (
 				8344B9901EF3CBA1001B5012 /* _Core.swift */,
-				8344B9EE1EF3D021001B5012 /* NSRegExNamedCaptureGroup.h */,
-				8344B9F11EF3D030001B5012 /* NSRegExNamedCaptureGroup.m */,
+				8344BA3C1EF3F116001B5012 /* NSRegExNamedCaptureGroup_macOS.h */,
+				8344B9EE1EF3D021001B5012 /* NSRegEx+NamedCaptureGroup.h */,
+				8344B9F11EF3D030001B5012 /* NSRegEx+NamedCaptureGroup.m */,
 				8344B9911EF3CBA1001B5012 /* Info-iOS.plist */,
 				8344B9921EF3CBA1001B5012 /* Info-macOS.plist */,
 			);
 			name = Sources;
 			path = ../Sources;
-			sourceTree = "<group>";
-		};
-		8344B9DC1EF3CE60001B5012 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		8344B9E31EF3CE82001B5012 /* NSRegExNamedCaptureGroup_macOS */ = {
-			isa = PBXGroup;
-			children = (
-				8344B9E41EF3CE82001B5012 /* NSRegExNamedCaptureGroup_macOS.h */,
-			);
-			path = NSRegExNamedCaptureGroup_macOS;
-			sourceTree = "<group>";
-		};
-		8344B9FD1EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS */ = {
-			isa = PBXGroup;
-			children = (
-				8344B9FE1EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS.h */,
-			);
-			path = NSRegExNamedCaptureGroup_iOS;
-			sourceTree = "<group>";
-		};
-		8344BA211EF3EDD4001B5012 /* NSRegExNamedCaptureGroup_macOS Tests */ = {
-			isa = PBXGroup;
-			children = (
-				8344BA241EF3EDD4001B5012 /* Info.plist */,
-			);
-			path = "NSRegExNamedCaptureGroup_macOS Tests";
 			sourceTree = "<group>";
 		};
 		8344BA341EF3EECF001B5012 /* Tests */ = {
@@ -150,8 +111,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8344B9F01EF3D021001B5012 /* NSRegExNamedCaptureGroup.h in Headers */,
-				8344B9E61EF3CE82001B5012 /* NSRegExNamedCaptureGroup_macOS.h in Headers */,
+				8344B9F01EF3D021001B5012 /* NSRegEx+NamedCaptureGroup.h in Headers */,
+				8344BA411EF3F2AA001B5012 /* NSRegExNamedCaptureGroup_macOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,8 +120,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8344BA071EF3D35C001B5012 /* NSRegExNamedCaptureGroup.h in Headers */,
-				8344BA001EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS.h in Headers */,
+				8344BA401EF3F2A1001B5012 /* NSRegEx+NamedCaptureGroup.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +142,7 @@
 			);
 			name = NSRegExNamedCaptureGroup_macOS;
 			productName = NSRegExNamedCaptureGroup_macOS;
-			productReference = 8344B9E21EF3CE82001B5012 /* NSRegExNamedCaptureGroup_macOS.framework */;
+			productReference = 8344BA551EF408C1001B5012 /* NSRegExNamedCaptureGroup.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		8344B9FB1EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS */ = {
@@ -200,25 +160,25 @@
 			);
 			name = NSRegExNamedCaptureGroup_iOS;
 			productName = NSRegExNamedCaptureGroup_iOS;
-			productReference = 8344B9FC1EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS.framework */;
+			productReference = 8344BA561EF408C1001B5012 /* NSRegExNamedCaptureGroup.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8344BA1F1EF3EDD4001B5012 /* NSRegExNamedCaptureGroup_macOS Tests */ = {
+		8344BA481EF407B8001B5012 /* NSRegExNamedCaptureGroup_macOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8344BA281EF3EDD4001B5012 /* Build configuration list for PBXNativeTarget "NSRegExNamedCaptureGroup_macOS Tests" */;
+			buildConfigurationList = 8344BA501EF407B9001B5012 /* Build configuration list for PBXNativeTarget "NSRegExNamedCaptureGroup_macOS Tests" */;
 			buildPhases = (
-				8344BA1C1EF3EDD4001B5012 /* Sources */,
-				8344BA1D1EF3EDD4001B5012 /* Frameworks */,
-				8344BA1E1EF3EDD4001B5012 /* Resources */,
+				8344BA451EF407B8001B5012 /* Sources */,
+				8344BA461EF407B8001B5012 /* Frameworks */,
+				8344BA471EF407B8001B5012 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8344BA271EF3EDD4001B5012 /* PBXTargetDependency */,
+				8344BA4F1EF407B9001B5012 /* PBXTargetDependency */,
 			);
 			name = "NSRegExNamedCaptureGroup_macOS Tests";
 			productName = "NSRegExNamedCaptureGroup_macOS Tests";
-			productReference = 8344BA201EF3EDD4001B5012 /* NSRegExNamedCaptureGroup_macOS Tests.xctest */;
+			productReference = 8344BA531EF407CE001B5012 /* NSRegExNamedCaptureGroup_macOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -240,7 +200,7 @@
 						DevelopmentTeam = 89BSC2UYH8;
 						ProvisioningStyle = Automatic;
 					};
-					8344BA1F1EF3EDD4001B5012 = {
+					8344BA481EF407B8001B5012 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 89BSC2UYH8;
 						ProvisioningStyle = Automatic;
@@ -261,7 +221,7 @@
 			targets = (
 				8344B9E11EF3CE82001B5012 /* NSRegExNamedCaptureGroup_macOS */,
 				8344B9FB1EF3D2D8001B5012 /* NSRegExNamedCaptureGroup_iOS */,
-				8344BA1F1EF3EDD4001B5012 /* NSRegExNamedCaptureGroup_macOS Tests */,
+				8344BA481EF407B8001B5012 /* NSRegExNamedCaptureGroup_macOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -282,7 +242,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8344BA1E1EF3EDD4001B5012 /* Resources */ = {
+		8344BA471EF407B8001B5012 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -296,7 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8344B9F31EF3D030001B5012 /* NSRegExNamedCaptureGroup.m in Sources */,
+				8344B9F31EF3D030001B5012 /* NSRegEx+NamedCaptureGroup.m in Sources */,
 				8344B9ED1EF3CFBE001B5012 /* Info-macOS.plist in Sources */,
 				8344B9EB1EF3CEA5001B5012 /* _Core.swift in Sources */,
 			);
@@ -306,27 +266,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8344BA061EF3D355001B5012 /* NSRegExNamedCaptureGroup.m in Sources */,
+				8344BA061EF3D355001B5012 /* NSRegEx+NamedCaptureGroup.m in Sources */,
 				8344BA051EF3D323001B5012 /* Info-iOS.plist in Sources */,
 				8344BA041EF3D323001B5012 /* _Core.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8344BA1C1EF3EDD4001B5012 /* Sources */ = {
+		8344BA451EF407B8001B5012 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8344BA3B1EF3EEDD001B5012 /* NSRegExNamedCaptureGroupTests.swift in Sources */,
+				8344BA541EF407EA001B5012 /* NSRegExNamedCaptureGroupTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8344BA271EF3EDD4001B5012 /* PBXTargetDependency */ = {
+		8344BA4F1EF407B9001B5012 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8344B9E11EF3CE82001B5012 /* NSRegExNamedCaptureGroup_macOS */;
-			targetProxy = 8344BA261EF3EDD4001B5012 /* PBXContainerItemProxy */;
+			targetProxy = 8344BA4E1EF407B9001B5012 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -335,8 +295,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
 			};
 			name = Debug;
 		};
@@ -344,8 +308,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
 			};
 			name = Release;
 		};
@@ -405,7 +373,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "indiv.TorinKwok.NSRegExNamedCaptureGroup-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NSRegExNamedCaptureGroup;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -464,7 +432,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "indiv.TorinKwok.NSRegExNamedCaptureGroup-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NSRegExNamedCaptureGroup;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -528,7 +496,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "indiv.TorinKwok.NSRegExNamedCaptureGroup-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NSRegExNamedCaptureGroup;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -586,7 +554,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "indiv.TorinKwok.NSRegExNamedCaptureGroup-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = NSRegExNamedCaptureGroup;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -596,7 +564,7 @@
 			};
 			name = Release;
 		};
-		8344BA291EF3EDD4001B5012 /* Debug */ = {
+		8344BA511EF407B9001B5012 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -623,6 +591,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 89BSC2UYH8;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -640,7 +609,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "NSRegExNamedCaptureGroup_macOS Tests/Info.plist";
+				INFOPLIST_FILE = ../Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -648,11 +617,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "indiv.TorinKwok.NSRegExNamedCaptureGroup-macOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		8344BA2A1EF3EDD4001B5012 /* Release */ = {
+		8344BA521EF407B9001B5012 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -679,6 +649,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 89BSC2UYH8;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -690,13 +661,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "NSRegExNamedCaptureGroup_macOS Tests/Info.plist";
+				INFOPLIST_FILE = ../Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "indiv.TorinKwok.NSRegExNamedCaptureGroup-macOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -729,14 +701,16 @@
 				8344BA031EF3D2D8001B5012 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		8344BA281EF3EDD4001B5012 /* Build configuration list for PBXNativeTarget "NSRegExNamedCaptureGroup_macOS Tests" */ = {
+		8344BA501EF407B9001B5012 /* Build configuration list for PBXNativeTarget "NSRegExNamedCaptureGroup_macOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8344BA291EF3EDD4001B5012 /* Debug */,
-				8344BA2A1EF3EDD4001B5012 /* Release */,
+				8344BA511EF407B9001B5012 /* Debug */,
+				8344BA521EF407B9001B5012 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
