@@ -64,12 +64,46 @@ fileprivate let NamedCaptureGroupsPattern = try! NSRegularExpression(
   , options: .dotMatchesLineSeparators
   )
 
-fileprivate extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
-  fileprivate typealias _GroupNamesSearchResult = (
-      _outerOrdinaryCaptureGroup: NSTextCheckingResult
-    , _innerRefinedNamedCaptureGroup: NSTextCheckingResult
-    , _index: Int
-    )
+fileprivate typealias _GroupNamesSearchResult = (
+    _outerOrdinaryCaptureGroup: NSTextCheckingResult
+  , _innerRefinedNamedCaptureGroup: NSTextCheckingResult
+  , _index: Int
+  )
+
+public class _ObjCGroupNamesSearchResult: NSObject {
+  public let _outerOrdinaryCaptureGroup: NSTextCheckingResult
+  public let _innerRefinedNamedCaptureGroup: NSTextCheckingResult
+  public let _index: Int
+
+  @nonobjc fileprivate init( _ tuple: _GroupNamesSearchResult ) {
+    _outerOrdinaryCaptureGroup = tuple._outerOrdinaryCaptureGroup
+    _innerRefinedNamedCaptureGroup = tuple._innerRefinedNamedCaptureGroup
+    _index = tuple._index
+    }
+  }
+
+public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
+
+  public func _textCheckingResultsOfNamedCaptureGroups_objc() throws
+    -> [ String: _ObjCGroupNamesSearchResult ] {
+    let results = try _textCheckingResultsOfNamedCaptureGroups()
+    var dictionary = [ String: _ObjCGroupNamesSearchResult ]()
+    for ( expr, result ) in results {
+      dictionary[ expr ] = _ObjCGroupNamesSearchResult( result )
+      }
+
+    return dictionary
+    // return
+    //   result.map {
+    //     print( $1 )
+    //     return ( $1.0, _ObjCGroupNamesSearchResult( one: $1.1._outerOrdinaryCaptureGroup, two: $1.1._innerRefinedNamedCaptureGroup, $1.1._index ) )
+    //     }
+    // _ObjCGroupNamesSearchResult(
+    //     one: result._outerOrdinaryCaptureGroup
+    //   , two: result._innerRefinedNamedCaptureGroup
+    //   , three: result._index
+    //   )
+    }
 
   fileprivate func _textCheckingResultsOfNamedCaptureGroups() throws
     -> [ String: _GroupNamesSearchResult ] {
@@ -117,76 +151,3 @@ fileprivate extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
     return groupNames
     }
   }
-
-/// __Named Capture Groups__ is an useful feature. Languages or libraries 
-/// like Python, PHP's preg engine, and .NET languages support captures to 
-/// named locations. Cocoa's NSRegEx implementation, according to Apple's 
-/// official documentation, is based on ICU's regex implementation:
-///
-/// > The pattern syntax currently supported is that specified by ICU. 
-/// > The ICU regular expressions are described at
-/// > <http://userguide.icu-project.org/strings/regexp>.
-///
-/// And that page (on <icu-project.org>) claims that Named Capture Groups
-/// are now supported, using the same syntax as .NET Regular Expressions:
-///
-/// > (?<name>...) Named capture group. The <angle brackets> are 
-/// > literal - they appear in the pattern.
-///
-/// For example:
-/// > \b**(?<Area>**\d\d\d)-(**?<Exch>**\d\d\d)-**(?<Num>**\d\d\d\d)\b
-///
-/// However, Apple's own documentation for NSRegularExpression does not 
-/// list the syntax for Named Capture Groups, it only appears on ICU's
-/// own documentation, suggesting that Named Capture Groups are a recent
-/// addition and hence Cocoa's implementation has not integrated it yet.
-///
-/// This extension aims at providing developers using NSRegEx's with 
-/// a solution to deal with Named Capture Groups within their regular 
-/// expressions.
-public extension NSRegularExpression /* NamedCaptureGroupsSupport */ {
-
-  /// Returns a dictionary, after introspecting regex's own pattern, 
-  /// containing all the Named Capture Group expressions found in
-  /// receiver's pattern and their corresponding indices.
-  ///
-  /// - Returns: A dictionary containing the Named Capture Group expressions
-  ///   plucked out and their corresponding indices.
-  public func indicesOfNamedCaptureGroups() throws
-    -> [ String: Int ] {
-    var groupNames = [ String: Int ]()
-    for ( name, ( _outerOrdinaryCaptureGroup: _, _innerRefinedNamedCaptureGroup: _, _index: index ) ) in
-      try _textCheckingResultsOfNamedCaptureGroups() {
-      groupNames[ name ] = index + 1
-      }
-
-    return groupNames
-    }
-
-  /// Returns a dictionary, after introspecting regex's own pattern, 
-  /// containing all the Named Capture Group expressions found in
-  /// receiver's pattern and the range of those expressions.
-  ///
-  /// - Returns: A dictionary containing the Named Capture Group expressions
-  ///   plucked out and the range of those expressions.
-  public func rangesOfNamedCaptureGroups( in match: NSTextCheckingResult ) throws
-    -> [ String: NSRange ] {
-    var nsRanges = [ String: NSRange ]()
-    for ( name, ( _outerOrdinaryCaptureGroup: _, _innerRefinedNamedCaptureGroup: _, _index: index ) ) in
-      try _textCheckingResultsOfNamedCaptureGroups() {
-      nsRanges[ name ] = match.rangeAt( index + 1 )
-      }
-
-    return nsRanges
-    }
-  }
-
-// public extension NSTextCheckingResult {
-//   public func range( withName groupName: String? ) -> NSRange {
-//     guard let groupName = groupName else {
-//       return rangeAt( 0 )
-//       }
-
-//     // TODO: Remaining logic
-//     }
-//   }
