@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8344BA6A1EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA681EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8344BA771EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA751EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8344BA821EF40CEB001B5012 /* _Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA7C1EF40CEB001B5012 /* _Core.swift */; };
+		8344BA841EF40CEB001B5012 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8344BA7E1EF40CEB001B5012 /* Info.plist */; };
+		8344BA851EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA7F1EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.h */; };
+		8344BA861EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA801EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.m */; };
+		8344BA871EF40CEB001B5012 /* NSRegExNamedCaptureGroup_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA811EF40CEB001B5012 /* NSRegExNamedCaptureGroup_macOS.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8344BA651EF40CC2001B5012 /* NSRegExNamedCaptureGroup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8344BA681EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSRegExNamedCaptureGroup macOS.h"; sourceTree = "<group>"; };
+		8344BA691EF40CC2001B5012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8344BA731EF40CD6001B5012 /* NSRegExNamedCaptureGroup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8344BA751EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSRegExNamedCaptureGroup iOS.h"; sourceTree = "<group>"; };
+		8344BA761EF40CD6001B5012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8344BA7C1EF40CEB001B5012 /* _Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Core.swift; sourceTree = "<group>"; };
+		8344BA7E1EF40CEB001B5012 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8344BA7F1EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRegEx+NamedCaptureGroup.h"; sourceTree = "<group>"; };
+		8344BA801EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRegEx+NamedCaptureGroup.m"; sourceTree = "<group>"; };
+		8344BA811EF40CEB001B5012 /* NSRegExNamedCaptureGroup_macOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRegExNamedCaptureGroup_macOS.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8344BA611EF40CC2001B5012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8344BA6F1EF40CD6001B5012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8344BA591EF40C7D001B5012 = {
+			isa = PBXGroup;
+			children = (
+				8344BA7B1EF40CEB001B5012 /* Sources */,
+				8344BA671EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS */,
+				8344BA741EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS */,
+				8344BA661EF40CC2001B5012 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8344BA661EF40CC2001B5012 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8344BA651EF40CC2001B5012 /* NSRegExNamedCaptureGroup.framework */,
+				8344BA731EF40CD6001B5012 /* NSRegExNamedCaptureGroup.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8344BA671EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS */ = {
+			isa = PBXGroup;
+			children = (
+				8344BA681EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS.h */,
+				8344BA691EF40CC2001B5012 /* Info.plist */,
+			);
+			path = "NSRegExNamedCaptureGroup macOS";
+			sourceTree = "<group>";
+		};
+		8344BA741EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8344BA751EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS.h */,
+				8344BA761EF40CD6001B5012 /* Info.plist */,
+			);
+			path = "NSRegExNamedCaptureGroup iOS";
+			sourceTree = "<group>";
+		};
+		8344BA7B1EF40CEB001B5012 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8344BA7E1EF40CEB001B5012 /* Info.plist */,
+				8344BA7C1EF40CEB001B5012 /* _Core.swift */,
+				8344BA7F1EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.h */,
+				8344BA801EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.m */,
+				8344BA811EF40CEB001B5012 /* NSRegExNamedCaptureGroup_macOS.h */,
+			);
+			name = Sources;
+			path = ../../Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8344BA621EF40CC2001B5012 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8344BA851EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.h in Headers */,
+				8344BA6A1EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS.h in Headers */,
+				8344BA871EF40CEB001B5012 /* NSRegExNamedCaptureGroup_macOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8344BA701EF40CD6001B5012 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8344BA771EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8344BA641EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8344BA6B1EF40CC2001B5012 /* Build configuration list for PBXNativeTarget "NSRegExNamedCaptureGroup macOS" */;
+			buildPhases = (
+				8344BA601EF40CC2001B5012 /* Sources */,
+				8344BA611EF40CC2001B5012 /* Frameworks */,
+				8344BA621EF40CC2001B5012 /* Headers */,
+				8344BA631EF40CC2001B5012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NSRegExNamedCaptureGroup macOS";
+			productName = "NSRegExNamedCaptureGroup macOS";
+			productReference = 8344BA651EF40CC2001B5012 /* NSRegExNamedCaptureGroup.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8344BA721EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8344BA781EF40CD6001B5012 /* Build configuration list for PBXNativeTarget "NSRegExNamedCaptureGroup iOS" */;
+			buildPhases = (
+				8344BA6E1EF40CD6001B5012 /* Sources */,
+				8344BA6F1EF40CD6001B5012 /* Frameworks */,
+				8344BA701EF40CD6001B5012 /* Headers */,
+				8344BA711EF40CD6001B5012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NSRegExNamedCaptureGroup iOS";
+			productName = "NSRegExNamedCaptureGroup iOS";
+			productReference = 8344BA731EF40CD6001B5012 /* NSRegExNamedCaptureGroup.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8344BA5A1EF40C7D001B5012 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				TargetAttributes = {
+					8344BA641EF40CC2001B5012 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 89BSC2UYH8;
+						ProvisioningStyle = Automatic;
+					};
+					8344BA721EF40CD6001B5012 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 89BSC2UYH8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8344BA5D1EF40C7D001B5012 /* Build configuration list for PBXProject "NSRegExNamedCaptureGroup" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8344BA591EF40C7D001B5012;
+			productRefGroup = 8344BA661EF40CC2001B5012 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8344BA641EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS */,
+				8344BA721EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8344BA631EF40CC2001B5012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8344BA841EF40CEB001B5012 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8344BA711EF40CD6001B5012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8344BA601EF40CC2001B5012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8344BA821EF40CEB001B5012 /* _Core.swift in Sources */,
+				8344BA861EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8344BA6E1EF40CD6001B5012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8344BA5E1EF40C7D001B5012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8344BA5F1EF40C7D001B5012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		8344BA6C1EF40CC2001B5012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 89BSC2UYH8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = ../../Sources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "indiv.TorinKwok.NSRegExNamedCaptureGroup-macOS";
+				PRODUCT_NAME = NSRegExNamedCaptureGroup;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8344BA6D1EF40CC2001B5012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 89BSC2UYH8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = ../../Sources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "indiv.TorinKwok.NSRegExNamedCaptureGroup-macOS";
+				PRODUCT_NAME = NSRegExNamedCaptureGroup;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8344BA791EF40CD6001B5012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 89BSC2UYH8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = ../../Sources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "indiv.TorinKwok.NSRegExNamedCaptureGroup-iOS";
+				PRODUCT_NAME = NSRegExNamedCaptureGroup;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8344BA7A1EF40CD6001B5012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 89BSC2UYH8;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = ../../Sources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "indiv.TorinKwok.NSRegExNamedCaptureGroup-iOS";
+				PRODUCT_NAME = NSRegExNamedCaptureGroup;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8344BA5D1EF40C7D001B5012 /* Build configuration list for PBXProject "NSRegExNamedCaptureGroup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8344BA5E1EF40C7D001B5012 /* Debug */,
+				8344BA5F1EF40C7D001B5012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8344BA6B1EF40CC2001B5012 /* Build configuration list for PBXNativeTarget "NSRegExNamedCaptureGroup macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8344BA6C1EF40CC2001B5012 /* Debug */,
+				8344BA6D1EF40CC2001B5012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8344BA781EF40CD6001B5012 /* Build configuration list for PBXNativeTarget "NSRegExNamedCaptureGroup iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8344BA791EF40CD6001B5012 /* Debug */,
+				8344BA7A1EF40CD6001B5012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8344BA5A1EF40C7D001B5012 /* Project object */;
+}

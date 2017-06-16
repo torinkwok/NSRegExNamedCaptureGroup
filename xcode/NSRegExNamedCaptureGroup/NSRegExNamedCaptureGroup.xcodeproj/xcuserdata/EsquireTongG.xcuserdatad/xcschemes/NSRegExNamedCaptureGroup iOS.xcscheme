@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8344BA1F1EF3EDD4001B5012"
-               BuildableName = "NSRegExNamedCaptureGroup_macOS Tests.xctest"
-               BlueprintName = "NSRegExNamedCaptureGroup_macOS Tests"
+               BlueprintIdentifier = "8344BA721EF40CD6001B5012"
+               BuildableName = "NSRegExNamedCaptureGroup iOS.framework"
+               BlueprintName = "NSRegExNamedCaptureGroup iOS"
                ReferencedContainer = "container:NSRegExNamedCaptureGroup.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8344BA1F1EF3EDD4001B5012"
-               BuildableName = "NSRegExNamedCaptureGroup_macOS Tests.xctest"
-               BlueprintName = "NSRegExNamedCaptureGroup_macOS Tests"
-               ReferencedContainer = "container:NSRegExNamedCaptureGroup.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8344BA1F1EF3EDD4001B5012"
-            BuildableName = "NSRegExNamedCaptureGroup_macOS Tests.xctest"
-            BlueprintName = "NSRegExNamedCaptureGroup_macOS Tests"
-            ReferencedContainer = "container:NSRegExNamedCaptureGroup.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8344BA1F1EF3EDD4001B5012"
-            BuildableName = "NSRegExNamedCaptureGroup_macOS Tests.xctest"
-            BlueprintName = "NSRegExNamedCaptureGroup_macOS Tests"
+            BlueprintIdentifier = "8344BA721EF40CD6001B5012"
+            BuildableName = "NSRegExNamedCaptureGroup iOS.framework"
+            BlueprintName = "NSRegExNamedCaptureGroup iOS"
             ReferencedContainer = "container:NSRegExNamedCaptureGroup.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -79,6 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8344BA721EF40CD6001B5012"
+            BuildableName = "NSRegExNamedCaptureGroup iOS.framework"
+            BlueprintName = "NSRegExNamedCaptureGroup iOS"
+            ReferencedContainer = "container:NSRegExNamedCaptureGroup.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
