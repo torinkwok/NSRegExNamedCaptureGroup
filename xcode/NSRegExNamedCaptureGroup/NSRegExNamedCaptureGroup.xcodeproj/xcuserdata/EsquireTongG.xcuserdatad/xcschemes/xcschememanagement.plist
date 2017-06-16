@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>NSRegExNamedCaptureGroup macOS Tests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>NSRegExNamedCaptureGroup macOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>8344BA721EF40CD6001B5012</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8344BA9A1EF40F4B001B5012</key>
 		<dict>
 			<key>primary</key>
 			<true/>
