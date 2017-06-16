@@ -7,3 +7,9 @@
 //
 
 @import Foundation;
+
+NS_ASSUME_NONNULL_BEGIN
+@interface NSTextCheckingResult ( NSRegExNamedCaptureGroup )
+- ( NSRange ) rangeWithGroupName: ( nullable NSString* )groupName;
+@end
+NS_ASSUME_NONNULL_END
