@@ -21,6 +21,8 @@
 		8344BAA01EF40F4B001B5012 /* NSRegExNamedCaptureGroup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8344BA651EF40CC2001B5012 /* NSRegExNamedCaptureGroup.framework */; };
 		8344BAA61EF40F7B001B5012 /* NSRegExNamedCaptureGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA921EF40F17001B5012 /* NSRegExNamedCaptureGroupTests.swift */; };
 		8344BAA71EF4103F001B5012 /* NSRegExNamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA901EF40ED9001B5012 /* NSRegExNamedCaptureGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8344BAB11EF418D9001B5012 /* NSRegExNamedCaptureGroup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8344BA731EF40CD6001B5012 /* NSRegExNamedCaptureGroup.framework */; };
+		8344BAB71EF41923001B5012 /* NSRegExNamedCaptureGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA921EF40F17001B5012 /* NSRegExNamedCaptureGroupTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8344BA641EF40CC2001B5012;
 			remoteInfo = "NSRegExNamedCaptureGroup macOS";
+		};
+		8344BAB21EF418D9001B5012 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8344BA5A1EF40C7D001B5012 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8344BA721EF40CD6001B5012;
+			remoteInfo = "NSRegExNamedCaptureGroup iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -46,6 +55,8 @@
 		8344BA931EF40F17001B5012 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Tests/Info.plist; sourceTree = "<group>"; };
 		8344BA9B1EF40F4B001B5012 /* NSRegExNamedCaptureGroup macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSRegExNamedCaptureGroup macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8344BA9F1EF40F4B001B5012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8344BAAC1EF418D9001B5012 /* NSRegExNamedCaptureGroup iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSRegExNamedCaptureGroup iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8344BAB01EF418D9001B5012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +82,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8344BAA91EF418D9001B5012 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8344BAB11EF418D9001B5012 /* NSRegExNamedCaptureGroup.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +101,7 @@
 				8344BA741EF40CD6001B5012 /* iOS */,
 				8344BA961EF40F1A001B5012 /* Tests */,
 				8344BA9C1EF40F4B001B5012 /* NSRegExNamedCaptureGroup macOS Tests */,
+				8344BAAD1EF418D9001B5012 /* NSRegExNamedCaptureGroup iOS Tests */,
 				8344BA661EF40CC2001B5012 /* Products */,
 			);
 			indentWidth = 2;
@@ -94,6 +114,7 @@
 				8344BA651EF40CC2001B5012 /* NSRegExNamedCaptureGroup.framework */,
 				8344BA731EF40CD6001B5012 /* NSRegExNamedCaptureGroup.framework */,
 				8344BA9B1EF40F4B001B5012 /* NSRegExNamedCaptureGroup macOS Tests.xctest */,
+				8344BAAC1EF418D9001B5012 /* NSRegExNamedCaptureGroup iOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,6 +164,14 @@
 				8344BA9F1EF40F4B001B5012 /* Info.plist */,
 			);
 			path = "NSRegExNamedCaptureGroup macOS Tests";
+			sourceTree = "<group>";
+		};
+		8344BAAD1EF418D9001B5012 /* NSRegExNamedCaptureGroup iOS Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8344BAB01EF418D9001B5012 /* Info.plist */,
+			);
+			path = "NSRegExNamedCaptureGroup iOS Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +252,24 @@
 			productReference = 8344BA9B1EF40F4B001B5012 /* NSRegExNamedCaptureGroup macOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		8344BAAB1EF418D9001B5012 /* NSRegExNamedCaptureGroup iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8344BAB41EF418D9001B5012 /* Build configuration list for PBXNativeTarget "NSRegExNamedCaptureGroup iOS Tests" */;
+			buildPhases = (
+				8344BAA81EF418D9001B5012 /* Sources */,
+				8344BAA91EF418D9001B5012 /* Frameworks */,
+				8344BAAA1EF418D9001B5012 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8344BAB31EF418D9001B5012 /* PBXTargetDependency */,
+			);
+			name = "NSRegExNamedCaptureGroup iOS Tests";
+			productName = "NSRegExNamedCaptureGroup iOS Tests";
+			productReference = 8344BAAC1EF418D9001B5012 /* NSRegExNamedCaptureGroup iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -246,6 +293,11 @@
 						DevelopmentTeam = 89BSC2UYH8;
 						ProvisioningStyle = Automatic;
 					};
+					8344BAAB1EF418D9001B5012 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 89BSC2UYH8;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 8344BA5D1EF40C7D001B5012 /* Build configuration list for PBXProject "NSRegExNamedCaptureGroup" */;
@@ -263,6 +315,7 @@
 				8344BA641EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS */,
 				8344BA721EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS */,
 				8344BA9A1EF40F4B001B5012 /* NSRegExNamedCaptureGroup macOS Tests */,
+				8344BAAB1EF418D9001B5012 /* NSRegExNamedCaptureGroup iOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -285,6 +338,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8344BA991EF40F4B001B5012 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8344BAAA1EF418D9001B5012 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -322,6 +382,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8344BAA81EF418D9001B5012 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8344BAB71EF41923001B5012 /* NSRegExNamedCaptureGroupTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -329,6 +397,11 @@
 			isa = PBXTargetDependency;
 			target = 8344BA641EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS */;
 			targetProxy = 8344BAA11EF40F4B001B5012 /* PBXContainerItemProxy */;
+		};
+		8344BAB31EF418D9001B5012 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8344BA721EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS */;
+			targetProxy = 8344BAB21EF418D9001B5012 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -625,7 +698,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 89BSC2UYH8;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -682,7 +755,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 89BSC2UYH8;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -702,6 +775,110 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8344BAB51EF418D9001B5012 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = 89BSC2UYH8;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "NSRegExNamedCaptureGroup iOS Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "indiv.TorinKwok.NSRegExNamedCaptureGroup-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8344BAB61EF418D9001B5012 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = 89BSC2UYH8;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "NSRegExNamedCaptureGroup iOS Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "indiv.TorinKwok.NSRegExNamedCaptureGroup-iOS-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -738,6 +915,14 @@
 			buildConfigurations = (
 				8344BAA41EF40F4B001B5012 /* Debug */,
 				8344BAA51EF40F4B001B5012 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8344BAB41EF418D9001B5012 /* Build configuration list for PBXNativeTarget "NSRegExNamedCaptureGroup iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8344BAB51EF418D9001B5012 /* Debug */,
+				8344BAB61EF418D9001B5012 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

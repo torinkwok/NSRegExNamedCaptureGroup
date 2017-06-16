@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>NSRegExNamedCaptureGroup iOS Tests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>NSRegExNamedCaptureGroup iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -33,6 +38,11 @@
 			<true/>
 		</dict>
 		<key>8344BA9A1EF40F4B001B5012</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8344BAAB1EF418D9001B5012</key>
 		<dict>
 			<key>primary</key>
 			<true/>
