@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8344BA6A1EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA681EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8344BA771EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA751EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8344BA821EF40CEB001B5012 /* _Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA7C1EF40CEB001B5012 /* _Core.swift */; };
 		8344BA841EF40CEB001B5012 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8344BA7E1EF40CEB001B5012 /* Info.plist */; };
 		8344BA851EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA7F1EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -19,17 +17,19 @@
 		8344BA8B1EF40E66001B5012 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8344BA7E1EF40CEB001B5012 /* Info.plist */; };
 		8344BA8C1EF40E70001B5012 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA7E1EF40CEB001B5012 /* Info.plist */; };
 		8344BA8D1EF40E74001B5012 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA7E1EF40CEB001B5012 /* Info.plist */; };
+		8344BA8F1EF40EB4001B5012 /* NSRegExNamedCaptureGroup macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA8E1EF40EB4001B5012 /* NSRegExNamedCaptureGroup macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8344BA911EF40ED9001B5012 /* NSRegExNamedCaptureGroup iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA901EF40ED9001B5012 /* NSRegExNamedCaptureGroup iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8344BA651EF40CC2001B5012 /* NSRegExNamedCaptureGroup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8344BA681EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSRegExNamedCaptureGroup macOS.h"; sourceTree = "<group>"; };
 		8344BA731EF40CD6001B5012 /* NSRegExNamedCaptureGroup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8344BA751EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSRegExNamedCaptureGroup iOS.h"; sourceTree = "<group>"; };
 		8344BA7C1EF40CEB001B5012 /* _Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Core.swift; sourceTree = "<group>"; };
 		8344BA7E1EF40CEB001B5012 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8344BA7F1EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRegEx+NamedCaptureGroup.h"; sourceTree = "<group>"; };
 		8344BA801EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRegEx+NamedCaptureGroup.m"; sourceTree = "<group>"; };
+		8344BA8E1EF40EB4001B5012 /* NSRegExNamedCaptureGroup macOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSRegExNamedCaptureGroup macOS.h"; path = "../macOS/NSRegExNamedCaptureGroup macOS.h"; sourceTree = "<group>"; };
+		8344BA901EF40ED9001B5012 /* NSRegExNamedCaptureGroup iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSRegExNamedCaptureGroup iOS.h"; path = "../iOS/NSRegExNamedCaptureGroup iOS.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				8344BA7B1EF40CEB001B5012 /* Sources */,
-				8344BA671EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS */,
-				8344BA741EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS */,
+				8344BA671EF40CC2001B5012 /* macOS */,
+				8344BA741EF40CD6001B5012 /* iOS */,
 				8344BA661EF40CC2001B5012 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,19 +69,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8344BA671EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS */ = {
+		8344BA671EF40CC2001B5012 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				8344BA681EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS.h */,
+				8344BA8E1EF40EB4001B5012 /* NSRegExNamedCaptureGroup macOS.h */,
 			);
+			name = macOS;
 			path = "NSRegExNamedCaptureGroup macOS";
 			sourceTree = "<group>";
 		};
-		8344BA741EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS */ = {
+		8344BA741EF40CD6001B5012 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				8344BA751EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS.h */,
+				8344BA901EF40ED9001B5012 /* NSRegExNamedCaptureGroup iOS.h */,
 			);
+			name = iOS;
 			path = "NSRegExNamedCaptureGroup iOS";
 			sourceTree = "<group>";
 		};
@@ -105,7 +107,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8344BA851EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.h in Headers */,
-				8344BA6A1EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS.h in Headers */,
+				8344BA911EF40ED9001B5012 /* NSRegExNamedCaptureGroup iOS.h in Headers */,
+				8344BA8F1EF40EB4001B5012 /* NSRegExNamedCaptureGroup macOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +117,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8344BA881EF40E16001B5012 /* NSRegEx+NamedCaptureGroup.h in Headers */,
-				8344BA771EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
