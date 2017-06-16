@@ -4,20 +4,35 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>NSRegExNamedCaptureGroup.xcscheme</key>
+		<key>NSRegExNamedCaptureGroup_iOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>NSRegExNamedCaptureGroup_macOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>83B1EEE91EF2BB4A00E7405F</key>
+		<key>8344B9C51EF3CE2E001B5012</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>83B1EEF21EF2BB4A00E7405F</key>
+		<key>8344B9D31EF3CE54001B5012</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8344B9E11EF3CE82001B5012</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8344B9FB1EF3D2D8001B5012</key>
 		<dict>
 			<key>primary</key>
 			<true/>
