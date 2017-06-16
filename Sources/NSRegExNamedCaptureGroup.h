@@ -56,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// - Returns: A dictionary containing the Named Capture Group expressions
 ///   plucked out and the range of those expressions.
-- ( NSDictionary<NSString*, _ObjCGroupNamesSearchResult*>* ) rangesOfNamedCaptureGroupsInMatch: ( NSTextCheckingResult* )match;
+- ( NSDictionary<NSString*, NSValue*>* ) rangesOfNamedCaptureGroupsInMatch: ( NSTextCheckingResult* )match;
 
 @end
 

@@ -93,16 +93,6 @@ public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
       }
 
     return dictionary
-    // return
-    //   result.map {
-    //     print( $1 )
-    //     return ( $1.0, _ObjCGroupNamesSearchResult( one: $1.1._outerOrdinaryCaptureGroup, two: $1.1._innerRefinedNamedCaptureGroup, $1.1._index ) )
-    //     }
-    // _ObjCGroupNamesSearchResult(
-    //     one: result._outerOrdinaryCaptureGroup
-    //   , two: result._innerRefinedNamedCaptureGroup
-    //   , three: result._index
-    //   )
     }
 
   fileprivate func _textCheckingResultsOfNamedCaptureGroups() throws

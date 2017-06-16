@@ -6,6 +6,7 @@
 //
 //
 
+@import Foundation;
 // #if os(macOS)
 #import "NSRegExNamedCaptureGroup_macOS/NSRegExNamedCaptureGroup_macOS-Swift.h"
 // #elseif os(iOS)
@@ -26,28 +27,26 @@
 @implementation NSRegularExpression ( NSRegExNamedCaptureGroup )
 
 - ( NSDictionary<NSString*, NSNumber*>* ) indicesOfNamedCaptureGroups {
+  NSMutableDictionary* groupNames = [ NSMutableDictionary dictionary ];
 
-  // public func indicesOfNamedCaptureGroups() throws
-  //   -> [ String: Int ] {
-  //   var groupNames = [ String: Int ]()
-  //   for ( name, ( _outerOrdinaryCaptureGroup: _, _innerRefinedNamedCaptureGroup: _, _index: index ) ) in
-  //     try _textCheckingResultsOfNamedCaptureGroups() {
-  //     groupNames[ name ] = index + 1
-  //     }
+  [ [ self _textCheckingResultsOfNamedCaptureGroups_objcAndReturnError: nil ]
+    enumerateKeysAndObjectsUsingBlock:
+      ^( NSString* subexpr, _ObjCGroupNamesSearchResult* result, BOOL* stopToken ) {
+      groupNames[ subexpr ] = @( result._index + 1 );
+      } ];
 
-  //   return groupNames
-  return @{};
+  return groupNames;
   }
 
-- ( NSDictionary<NSString*, _ObjCGroupNamesSearchResult*>* ) rangesOfNamedCaptureGroupsInMatch: ( NSTextCheckingResult* )match {
-  NSLog( @"%@", [ self _textCheckingResultsOfNamedCaptureGroups_objcAndReturnError: nil ] );
-    // NSDictionary* ranges = @{:};
-    // for ( name, ( _outerOrdinaryCaptureGroup: _, _innerRefinedNamedCaptureGroup: _, _index: index ) ) in
-    //   try _textCheckingResultsOfNamedCaptureGroups() {
-    //   nsRanges[ name ] = match.rangeAt( index + 1 )
-    //   }
+- ( NSDictionary<NSString*, NSValue*>* ) rangesOfNamedCaptureGroupsInMatch: ( NSTextCheckingResult* )match {
+  NSMutableDictionary* groupNames = [ NSMutableDictionary dictionary ];
 
-    // return nsRanges
-  return @{};
+  [ [ self _textCheckingResultsOfNamedCaptureGroups_objcAndReturnError: nil ]
+    enumerateKeysAndObjectsUsingBlock:
+      ^( NSString* subexpr, _ObjCGroupNamesSearchResult* result, BOOL* stopToken ) {
+      groupNames[ subexpr ] = [ NSValue valueWithRange: [ match rangeAtIndex: result._index + 1 ] ];
+      } ];
+
+  return groupNames;
   }
 @end
