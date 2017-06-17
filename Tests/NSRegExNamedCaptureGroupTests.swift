@@ -25,6 +25,7 @@ class NSRegExNamedCaptureGroupTests: XCTestCase {
   func test_1() {
     let matches = TestSamples_Group1.USAPhoneNumberPattern.matches( in: TestSamples_Group1.phoneNumber, options: [], range: NSMakeRange( 0, TestSamples_Group1.phoneNumber.utf16.count ) )
     print( matches )
+    print( NSStringFromRange( matches[ 0 ].range( withGroupName: nil ) ) )
     print( NSStringFromRange( matches[ 0 ].range( withGroupName: "(?<Area>\\d\\d\\d)" ) ) )
     print( NSStringFromRange( matches[ 0 ].range( withGroupName: "(?<Exch>\\d\\d\\d)" ) ) )
     print( NSStringFromRange( matches[ 0 ].range( withGroupName: "(?<Num>\\d\\d\\d\\d)" ) ) )

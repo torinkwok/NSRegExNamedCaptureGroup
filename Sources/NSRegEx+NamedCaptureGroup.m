@@ -9,7 +9,7 @@
 #import "NSRegEx+NamedCaptureGroup.h"
 #import "NSRegExNamedCaptureGroup/NSRegExNamedCaptureGroup-Swift.h"
 
-static void* AssociatedKey;
+static void* _CaptureGroupsDictAssociatedKey;
 
 @implementation NSTextCheckingResult ( NSRegExNamedCaptureGroup )
 
@@ -17,8 +17,8 @@ static void* AssociatedKey;
   if ( !groupName )
     return [ self rangeAtIndex: 0 ];
 
-  NSDictionary* captureGroups = objc_getAssociatedObject( self, &AssociatedKey );
-  NSValue* rangeWrapper = captureGroups[ groupName ];
+  NSDictionary* captureGroupsDict = objc_getAssociatedObject( self, &_CaptureGroupsDictAssociatedKey );
+  NSValue* rangeWrapper = captureGroupsDict[ groupName ];
   return rangeWrapper ? rangeWrapper.rangeValue : NSMakeRange( NSNotFound, 0 );
   }
 
@@ -30,14 +30,11 @@ static void* AssociatedKey;
   _swizzling_matchesInString: ( NSString* )text
                      options: ( NSMatchingOptions )options
                        range: ( NSRange )range {
-  NSLog( @"Woody!" );
   NSArray* checkingResults = [ self _swizzling_matchesInString: text options: options range: range ];
+
   for ( NSTextCheckingResult* result in checkingResults ) {
-    NSDictionary* captureGroups = [ self rangesOfNamedCaptureGroupsInMatch: result error: nil ];
-    // [ captureGroups enumerateKeysAndObjectsUsingBlock:
-    //   ^( NSString* groupName, NSValue* rangeValue ) {
-    //     } ]
-    objc_setAssociatedObject( result, &AssociatedKey, captureGroups, OBJC_ASSOCIATION_RETAIN );
+    NSDictionary* captureGroupsDict = [ self rangesOfNamedCaptureGroupsInMatch: result error: nil ];
+    objc_setAssociatedObject( result, &_CaptureGroupsDictAssociatedKey, captureGroupsDict, OBJC_ASSOCIATION_RETAIN );
     }
 
   return checkingResults;
