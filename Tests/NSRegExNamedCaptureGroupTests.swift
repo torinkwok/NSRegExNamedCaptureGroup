@@ -27,29 +27,6 @@ class NSRegExNamedCaptureGroupTests: XCTestCase {
       )
     }
 
-  func _compareRange(
-      in checkingResult: NSTextCheckingResult
-    , byGroupName groupName: String?
-    , with index: Int ) -> Bool {
-
-    let rangeByGroupName = checkingResult.range( withGroupName: groupName )
-    let rangeByIndex = checkingResult.rangeAt( index )
-
-    return
-      rangeByGroupName.location == rangeByIndex.location
-        && rangeByGroupName.length == rangeByIndex.length
-    }
-
-  func _isRangeInvalid(
-      in checkingResult: NSTextCheckingResult
-    , byGroupName groupName: String? ) -> Bool {
-    
-    let rangeByGroupName = checkingResult.range( withGroupName: groupName )
-    return
-      rangeByGroupName.location == NSNotFound
-        && rangeByGroupName.length == 0
-    }
-
   func testArrayBasedAPI_01() {
     let matches = TestSamples_Group1.USAPhoneNumberPattern.matches(
         in: TestSamples_Group1.phoneNumber
@@ -89,4 +66,31 @@ class NSRegExNamedCaptureGroupTests: XCTestCase {
       ( "testArrayBasedAPI_01", testArrayBasedAPI_01 )
     , ( "testBlockEnumerationBasedAPI_01", testBlockEnumerationBasedAPI_01 )
     ]
+  }
+
+/// Utility extension for convenience
+fileprivate extension NSRegExNamedCaptureGroupTests {
+
+  fileprivate func _compareRange(
+      in checkingResult: NSTextCheckingResult
+    , byGroupName groupName: String?
+    , with index: Int ) -> Bool {
+
+    let rangeByGroupName = checkingResult.range( withGroupName: groupName )
+    let rangeByIndex = checkingResult.rangeAt( index )
+
+    return
+      rangeByGroupName.location == rangeByIndex.location
+        && rangeByGroupName.length == rangeByIndex.length
+    }
+
+  fileprivate func _isRangeInvalid(
+      in checkingResult: NSTextCheckingResult
+    , byGroupName groupName: String? ) -> Bool {
+    
+    let rangeByGroupName = checkingResult.range( withGroupName: groupName )
+    return
+      rangeByGroupName.location == NSNotFound
+        && rangeByGroupName.length == 0
+    }  
   }
