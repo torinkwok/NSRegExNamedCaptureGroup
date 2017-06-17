@@ -74,21 +74,29 @@ public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
     return dictionary
     }
 
-  fileprivate func _vendors_matches( in text: String, options: NSRegularExpression.MatchingOptions, range: NSRange )
-    -> [ NSTextCheckingResult ] {
+  fileprivate func _vendors_enumerateMatches(
+      in text: String
+    , options: NSRegularExpression.MatchingOptions
+    , range: NSRange
+    , using block: ( NSTextCheckingResult?, NSRegularExpression.MatchingFlags, UnsafeMutablePointer<ObjCBool> ) -> Void ) {
 
-    let vendorsSel = Selector( ( "_swizzling_matchesInString:options:range:" ) )
+    let vendorsSel = Selector( ( "_swizzling_enumerateMatchesInString:options:range:usingBlock:" ) )
     let imp = self.method( for: vendorsSel )
 
     typealias VendorsIMP = @convention( c )(
         AnyObject
       , Selector
-      , String, NSRegularExpression.MatchingOptions
+      , String
+      , NSRegularExpression.MatchingOptions
       , NSRange
-      ) -> [ NSTextCheckingResult ]
+      , ( NSTextCheckingResult?
+        , NSRegularExpression.MatchingFlags
+        , UnsafeMutablePointer<ObjCBool>
+        ) -> ()
+      ) -> ()
 
     let curriedVendorsIMP = unsafeBitCast( imp, to: VendorsIMP.self )
-    return curriedVendorsIMP( self, vendorsSel, text, options, range )
+    curriedVendorsIMP( self, vendorsSel, text, options, range, block )
     }
 
   fileprivate func _textCheckingResultsOfNamedCaptureGroups() throws
@@ -96,7 +104,7 @@ public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
 
     var groupNames = [ String: _GroupNamesSearchResult ]()
 
-    let genericCaptureGroupsMatched = GenericCaptureGroupsPattern._vendors_matches(
+    let genericCaptureGroupsMatched = GenericCaptureGroupsPattern.matches(
         in: self.pattern
       , options: .withTransparentBounds
       , range: NSMakeRange( 0, self.pattern.utf16.count )
@@ -110,7 +118,7 @@ public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
 
       // Extract the part of Named Capture Group sub-expressions
       // nested in `genericCaptureGroupExpr`.
-      let namedCaptureGroupsMatched = NamedCaptureGroupsPattern._vendors_matches(
+      let namedCaptureGroupsMatched = NamedCaptureGroupsPattern.matches(
           in: genericCaptureGroupExpr
         , options: .anchored
         , range: NSMakeRange( 0, genericCaptureGroupExpr.utf16.count )
