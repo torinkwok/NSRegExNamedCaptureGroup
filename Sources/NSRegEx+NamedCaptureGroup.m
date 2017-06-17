@@ -9,13 +9,17 @@
 #import "NSRegEx+NamedCaptureGroup.h"
 #import "NSRegExNamedCaptureGroup/NSRegExNamedCaptureGroup-Swift.h"
 
+static void* AssociatedKey;
+
 @implementation NSTextCheckingResult ( NSRegExNamedCaptureGroup )
 
 - ( NSRange ) rangeWithGroupName: ( nullable NSString* )groupName {
   if ( !groupName )
     return [ self rangeAtIndex: 0 ];
-  // TODO: Remaining logic
-  return NSMakeRange( NSNotFound, 0 );
+
+  NSDictionary* captureGroups = objc_getAssociatedObject( self, &AssociatedKey );
+  NSValue* rangeWrapper = captureGroups[ groupName ];
+  return rangeWrapper ? rangeWrapper.rangeValue : NSMakeRange( NSNotFound, 0 );
   }
 
 @end
@@ -29,7 +33,11 @@
   NSLog( @"Woody!" );
   NSArray* checkingResults = [ self _swizzling_matchesInString: text options: options range: range ];
   for ( NSTextCheckingResult* result in checkingResults ) {
-    NSLog( @"%@", [ self rangesOfNamedCaptureGroupsInMatch: result error: nil ] );
+    NSDictionary* captureGroups = [ self rangesOfNamedCaptureGroupsInMatch: result error: nil ];
+    // [ captureGroups enumerateKeysAndObjectsUsingBlock:
+    //   ^( NSString* groupName, NSValue* rangeValue ) {
+    //     } ]
+    objc_setAssociatedObject( result, &AssociatedKey, captureGroups, OBJC_ASSOCIATION_RETAIN );
     }
 
   return checkingResults;

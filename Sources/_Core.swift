@@ -63,7 +63,7 @@ public class _ObjCGroupNamesSearchResult: NSObject {
 
 public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
 
-  public func _textCheckingResultsOfNamedCaptureGroups_objc() throws
+  @objc public func _textCheckingResultsOfNamedCaptureGroups_objc() throws
     -> [ String: _ObjCGroupNamesSearchResult ] {
     let results = try _textCheckingResultsOfNamedCaptureGroups()
     var dictionary = [ String: _ObjCGroupNamesSearchResult ]()
