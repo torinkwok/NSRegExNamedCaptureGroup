@@ -26,8 +26,13 @@
   _swizzling_matchesInString: ( NSString* )text
                      options: ( NSMatchingOptions )options
                        range: ( NSRange )range {
-  NSLog( @"HOLLY!!!" );
-  return [ self _swizzling_matchesInString: text options: options range: range ];
+  NSLog( @"Woody!" );
+  NSArray* checkingResults = [ self _swizzling_matchesInString: text options: options range: range ];
+  for ( NSTextCheckingResult* result in checkingResults ) {
+    NSLog( @"%@", [ self rangesOfNamedCaptureGroupsInMatch: result error: nil ] );
+    }
+
+  return checkingResults;
   }
 
 + ( void ) load {

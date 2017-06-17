@@ -74,12 +74,29 @@ public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
     return dictionary
     }
 
+  fileprivate func _vendors_matches( in text: String, options: NSRegularExpression.MatchingOptions, range: NSRange )
+    -> [ NSTextCheckingResult ] {
+
+    let vendorsSel = Selector( ( "_swizzling_matchesInString:options:range:" ) )
+    let imp = self.method( for: vendorsSel )
+
+    typealias VendorsIMP = @convention( c )(
+        AnyObject
+      , Selector
+      , String, NSRegularExpression.MatchingOptions
+      , NSRange
+      ) -> [ NSTextCheckingResult ]
+
+    let curriedVendorsIMP = unsafeBitCast( imp, to: VendorsIMP.self )
+    return curriedVendorsIMP( self, vendorsSel, text, options, range )
+    }
+
   fileprivate func _textCheckingResultsOfNamedCaptureGroups() throws
     -> [ String: _GroupNamesSearchResult ] {
 
     var groupNames = [ String: _GroupNamesSearchResult ]()
 
-    let genericCaptureGroupsMatched = GenericCaptureGroupsPattern.matches(
+    let genericCaptureGroupsMatched = GenericCaptureGroupsPattern._vendors_matches(
         in: self.pattern
       , options: .withTransparentBounds
       , range: NSMakeRange( 0, self.pattern.utf16.count )
@@ -93,7 +110,7 @@ public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
 
       // Extract the part of Named Capture Group sub-expressions
       // nested in `genericCaptureGroupExpr`.
-      let namedCaptureGroupsMatched = NamedCaptureGroupsPattern.matches(
+      let namedCaptureGroupsMatched = NamedCaptureGroupsPattern._vendors_matches(
           in: genericCaptureGroupExpr
         , options: .anchored
         , range: NSMakeRange( 0, genericCaptureGroupExpr.utf16.count )
