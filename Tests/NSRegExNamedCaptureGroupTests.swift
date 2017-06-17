@@ -15,14 +15,42 @@ extension NSRegularExpression {
 class NSRegExNamedCaptureGroupTests: XCTestCase {
 
   class TestSamples_Group1 {
-    static var phoneNumber = "202-555-0136"
-    static var USAPhoneNumberPattern = try! NSRegularExpression(
-        pattern: "\\b(?<Area>\\d\\d\\d)-(?:\\d\\d\\d)-(?<Num>\\d\\d\\d\\d)\\b"
+    static let phoneNumber = "202-555-0136"
+
+    static let areaPattern = "(?<Area>\\d\\d\\d)"
+    static let exchPattern = "(?:\\d\\d\\d)"
+    static let numPattern = "(?<Num>\\d\\d\\d\\d)"
+
+    static let USAPhoneNumberPattern = try! NSRegularExpression(
+        pattern: "\\b\(areaPattern)-\(exchPattern)-\(numPattern)\\b"
       , options: NSRegularExpression.commonOptions
       )
     }
 
-  func test_array_based_api_01() {
+  func _compareRange(
+      in checkingResult: NSTextCheckingResult
+    , byGroupName groupName: String?
+    , with index: Int ) -> Bool {
+
+    let rangeByGroupName = checkingResult.range( withGroupName: groupName )
+    let rangeByIndex = checkingResult.rangeAt( index )
+
+    return
+      rangeByGroupName.location == rangeByIndex.location
+        && rangeByGroupName.length == rangeByIndex.length
+    }
+
+  func _isRangeInvalid(
+      in checkingResult: NSTextCheckingResult
+    , byGroupName groupName: String? ) -> Bool {
+    
+    let rangeByGroupName = checkingResult.range( withGroupName: groupName )
+    return
+      rangeByGroupName.location == NSNotFound
+        && rangeByGroupName.length == 0
+    }
+
+  func testArrayBasedAPI_01() {
     let matches = TestSamples_Group1.USAPhoneNumberPattern.matches(
         in: TestSamples_Group1.phoneNumber
       , options: []
@@ -30,33 +58,14 @@ class NSRegExNamedCaptureGroupTests: XCTestCase {
       )
 
     for match in matches {
-      let overallRange = match.range( withGroupName: nil )
-      XCTAssert(
-        overallRange.location == match.range.location
-          && overallRange.length == match.range.length
-        )
-
-      let rangeOfGroupNameArea = match.range( withGroupName: "(?<Area>\\d\\d\\d)" )
-      XCTAssert(
-        rangeOfGroupNameArea.location == match.rangeAt( 1 ).location
-          && rangeOfGroupNameArea.length == match.rangeAt( 1 ).length
-        )
-
-      let rangeOfGroupNameExch = match.range( withGroupName: "(?<Exch>\\d\\d\\d)" )
-      XCTAssert(
-        rangeOfGroupNameExch.location == NSNotFound
-          && rangeOfGroupNameExch.length == 0
-        )
-
-      let rangeOfGroupNameNum = match.range( withGroupName: "(?<Num>\\d\\d\\d\\d)" )
-      XCTAssert(
-        rangeOfGroupNameNum.location == match.rangeAt( 2 ).location
-          && rangeOfGroupNameNum.length == match.rangeAt( 2 ).length
-        )
+      XCTAssert( _compareRange( in: match, byGroupName: nil, with: 0 ) )
+      XCTAssert( _compareRange( in: match, byGroupName: TestSamples_Group1.areaPattern, with: 1 ) )
+      XCTAssert( _isRangeInvalid( in: match, byGroupName: TestSamples_Group1.exchPattern ) )
+      XCTAssert( _compareRange( in: match, byGroupName: TestSamples_Group1.numPattern, with: 2 ) )
       }
     }
 
-  func test_block_enumeration_based_api_01() {
+  func testBlockEnumerationBasedAPI_01() {
     TestSamples_Group1.USAPhoneNumberPattern.enumerateMatches(
         in: TestSamples_Group1.phoneNumber
       , options: []
@@ -64,32 +73,20 @@ class NSRegExNamedCaptureGroupTests: XCTestCase {
       ) { checkingResult, _, stopToken in
 
       XCTAssertNotNil( checkingResult )
-      guard let checkingResult = checkingResult else { stopToken.pointee = true; return }
-
-      do {
-        let rangesOfCaptured = try TestSamples_Group1.USAPhoneNumberPattern.rangesOfNamedCaptureGroups( inMatch: checkingResult )
-        XCTAssertEqual( rangesOfCaptured.count, checkingResult.numberOfRanges - 1 )
-
-        // Tests whether NSRegExNamedCaptureGroup can extract 
-        // all the NCG expressions properly
-        for ( ncgSubexpr, nsRange ) in rangesOfCaptured {
-          let pattern = TestSamples_Group1.USAPhoneNumberPattern.pattern
-          let targetText = TestSamples_Group1.phoneNumber
-          XCTAssertNotEqual( pattern.range( of: ncgSubexpr ), nil )
-
-          // let substringCapturedByNCG = targetText[ targetText.range( from: nsRange )! ]
-          // let substringCapturedByOrdi = targetText[ targetText.range( from: checkingResult.range )! ]
-          // XCTAssertEqual( substringCapturedByNCG, substringCapturedByOrdi )
-          }
-
-        } catch {
-          fatalError( error.localizedDescription )
+      guard let checkingResult = checkingResult else {
+        stopToken.pointee = ObjCBool( true );
+        return
         }
+
+      XCTAssert( _compareRange( in: checkingResult, byGroupName: nil, with: 0 ) )
+      XCTAssert( _compareRange( in: checkingResult, byGroupName: TestSamples_Group1.areaPattern, with: 1 ) )
+      XCTAssert( _isRangeInvalid( in: checkingResult, byGroupName: TestSamples_Group1.exchPattern ) )
+      XCTAssert( _compareRange( in: checkingResult, byGroupName: TestSamples_Group1.numPattern, with: 2 ) )
       }
     }
 
   static var allTests = [
-      ( "test_array_based_api_01", test_array_based_api_01 )
-    , ( "test_block_enumeration_based_api_01", test_block_enumeration_based_api_01 )
+      ( "testArrayBasedAPI_01", testArrayBasedAPI_01 )
+    , ( "testBlockEnumerationBasedAPI_01", testBlockEnumerationBasedAPI_01 )
     ]
   }
