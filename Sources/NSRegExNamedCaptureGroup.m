@@ -1,4 +1,4 @@
-#import "NSRegEx+NamedCaptureGroup.h"
+#import "NSRegExNamedCaptureGroup.h"
 #import "NSRegExNamedCaptureGroup/NSRegExNamedCaptureGroup-Swift.h"
 
 @interface NSRegularExpression ( _Helpers )

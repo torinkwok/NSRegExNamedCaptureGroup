@@ -1,4 +1,10 @@
-@import Foundation;
+#import <Foundation/Foundation.h>
+
+//! Project version number for NSRegExNamedCaptureGroup.
+FOUNDATION_EXPORT double NSRegExNamedCaptureGroupVersionNumber;
+
+//! Project version string for NSRegExNamedCaptureGroup.
+FOUNDATION_EXPORT const unsigned char NSRegExNamedCaptureGroupVersionString[];
 
 NS_ASSUME_NONNULL_BEGIN
 
