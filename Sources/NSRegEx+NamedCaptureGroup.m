@@ -9,6 +9,26 @@
 #import "NSRegEx+NamedCaptureGroup.h"
 #import "NSRegExNamedCaptureGroup/NSRegExNamedCaptureGroup-Swift.h"
 
+@interface NSRegularExpression ( _Helpers )
+
+/// Returns a dictionary, after introspecting regex's own pattern, 
+/// containing all the Named Capture Group expressions found in
+/// receiver's pattern and their corresponding indices.
+///
+/// - Returns: A dictionary containing the Named Capture Group expressions
+///   plucked out and their corresponding indices.
+- ( nullable NSDictionary<NSString*, NSNumber*>* ) _indicesOfNamedCaptureGroupsWithError: ( NSError** )error;
+
+/// Returns a dictionary, after introspecting regex's own pattern, 
+/// containing all the Named Capture Group expressions found in
+/// receiver's pattern and the range of those expressions.
+///
+/// - Returns: A dictionary containing the Named Capture Group expressions
+///   plucked out and the range of those expressions.
+- ( nullable NSDictionary<NSString*, NSValue*>* ) _rangesOfNamedCaptureGroupsInMatch: ( NSTextCheckingResult* )match error: ( NSError** )error;
+
+@end
+
 static void* _CaptureGroupsDictAssociatedKey;
 static void _swizzle( Class srcClass, SEL srcSelector, Class dstClass, SEL dstSelector );
 
@@ -40,7 +60,7 @@ _swizzling_enumerateMatchesInString: ( NSString* )string
                          usingBlock: ( NSRegExEnumerationBlock )block {
   NSRegExEnumerationBlock ourBlock =
     ^( NSTextCheckingResult* result, NSMatchingFlags flags, BOOL* stop ) {
-      NSDictionary* captureGroupsDict = [ self rangesOfNamedCaptureGroupsInMatch: result error: nil ];
+      NSDictionary* captureGroupsDict = [ self _rangesOfNamedCaptureGroupsInMatch: result error: nil ];
       objc_setAssociatedObject( result, &_CaptureGroupsDictAssociatedKey, captureGroupsDict, OBJC_ASSOCIATION_RETAIN );
 
       if ( block )
@@ -60,7 +80,11 @@ _swizzling_enumerateMatchesInString: ( NSString* )string
     );
   }
 
-- ( NSDictionary<NSString*, NSNumber*>* ) indicesOfNamedCaptureGroupsWithError: ( NSError** )error {
+@end
+
+@implementation NSRegularExpression ( _Helpers )
+
+- ( NSDictionary<NSString*, NSNumber*>* ) _indicesOfNamedCaptureGroupsWithError: ( NSError** )error {
   NSMutableDictionary* groupNames = [ NSMutableDictionary dictionary ];
 
   [ [ self _textCheckingResultsOfNamedCaptureGroups_objcAndReturnError: error ]
@@ -72,7 +96,7 @@ _swizzling_enumerateMatchesInString: ( NSString* )string
   return groupNames;
   }
 
-- ( NSDictionary<NSString*, NSValue*>* ) rangesOfNamedCaptureGroupsInMatch: ( NSTextCheckingResult* )match error: ( NSError** )error {
+- ( NSDictionary<NSString*, NSValue*>* ) _rangesOfNamedCaptureGroupsInMatch: ( NSTextCheckingResult* )match error: ( NSError** )error {
   NSMutableDictionary* groupNames = [ NSMutableDictionary dictionary ];
 
   [ [ self _textCheckingResultsOfNamedCaptureGroups_objcAndReturnError: error ]
@@ -83,6 +107,7 @@ _swizzling_enumerateMatchesInString: ( NSString* )string
 
   return groupNames;
   }
+
 @end
 
 void _swizzle( Class srcClass, SEL srcSelector, Class dstClass, SEL dstSelector ) {

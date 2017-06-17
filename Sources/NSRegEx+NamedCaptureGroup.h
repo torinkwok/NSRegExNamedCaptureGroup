@@ -10,10 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSTextCheckingResult ( NSRegExNamedCaptureGroup )
-- ( NSRange ) rangeWithGroupName: ( nullable NSString* )groupName;
-@end
-
 /// __Named Capture Groups__ is an useful feature. Languages or libraries 
 /// like Python, PHP's preg engine, and .NET languages support captures to 
 /// named locations. Cocoa's NSRegEx implementation, according to Apple's 
@@ -37,27 +33,21 @@ NS_ASSUME_NONNULL_BEGIN
 /// own documentation, suggesting that Named Capture Groups are a recent
 /// addition and hence Cocoa's implementation has not integrated it yet.
 ///
-/// This extension aims at providing developers using NSRegEx's with 
-/// a solution to deal with Named Capture Groups within their regular 
-/// expressions.
-@interface NSRegularExpression ( NSRegExNamedCaptureGroup )
-
-/// Returns a dictionary, after introspecting regex's own pattern, 
-/// containing all the Named Capture Group expressions found in
-/// receiver's pattern and their corresponding indices.
+/// This extension library aims at providing developers using NSRegEx's 
+/// with an elegant approach to deal with Named Capture Groups within
+/// their regular expressions.
+@interface NSTextCheckingResult ( NSRegExNamedCaptureGroup )
+/// Returns the result type that the range represents.
 ///
-/// - Returns: A dictionary containing the Named Capture Group expressions
-///   plucked out and their corresponding indices.
-- ( nullable NSDictionary<NSString*, NSNumber*>* ) indicesOfNamedCaptureGroupsWithError: ( NSError** )error;
-
-/// Returns a dictionary, after introspecting regex's own pattern, 
-/// containing all the Named Capture Group expressions found in
-/// receiver's pattern and the range of those expressions.
-///
-/// - Returns: A dictionary containing the Named Capture Group expressions
-///   plucked out and the range of those expressions.
-- ( nullable NSDictionary<NSString*, NSValue*>* ) rangesOfNamedCaptureGroupsInMatch: ( NSTextCheckingResult* )match error: ( NSError** )error;
-
+/// - Parameters groupName: 
+/// - Returns: The range of the result.
+/// - Discussion: A result must have at least one range, but may
+///   optionally have more (for example, to represent regular 
+///   expression capture groups).
+///   Passing `range(withGroupName_:)` the value `nil` always returns
+///   the value of the the range property. Additional ranges, if any,
+///   will be got by provide their capture group names.
+- ( NSRange ) rangeWithGroupName: ( nullable NSString* )groupName;
 @end
 
 NS_ASSUME_NONNULL_END
