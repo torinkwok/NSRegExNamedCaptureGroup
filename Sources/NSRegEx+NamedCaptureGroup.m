@@ -10,6 +10,7 @@
 #import "NSRegExNamedCaptureGroup/NSRegExNamedCaptureGroup-Swift.h"
 
 static void* _CaptureGroupsDictAssociatedKey;
+static void _swizzle( Class srcClass, SEL srcSelector, Class dstClass, SEL dstSelector );
 
 @implementation NSTextCheckingResult ( NSRegExNamedCaptureGroup )
 
@@ -41,16 +42,10 @@ static void* _CaptureGroupsDictAssociatedKey;
   }
 
 + ( void ) load {
-  SEL selector = @selector( matchesInString:options:range: );
-  Method lhsMethod = class_getInstanceMethod( [ NSRegularExpression class ], selector );
-  IMP lhsImp = method_getImplementation( lhsMethod );
-
-  SEL swizzlingSelector =@selector( _swizzling_matchesInString:options:range: );
-  Method rhsMethod = class_getInstanceMethod( [ NSRegularExpression class ], swizzlingSelector );
-  IMP rhsImp = method_getImplementation( rhsMethod );
-
-  method_setImplementation( lhsMethod, rhsImp );
-  method_setImplementation( rhsMethod, lhsImp );
+  _swizzle(
+      [ NSRegularExpression class ], @selector( matchesInString:options:range: )
+    , [ NSRegularExpression class ], @selector( _swizzling_matchesInString:options:range: )
+    );
   }
 
 - ( NSDictionary<NSString*, NSNumber*>* ) indicesOfNamedCaptureGroupsWithError: ( NSError** )error {
@@ -77,3 +72,14 @@ static void* _CaptureGroupsDictAssociatedKey;
   return groupNames;
   }
 @end
+
+void _swizzle( Class srcClass, SEL srcSelector, Class dstClass, SEL dstSelector ) {
+  Method srcMethod = class_getInstanceMethod( srcClass, srcSelector );
+  IMP srcImp = method_getImplementation( srcMethod );
+
+  Method dstMethod = class_getInstanceMethod( dstClass, dstSelector );
+  IMP dstImp = method_getImplementation( dstMethod );
+
+  method_setImplementation( srcMethod, dstImp );
+  method_setImplementation( dstMethod, srcImp );  
+  }

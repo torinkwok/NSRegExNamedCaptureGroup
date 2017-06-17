@@ -9,7 +9,7 @@ import Foundation
 ///
 /// - Returns: A Swift range equivalent to `nsRange` 
 ///   if it is able to be converted. Otherwise, `nil`.
-public extension String {
+fileprivate extension String {
   func range( from nsRange: NSRange ) -> Range<Index>? {
     guard let swiftRange = nsRange.toRange() else {
       return nil
