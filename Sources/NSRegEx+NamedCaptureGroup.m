@@ -28,9 +28,9 @@ static void _swizzle( Class srcClass, SEL srcSelector, Class dstClass, SEL dstSe
 @implementation NSRegularExpression ( NSRegExNamedCaptureGroup )
 
 - ( NSArray<NSTextCheckingResult*>* ) 
-  _swizzling_matchesInString: ( NSString* )text
-                     options: ( NSMatchingOptions )options
-                       range: ( NSRange )range {
+_swizzling_matchesInString: ( NSString* )text
+                   options: ( NSMatchingOptions )options
+                     range: ( NSRange )range {
   NSArray* checkingResults = [ self _swizzling_matchesInString: text options: options range: range ];
 
   for ( NSTextCheckingResult* result in checkingResults ) {
@@ -41,10 +41,42 @@ static void _swizzle( Class srcClass, SEL srcSelector, Class dstClass, SEL dstSe
   return checkingResults;
   }
 
+typedef void (^NSRegExEnumerationBlock)(
+    NSTextCheckingResult* result
+  , NSMatchingFlags flags
+  , BOOL* stop
+  );
+
+- ( void )
+_swizzling_enumerateMatchesInString: ( NSString* )string
+                            options: ( NSMatchingOptions )options
+                              range: ( NSRange )range 
+                         usingBlock: ( NSRegExEnumerationBlock )block {
+  NSLog( @"Woody" );
+  NSRegExEnumerationBlock ourBlock =
+    ^( NSTextCheckingResult* result, NSMatchingFlags flags, BOOL* stop ) {
+      NSDictionary* captureGroupsDict = [ self rangesOfNamedCaptureGroupsInMatch: result error: nil ];
+      objc_setAssociatedObject( result, &_CaptureGroupsDictAssociatedKey, captureGroupsDict, OBJC_ASSOCIATION_RETAIN );
+
+      if ( block )
+        block( result, flags, stop );
+      };
+
+  [ self _swizzling_enumerateMatchesInString: string
+                                     options: options
+                                       range: range
+                                  usingBlock: ourBlock ];
+  }
+
 + ( void ) load {
   _swizzle(
       [ NSRegularExpression class ], @selector( matchesInString:options:range: )
     , [ NSRegularExpression class ], @selector( _swizzling_matchesInString:options:range: )
+    );
+
+  _swizzle(
+      [ NSRegularExpression class ], @selector( enumerateMatchesInString:options:range:usingBlock: )
+    , [ NSRegularExpression class ], @selector( _swizzling_enumerateMatchesInString:options:range:usingBlock: )
     );
   }
 
