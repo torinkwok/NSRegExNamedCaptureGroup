@@ -62,9 +62,27 @@ class NSRegExNamedCaptureGroupTests: XCTestCase {
       }
     }
 
+  func testFirstMatchAPI_01() {
+    let result = TestSamples_Group1.USAPhoneNumberPattern.firstMatch(
+        in: TestSamples_Group1.phoneNumber
+      , options: []
+      , range: NSMakeRange( 0, TestSamples_Group1.phoneNumber.utf16.count ) )
+
+    XCTAssertNotNil( result )
+    guard let firstMatch = result else {
+      return
+      }
+
+    XCTAssert( _compareRange( in: firstMatch, byGroupName: nil, with: 0 ) )
+    XCTAssert( _compareRange( in: firstMatch, byGroupName: TestSamples_Group1.areaPattern, with: 1 ) )
+    XCTAssert( _isRangeInvalid( in: firstMatch, byGroupName: TestSamples_Group1.exchPattern ) )
+    XCTAssert( _compareRange( in: firstMatch, byGroupName: TestSamples_Group1.numPattern, with: 2 ) )
+    }
+
   static var allTests = [
       ( "testArrayBasedAPI_01", testArrayBasedAPI_01 )
     , ( "testBlockEnumerationBasedAPI_01", testBlockEnumerationBasedAPI_01 )
+    , ( "testFirstMatchAPI_01", testFirstMatchAPI_01 )
     ]
   }
 
