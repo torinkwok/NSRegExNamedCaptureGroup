@@ -94,7 +94,7 @@ fileprivate extension NSRegExNamedCaptureGroupTests {
     , byGroupName groupName: String?
     , with index: Int ) -> Bool {
 
-    let rangeByGroupName = checkingResult.range( withGroupName: groupName )
+    let rangeByGroupName = checkingResult.rangeWith( groupName )
     let rangeByIndex = checkingResult.rangeAt( index )
 
     return
@@ -106,7 +106,7 @@ fileprivate extension NSRegExNamedCaptureGroupTests {
       in checkingResult: NSTextCheckingResult
     , byGroupName groupName: String? ) -> Bool {
     
-    let rangeByGroupName = checkingResult.range( withGroupName: groupName )
+    let rangeByGroupName = checkingResult.rangeWith( groupName )
     return
       rangeByGroupName.location == NSNotFound
         && rangeByGroupName.length == 0

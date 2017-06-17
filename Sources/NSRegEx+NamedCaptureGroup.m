@@ -15,16 +15,16 @@
 /// containing all the Named Capture Group expressions found in
 /// receiver's pattern and their corresponding indices.
 ///
-/// - Returns: A dictionary containing the Named Capture Group expressions
-///   plucked out and their corresponding indices.
+/// @return A dictionary containing the Named Capture Group expressions
+///         plucked out and their corresponding indices.
 - ( nullable NSDictionary<NSString*, NSNumber*>* ) _indicesOfNamedCaptureGroupsWithError: ( NSError** )error;
 
 /// Returns a dictionary, after introspecting regex's own pattern, 
 /// containing all the Named Capture Group expressions found in
 /// receiver's pattern and the range of those expressions.
 ///
-/// - Returns: A dictionary containing the Named Capture Group expressions
-///   plucked out and the range of those expressions.
+/// @return A dictionary containing the Named Capture Group expressions
+///         plucked out and the range of those expressions.
 - ( nullable NSDictionary<NSString*, NSValue*>* ) _rangesOfNamedCaptureGroupsInMatch: ( NSTextCheckingResult* )match error: ( NSError** )error;
 
 @end

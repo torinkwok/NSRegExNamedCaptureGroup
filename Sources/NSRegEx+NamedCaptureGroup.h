@@ -38,16 +38,18 @@ NS_ASSUME_NONNULL_BEGIN
 /// their regular expressions.
 @interface NSTextCheckingResult ( NSRegExNamedCaptureGroup )
 /// Returns the result type that the range represents.
+/// A result must have at least one range, but may
+/// optionally have more (for example, to represent regular 
+/// expression capture groups).
 ///
-/// - Parameters groupName: 
-/// - Returns: The range of the result.
-/// - Discussion: A result must have at least one range, but may
-///   optionally have more (for example, to represent regular 
-///   expression capture groups).
-///   Passing `range(withGroupName_:)` the value `nil` always returns
-///   the value of the the range property. Additional ranges, if any,
-///   will be got by provide their capture group names.
-- ( NSRange ) rangeWithGroupName: ( nullable NSString* )groupName;
+/// @pram groupName The name of capture group that appears in the regex
+///       pattern. Passing the value `nil` if the overall range is expected.
+///
+/// @return The range of the result.
+///         Passing the method the value `nil` always returns
+///         the value of the the `range` property. Additional ranges,
+///         if any, can be retrieved through their capture group names.
+- ( NSRange ) rangeWithGroupName: ( nullable NSString* )groupName NS_SWIFT_NAME(rangeWith(_:));
 @end
 
 NS_ASSUME_NONNULL_END
