@@ -103,14 +103,19 @@ public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
     -> [ String: _GroupNamesSearchResult ] {
 
     var groupNames = [ String: _GroupNamesSearchResult ]()
+    var index = 0
 
-    let genericCaptureGroupsMatched = GenericCaptureGroupsPattern.matches(
+    GenericCaptureGroupsPattern._vendors_enumerateMatches(
         in: self.pattern
       , options: .withTransparentBounds
       , range: NSMakeRange( 0, self.pattern.utf16.count )
-      )
+      ) { ordiGroup, _, stopToken in
 
-    for ( index, ordiGroup ) in genericCaptureGroupsMatched.enumerated() {
+      guard let ordiGroup = ordiGroup else {
+        stopToken.pointee = ObjCBool( true )
+        return
+        }
+
       // Extract the sub-expression nested in `self.pattern`
       let genericCaptureGroupExpr: String = self.pattern[ self.pattern.range( from: ordiGroup.range )! ]
 
@@ -140,6 +145,8 @@ public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
           , _index: index
           )
         }
+
+      index += 1
       }
 
     return groupNames

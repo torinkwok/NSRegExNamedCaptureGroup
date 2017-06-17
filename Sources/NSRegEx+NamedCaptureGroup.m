@@ -69,10 +69,10 @@ _swizzling_enumerateMatchesInString: ( NSString* )string
   }
 
 + ( void ) load {
-  _swizzle(
-      [ NSRegularExpression class ], @selector( matchesInString:options:range: )
-    , [ NSRegularExpression class ], @selector( _swizzling_matchesInString:options:range: )
-    );
+  // _swizzle(
+  //     [ NSRegularExpression class ], @selector( matchesInString:options:range: )
+  //   , [ NSRegularExpression class ], @selector( _swizzling_matchesInString:options:range: )
+  //   );
 
   _swizzle(
       [ NSRegularExpression class ], @selector( enumerateMatchesInString:options:range:usingBlock: )
