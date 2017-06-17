@@ -1,27 +1,6 @@
 import ObjectiveC
 import Foundation
 
-// let selector = #selector( NSRegularExpression.matches(in:options:range:) )
-// let lhsMethod: Method = class_getInstanceMethod( NSRegularExpression.self, selector )
-// let lhsImp = method_getImplementation( lhsMethod )
-
-// fileprivate extension NSRegularExpression {
-//   @objc fileprivate func swizzling_matches(
-//       in text: String
-//     , options: NSRegularExpression.MatchingOptions = []
-//     , range: NSRange ) -> [ NSTextCheckingResult ] {
-//     print( "HOLLY!!!" )
-//     return self.swizzling_matches( in: text, options: options, range: range )
-//     }
-//   }
-
-// let swizzlingSelector = #selector( NSRegularExpression.swizzling_matches(in:options:range:) )
-// let rhsMethod: Method = class_getInstanceMethod( NSRegularExpression.self, swizzlingSelector )
-// let rhsImp = method_getImplementation( rhsMethod )
-
-// method_setImplementation( lhsMethod, rhsImp )
-// method_setImplementation( rhsMethod, lhsImp )
-
 /// Returns a range equivalent to the given `NSRange`,
 /// or `nil` if the range can't be converted.
 ///

@@ -6,7 +6,7 @@
 //
 //
 
-@import Foundation;
+#import "NSRegEx+NamedCaptureGroup.h"
 #import "NSRegExNamedCaptureGroup/NSRegExNamedCaptureGroup-Swift.h"
 
 @implementation NSTextCheckingResult ( NSRegExNamedCaptureGroup )
@@ -21,6 +21,27 @@
 @end
 
 @implementation NSRegularExpression ( NSRegExNamedCaptureGroup )
+
+- ( NSArray<NSTextCheckingResult*>* ) 
+  _swizzling_matchesInString: ( NSString* )text
+                     options: ( NSMatchingOptions )options
+                       range: ( NSRange )range {
+  NSLog( @"HOLLY!!!" );
+  return [ self _swizzling_matchesInString: text options: options range: range ];
+  }
+
++ ( void ) load {
+  SEL selector = @selector( matchesInString:options:range: );
+  Method lhsMethod = class_getInstanceMethod( [ NSRegularExpression class ], selector );
+  IMP lhsImp = method_getImplementation( lhsMethod );
+
+  SEL swizzlingSelector =@selector( _swizzling_matchesInString:options:range: );
+  Method rhsMethod = class_getInstanceMethod( [ NSRegularExpression class ], swizzlingSelector );
+  IMP rhsImp = method_getImplementation( rhsMethod );
+
+  method_setImplementation( lhsMethod, rhsImp );
+  method_setImplementation( rhsMethod, lhsImp );
+  }
 
 - ( NSDictionary<NSString*, NSNumber*>* ) indicesOfNamedCaptureGroupsWithError: ( NSError** )error {
   NSMutableDictionary* groupNames = [ NSMutableDictionary dictionary ];
