@@ -131,15 +131,15 @@ public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
 
       if namedCaptureGroupsMatched.count > 0 {
         let firstNamedCaptureGroup = namedCaptureGroupsMatched[ 0 ]
-        let namedCaptureExpr: String = genericCaptureGroupExpr[ genericCaptureGroupExpr.range( from: firstNamedCaptureGroup.range )! ]
+        let groupName: String = genericCaptureGroupExpr[ genericCaptureGroupExpr.range( from: firstNamedCaptureGroup.rangeAt( 1 ) )! ]
 
         // In the case that `genericCaptureGroupExpr` is itself a NCG,
         // contents of `namedCaptureExpr` is completely identical to 
         // `genericCaptureGroupExpr`.
-
+        let namedCaptureExpr: String = genericCaptureGroupExpr[ genericCaptureGroupExpr.range( from: firstNamedCaptureGroup.range )! ]
         print( "Capture Name: qr/\(namedCaptureExpr)/" )
 
-        groupNames[ namedCaptureExpr ] = (
+        groupNames[ groupName ] = (
             _outerOrdinaryCaptureGroup: ordiGroup
           , _innerRefinedNamedCaptureGroup: firstNamedCaptureGroup
           , _index: index

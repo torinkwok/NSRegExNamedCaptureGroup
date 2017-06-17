@@ -17,9 +17,13 @@ class NSRegExNamedCaptureGroupTests: XCTestCase {
   class TestSamples_Group1 {
     static let phoneNumber = "202-555-0136"
 
-    static let areaPattern = "(?<Area>\\d\\d\\d)"
+    static let groupNameArea = "Area"
+    static let groupNameExch = "Exch"
+    static let groupNameNum = "Num"
+
+    static let areaPattern = "(?<\(groupNameArea)>\\d\\d\\d)"
     static let exchPattern = "(?:\\d\\d\\d)"
-    static let numPattern = "(?<Num>\\d\\d\\d\\d)"
+    static let numPattern = "(?<\(groupNameNum)>\\d\\d\\d\\d)"
 
     static let USAPhoneNumberPattern = try! NSRegularExpression(
         pattern: "\\b\(areaPattern)-\(exchPattern)-\(numPattern)\\b"
@@ -36,9 +40,9 @@ class NSRegExNamedCaptureGroupTests: XCTestCase {
 
     for match in matches {
       XCTAssert( _compareRange( in: match, byGroupName: nil, with: 0 ) )
-      XCTAssert( _compareRange( in: match, byGroupName: TestSamples_Group1.areaPattern, with: 1 ) )
-      XCTAssert( _isRangeInvalid( in: match, byGroupName: TestSamples_Group1.exchPattern ) )
-      XCTAssert( _compareRange( in: match, byGroupName: TestSamples_Group1.numPattern, with: 2 ) )
+      XCTAssert( _compareRange( in: match, byGroupName: TestSamples_Group1.groupNameArea, with: 1 ) )
+      XCTAssert( _isRangeInvalid( in: match, byGroupName: TestSamples_Group1.groupNameExch ) )
+      XCTAssert( _compareRange( in: match, byGroupName: TestSamples_Group1.groupNameNum, with: 2 ) )
       }
     }
 
@@ -56,9 +60,9 @@ class NSRegExNamedCaptureGroupTests: XCTestCase {
         }
 
       XCTAssert( _compareRange( in: checkingResult, byGroupName: nil, with: 0 ) )
-      XCTAssert( _compareRange( in: checkingResult, byGroupName: TestSamples_Group1.areaPattern, with: 1 ) )
-      XCTAssert( _isRangeInvalid( in: checkingResult, byGroupName: TestSamples_Group1.exchPattern ) )
-      XCTAssert( _compareRange( in: checkingResult, byGroupName: TestSamples_Group1.numPattern, with: 2 ) )
+      XCTAssert( _compareRange( in: checkingResult, byGroupName: TestSamples_Group1.groupNameArea, with: 1 ) )
+      XCTAssert( _isRangeInvalid( in: checkingResult, byGroupName: TestSamples_Group1.groupNameExch ) )
+      XCTAssert( _compareRange( in: checkingResult, byGroupName: TestSamples_Group1.groupNameNum, with: 2 ) )
       }
     }
 
@@ -74,9 +78,9 @@ class NSRegExNamedCaptureGroupTests: XCTestCase {
       }
 
     XCTAssert( _compareRange( in: firstMatch, byGroupName: nil, with: 0 ) )
-    XCTAssert( _compareRange( in: firstMatch, byGroupName: TestSamples_Group1.areaPattern, with: 1 ) )
-    XCTAssert( _isRangeInvalid( in: firstMatch, byGroupName: TestSamples_Group1.exchPattern ) )
-    XCTAssert( _compareRange( in: firstMatch, byGroupName: TestSamples_Group1.numPattern, with: 2 ) )
+    XCTAssert( _compareRange( in: firstMatch, byGroupName: TestSamples_Group1.groupNameArea, with: 1 ) )
+    XCTAssert( _isRangeInvalid( in: firstMatch, byGroupName: TestSamples_Group1.groupNameExch ) )
+    XCTAssert( _compareRange( in: firstMatch, byGroupName: TestSamples_Group1.groupNameNum, with: 2 ) )
     }
 
   static var allTests = [
