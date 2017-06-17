@@ -13,12 +13,12 @@
 		8344BA881EF40E16001B5012 /* NSRegEx+NamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA7F1EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8344BA891EF40E19001B5012 /* NSRegEx+NamedCaptureGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA801EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.m */; };
 		8344BA8A1EF40E5B001B5012 /* _Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA7C1EF40CEB001B5012 /* _Core.swift */; };
-		8344BA8F1EF40EB4001B5012 /* NSRegExNamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA8E1EF40EB4001B5012 /* NSRegExNamedCaptureGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8344BAA01EF40F4B001B5012 /* NSRegExNamedCaptureGroup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8344BA651EF40CC2001B5012 /* NSRegExNamedCaptureGroup.framework */; };
 		8344BAA61EF40F7B001B5012 /* NSRegExNamedCaptureGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA921EF40F17001B5012 /* NSRegExNamedCaptureGroupTests.swift */; };
-		8344BAA71EF4103F001B5012 /* NSRegExNamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BA901EF40ED9001B5012 /* NSRegExNamedCaptureGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8344BAB11EF418D9001B5012 /* NSRegExNamedCaptureGroup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8344BA731EF40CD6001B5012 /* NSRegExNamedCaptureGroup.framework */; };
 		8344BAB71EF41923001B5012 /* NSRegExNamedCaptureGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8344BA921EF40F17001B5012 /* NSRegExNamedCaptureGroupTests.swift */; };
+		8344BAEC1EF55F84001B5012 /* NSRegExNamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BAEB1EF55F84001B5012 /* NSRegExNamedCaptureGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8344BAEF1EF55FA5001B5012 /* NSRegExNamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 8344BAED1EF55F8E001B5012 /* NSRegExNamedCaptureGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +44,6 @@
 		8344BA7C1EF40CEB001B5012 /* _Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Core.swift; sourceTree = "<group>"; };
 		8344BA7F1EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRegEx+NamedCaptureGroup.h"; sourceTree = "<group>"; };
 		8344BA801EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRegEx+NamedCaptureGroup.m"; sourceTree = "<group>"; };
-		8344BA8E1EF40EB4001B5012 /* NSRegExNamedCaptureGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSRegExNamedCaptureGroup.h; path = ../macOS/NSRegExNamedCaptureGroup.h; sourceTree = "<group>"; };
-		8344BA901EF40ED9001B5012 /* NSRegExNamedCaptureGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSRegExNamedCaptureGroup.h; path = ../iOS/NSRegExNamedCaptureGroup.h; sourceTree = "<group>"; };
 		8344BA921EF40F17001B5012 /* NSRegExNamedCaptureGroupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSRegExNamedCaptureGroupTests.swift; path = ../../Tests/NSRegExNamedCaptureGroupTests.swift; sourceTree = "<group>"; };
 		8344BA9B1EF40F4B001B5012 /* NSRegExNamedCaptureGroup macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSRegExNamedCaptureGroup macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8344BAAC1EF418D9001B5012 /* NSRegExNamedCaptureGroup iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSRegExNamedCaptureGroup iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +51,8 @@
 		8344BABD1EF41B9A001B5012 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "iOS Tests/Info.plist"; sourceTree = SOURCE_ROOT; };
 		8344BAC11EF4D45C001B5012 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = macOS/Info.plist; sourceTree = SOURCE_ROOT; };
 		8344BAC31EF4D466001B5012 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = iOS/Info.plist; sourceTree = SOURCE_ROOT; };
+		8344BAEB1EF55F84001B5012 /* NSRegExNamedCaptureGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSRegExNamedCaptureGroup.h; path = macOS/NSRegExNamedCaptureGroup.h; sourceTree = SOURCE_ROOT; };
+		8344BAED1EF55F8E001B5012 /* NSRegExNamedCaptureGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSRegExNamedCaptureGroup.h; path = iOS/NSRegExNamedCaptureGroup.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,7 @@
 		8344BA671EF40CC2001B5012 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				8344BA8E1EF40EB4001B5012 /* NSRegExNamedCaptureGroup.h */,
+				8344BAEB1EF55F84001B5012 /* NSRegExNamedCaptureGroup.h */,
 				8344BAC11EF4D45C001B5012 /* Info.plist */,
 			);
 			name = macOS;
@@ -128,7 +128,7 @@
 		8344BA741EF40CD6001B5012 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				8344BA901EF40ED9001B5012 /* NSRegExNamedCaptureGroup.h */,
+				8344BAED1EF55F8E001B5012 /* NSRegExNamedCaptureGroup.h */,
 				8344BAC31EF4D466001B5012 /* Info.plist */,
 			);
 			name = iOS;
@@ -179,8 +179,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8344BAEC1EF55F84001B5012 /* NSRegExNamedCaptureGroup.h in Headers */,
 				8344BA851EF40CEB001B5012 /* NSRegEx+NamedCaptureGroup.h in Headers */,
-				8344BA8F1EF40EB4001B5012 /* NSRegExNamedCaptureGroup.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,8 +188,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8344BAEF1EF55FA5001B5012 /* NSRegExNamedCaptureGroup.h in Headers */,
 				8344BA881EF40E16001B5012 /* NSRegEx+NamedCaptureGroup.h in Headers */,
-				8344BAA71EF4103F001B5012 /* NSRegExNamedCaptureGroup.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +419,7 @@
 		8344BA6C1EF40CC2001B5012 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -485,7 +485,7 @@
 		8344BA6D1EF40CC2001B5012 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -544,7 +544,7 @@
 		8344BA791EF40CD6001B5012 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -609,7 +609,7 @@
 		8344BA7A1EF40CD6001B5012 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -668,7 +668,7 @@
 		8344BAA41EF40F4B001B5012 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -725,7 +725,7 @@
 		8344BAA51EF40F4B001B5012 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -775,7 +775,7 @@
 		8344BAB51EF418D9001B5012 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -830,7 +830,7 @@
 		8344BAB61EF418D9001B5012 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -895,6 +895,7 @@
 				8344BA6D1EF40CC2001B5012 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8344BA781EF40CD6001B5012 /* Build configuration list for PBXNativeTarget "NSRegExNamedCaptureGroup iOS" */ = {
 			isa = XCConfigurationList;
@@ -903,6 +904,7 @@
 				8344BA7A1EF40CD6001B5012 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8344BAA31EF40F4B001B5012 /* Build configuration list for PBXNativeTarget "NSRegExNamedCaptureGroup macOS Tests" */ = {
 			isa = XCConfigurationList;
@@ -911,6 +913,7 @@
 				8344BAA51EF40F4B001B5012 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8344BAB41EF418D9001B5012 /* Build configuration list for PBXNativeTarget "NSRegExNamedCaptureGroup iOS Tests" */ = {
 			isa = XCConfigurationList;
@@ -919,6 +922,7 @@
 				8344BAB61EF418D9001B5012 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
