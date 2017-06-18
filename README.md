@@ -1,4 +1,4 @@
-## The problem we're facing
+## The problem we've faced
 
 Nearly all modern regular expression engines support [numbered capturing groups](http://www.regular-expressions.info/brackets.html) and numbered [backreferences](http://www.regular-expressions.info/backref.html). Long regular expressions with lots of groups and backreferences may be hard to read. They can be particularly difficult to maintain as adding or removing a capturing group in the middle of the regex upsets the numbers of all the groups that follow the added or removed group.
 
@@ -73,9 +73,15 @@ git submodule add https://github.com/TorinKwok/NSRegExNamedCaptureGroup.git "$SR
 
 2. The remaining steps are identical to the last two in **Carthage** section
 
+### Usage
+
+```swift
+
+```
+
 ### Author
 
-Torin Kwok (torin@kwok.im)
+[Torin Kwok](https://keybase.io/kwok).
 
 ### License
 
