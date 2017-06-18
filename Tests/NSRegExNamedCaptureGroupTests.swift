@@ -12,26 +12,7 @@ extension NSRegularExpression {
     }
   }
 
-class NSRegExNamedCaptureGroupTests: XCTestCase {
-
-  class USAPhoneNumberSamples {
-    static let phoneNumber = "202-555-0136"
-
-    static let groupNameArea = "Area"
-    static let groupNameExch = "Exch"
-    static let groupNameNum = "Num"
-
-    static let areaPattern = "(?<\(groupNameArea)>\\d\\d\\d)"
-    static let exchPattern = "(?:\\d\\d\\d)"
-    static let numPattern = "(?<\(groupNameNum)>\\d\\d\\d\\d)"
-
-    static let USAPhoneNumberPattern = try! NSRegularExpression(
-        pattern: "\\b\(areaPattern)-\(exchPattern)-\(numPattern)\\b"
-      , options: NSRegularExpression.commonOptions
-      )
-    }
-
-  }
+class NSRegExNamedCaptureGroupTests: XCTestCase {}
 
 /// Utility extension for convenience
 extension NSRegExNamedCaptureGroupTests {

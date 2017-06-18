@@ -1,12 +1,38 @@
 import XCTest
 @testable import NSRegExNamedCaptureGroup
 
-class USAPhoneNumberTestCase: NSRegExNamedCaptureGroupTests {
+fileprivate class USAPhoneNumberTestCase: NSRegExNamedCaptureGroupTests {
+  static var allTests = [
+      ( "testArrayBasedAPI_01", testArrayBasedAPI_01 )
+    , ( "testBlockEnumerationBasedAPI_01", testBlockEnumerationBasedAPI_01 )
+    , ( "testFirstMatchAPI_01", testFirstMatchAPI_01 )
+    ]
+  }
+
+fileprivate extension USAPhoneNumberTestCase {
+  class USAPhoneNumberSamples {
+    static let phoneNumber = "202-555-0136"
+
+    static let groupNameArea = "Area"
+    static let groupNameExch = "Exch"
+    static let groupNameNum = "Num"
+
+    static let areaPattern = "(?<\(groupNameArea)>\\d\\d\\d)"
+    static let exchPattern = "(?:\\d\\d\\d)"
+    static let numPattern = "(?<\(groupNameNum)>\\d\\d\\d\\d)"
+
+    static let USAPhoneNumberPattern = try! NSRegularExpression(
+        pattern: "\\b\(areaPattern)-\(exchPattern)-\(numPattern)\\b"
+      , options: NSRegularExpression.commonOptions
+      )
+    }
+  }
+
+fileprivate extension USAPhoneNumberTestCase {
 
   func testArrayBasedAPI_01() {
     let matches = USAPhoneNumberSamples.USAPhoneNumberPattern.matches(
         in: USAPhoneNumberSamples.phoneNumber
-      , options: []
       , range: NSMakeRange( 0, USAPhoneNumberSamples.phoneNumber.utf16.count )
       )
 
@@ -21,7 +47,6 @@ class USAPhoneNumberTestCase: NSRegExNamedCaptureGroupTests {
   func testBlockEnumerationBasedAPI_01() {
     USAPhoneNumberSamples.USAPhoneNumberPattern.enumerateMatches(
         in: USAPhoneNumberSamples.phoneNumber
-      , options: []
       , range: NSMakeRange( 0, USAPhoneNumberSamples.phoneNumber.utf16.count )
       ) { checkingResult, _, stopToken in
 
@@ -41,7 +66,6 @@ class USAPhoneNumberTestCase: NSRegExNamedCaptureGroupTests {
   func testFirstMatchAPI_01() {
     let result = USAPhoneNumberSamples.USAPhoneNumberPattern.firstMatch(
         in: USAPhoneNumberSamples.phoneNumber
-      , options: []
       , range: NSMakeRange( 0, USAPhoneNumberSamples.phoneNumber.utf16.count ) )
 
     XCTAssertNotNil( result )
@@ -54,10 +78,4 @@ class USAPhoneNumberTestCase: NSRegExNamedCaptureGroupTests {
     XCTAssert( _isRangeInvalid( in: firstMatch, byGroupName: USAPhoneNumberSamples.groupNameExch ) )
     XCTAssert( _compareRange( in: firstMatch, byGroupName: USAPhoneNumberSamples.groupNameNum, with: 2 ) )
     }
-
-  static var allTests = [
-      ( "testArrayBasedAPI_01", testArrayBasedAPI_01 )
-    , ( "testBlockEnumerationBasedAPI_01", testBlockEnumerationBasedAPI_01 )
-    , ( "testFirstMatchAPI_01", testFirstMatchAPI_01 )
-    ]
   }
