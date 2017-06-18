@@ -119,8 +119,6 @@ public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
       // Extract the sub-expression nested in `self.pattern`
       let genericCaptureGroupExpr: String = self.pattern[ self.pattern.range( from: ordiGroup.range )! ]
 
-      print( "Gapturing/Grouping: qr/\(genericCaptureGroupExpr)/" )
-
       // Extract the part of Named Capture Group sub-expressions
       // nested in `genericCaptureGroupExpr`.
       let namedCaptureGroupsMatched = NamedCaptureGroupsPattern.matches(
@@ -137,7 +135,7 @@ public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
         // contents of `namedCaptureExpr` is completely identical to 
         // `genericCaptureGroupExpr`.
         let namedCaptureExpr: String = genericCaptureGroupExpr[ genericCaptureGroupExpr.range( from: firstNamedCaptureGroup.range )! ]
-        print( "Capture Name: qr/\(namedCaptureExpr)/" )
+        print( namedCaptureExpr )
 
         groupNames[ groupName ] = (
             _outerOrdinaryCaptureGroup: ordiGroup

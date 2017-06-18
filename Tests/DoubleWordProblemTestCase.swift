@@ -20,21 +20,24 @@ fileprivate extension DoubleWordProblemTestCase {
       return contents
       }()
 
-    static let patterns: ( NSRegularExpression, NSRegularExpression, NSRegularExpression ) = {
+    static let patterns: (
+        mainPattern: NSRegularExpression
+      , cleanPattern: NSRegularExpression
+      , formatPattern: NSRegularExpression ) = {
       let patterns = (
         ( "\\b                                                   \n"
         + "# Need to match one word:                             \n"
-        + "( [a-z]+ )                                            \n"
+        + "(?<Once> [a-z]+ )                                     \n"
 
         + "# Now need to allow any number of spaces and/or <TAGS>\n"
-        + "(                                                     \n"
+        + "(?<Spaces>                                                     \n"
         + "  # Whitespace (includes newline, which is good)      \n"
         + "  # or item like html <tags>                          \n"
-        + "  (?:\\s | <[^>]+>)+                                  \n"
+        + "  (?<Tag>\\s | <[^>]+>)+                              \n"
         + ")                                                     \n"
 
         + "# Now match the first word again:                     \n"
-        + "(\\1\\b)"
+        + "(?<Twice>\\1\\b)"
         ).regularExpression
 
         , "^(?:[^\\e]*\\n)".regularExpression
@@ -59,15 +62,38 @@ fileprivate class DoubleWordProblemTestCase: NSRegExNamedCaptureGroupTests {
     ]
 
   func test_01() {
+    let samplePatterns = DoubleWordProblemSamples.patterns
     for ( fileURL, contents ) in DoubleWordProblemSamples.loadedContents {
 
-      // print( 
-      //   ( ( ( contents =~ pattern )(
-      //         "$1".highlightedInTerminal + "$2" + "$3".highlightedInTerminal
-      //       ) =~ clearingPattern )( "" ) =~ formatPattern )(
-      //     "\(fileURL.pathComponents.suffix( 1 ).joined( separator: "/" )): ".boldInTerminal
-      //     )
-      //   )
+      let nsRange = NSMakeRange( 0, contents.utf16.count )
+
+      samplePatterns.mainPattern.enumerateMatches(
+          in: contents, range: nsRange ) {
+        match, _, stopToken in
+        guard let match = match else {
+          stopToken.pointee = ObjCBool( true )
+          return
+          }
+
+        XCTAssert( _compareRange( in: match, byGroupName: nil, with: 0 ) )
+        XCTAssert( _compareRange( in: match, byGroupName: "Once", with: 1 ) )
+        // XCTAssert( _compareRange( in: match, byGroupName: "Spaces", with: 2 ) )
+        XCTAssert( _compareRange( in: match, byGroupName: "Tag", with: 3 ) )
+        XCTAssert( _compareRange( in: match, byGroupName: "Twice", with: 4 ) )
+        
+        print( "Range of (?<Once>): \(NSStringFromRange( match.rangeWith( "Once" ) ))" )
+        print( "Range of (?<Spaces>): \(NSStringFromRange( match.rangeWith( "Spaces" ) ))" )
+        print( "Range of (?<Tag>): \(NSStringFromRange( match.rangeWith( "Tag" ) ))" )
+        print( "Range of (?<Twice>): \(NSStringFromRange( match.rangeWith( "Twice" ) ))" )
+        }
+
+      print( 
+        ( ( ( contents =~ samplePatterns.mainPattern )(
+              "$1".highlightedInTerminal + "$2" + "$3".highlightedInTerminal
+            ) =~ samplePatterns.cleanPattern )( "" ) =~ samplePatterns.formatPattern )(
+          "\(fileURL.pathComponents.suffix( 1 ).joined( separator: "/" )): ".boldInTerminal
+          )
+        )
       }
     }
   }
