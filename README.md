@@ -35,7 +35,7 @@ That is to say, the only way of capturing group matching results exposed by `NSR
 
 ## Happy are those who are sad ... - Matthew 5:4
 
-This extension library aims at providing developers using `NSRegEx` 
+The extension library, __NSRegExNamedCaptureGroup__, aims at providing developers using `NSRegEx` 
 with an intuitive approach to deal with Named Capture Groups within
 their regular expressions.
 
@@ -79,21 +79,50 @@ git submodule add https://github.com/TorinKwok/NSRegExNamedCaptureGroup.git "$SR
 import NSRegExNamedCaptureGroup
 
 let phoneNumber = "202-555-0136"
-let pattern = try! NSRegularExpression( pattern: "(?<Area>\\d\\d\\d)-(?:\\d\\d\\d)-(?<Num>\\d\\d\\d\\d)", options: [] )
+
+// Regex with Named Capture Group.
+// Without importing NSRegExNamedCaptureGroup, you'd have to 
+// deal with the matching results (instances of NSTextCheckingResult)
+// through passing the Numberd Capture Group API: 
+// `rangeAt(:_)` a series of magic numbers: 0, 1, 2, 3 ...
+// That's rather inconvenient, confusing, and, as a result, error prune.
+let pattern = "(?<Area>\\d\\d\\d)-(?:\\d\\d\\d)-(?<Num>\\d\\d\\d\\d)"
+
+let pattern = try! NSRegularExpression( pattern: pattern, options: [] )
+let range = NSMakeRange( 0, phoneNumber.utf16.count )
 ```
+
+Working with `NSRegEx`'s first match convenient method:
 
 ```swift
 let firstMatch = pattern.firstMatch( in: phoneNumber, range: range )
+
+// Much better ... 
+
+// ... than invoking `rangeAt( 1 )`
 print( NSStringFromRange( firstMatch!.rangeWith( "Area" ) ) )
-// Prints "{0, 3}"
+// prints "{0, 3}"
 
+// ... than putting your program at the risk of getting an
+// unexpected result back by passing `rangeAt( 2 )` when you
+// forget that the middle capture group (?:\d\d\d) is wrapped 
+// within a pair of grouping-only parentheses, which means 
+// it will not participate in capturing at all.
+//
+// Conversely, in the case of using
+// NSRegExNamedCaptureGroup's extension method `rangeWith(:_)`,
+// we will only get a range {NSNotFound, 0} when the specified
+// group name does not exist in the original regex.
 print( NSStringFromRange( firstMatch!.rangeWith( "Exch" ) ) )
-// Prints "{9223372036854775807, 0}"
+// There's no a capture group named as "Exch",
+// so prints "{9223372036854775807, 0}"
 
+// ... than invoking `rangeAt( 2 )`
 print( NSStringFromRange( firstMatch!.rangeWith( "Num" ) ) )
-// Prints "{8, 4}"
-
+// prints "{8, 4}"
 ```
+
+Working with `NSRegEx`'s block-enumeration-based API:
 
 ```swift
 pattern.enumerateMatches( in: phoneNumber, range: range ) {
@@ -104,27 +133,31 @@ pattern.enumerateMatches( in: phoneNumber, range: range ) {
     }
 
   print( NSStringFromRange( match.rangeWith( "Area" ) ) )
-  // Prints "{0, 3}"
+  // prints "{0, 3}"
 
   print( NSStringFromRange( match.rangeWith( "Exch" ) ) )
-  // Prints "{9223372036854775807, 0}"
+  // There's no a capture group named as "Exch"
+  // prints "{9223372036854775807, 0}"
 
   print( NSStringFromRange( match.rangeWith( "Num" ) ) )
-  // Prints "{8, 4}"
+  // prints "{8, 4}"
   }
 ```
+
+Working with `NSRegEx`'s array-based API:
 
 ```swift
 let matches = pattern.matches( in: phoneNumber, range: range )
 for match in matches {
   print( NSStringFromRange( match.rangeWith( "Area" ) ) )
-  // Prints "{0, 3}"
+  // prints "{0, 3}"
 
   print( NSStringFromRange( match.rangeWith( "Exch" ) ) )
-  // Prints "{9223372036854775807, 0}"
+  // There's no a capture group named as "Exch"
+  // prints "{9223372036854775807, 0}"
 
   print( NSStringFromRange( match.rangeWith( "Num" ) ) )
-  // Prints "{8, 4}"
+  // prints "{8, 4}"
   }
 ```
 
