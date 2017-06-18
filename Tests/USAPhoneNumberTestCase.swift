@@ -1,14 +1,6 @@
 import XCTest
 @testable import NSRegExNamedCaptureGroup
 
-fileprivate class USAPhoneNumberTestCase: NSRegExNamedCaptureGroupTests {
-  static var allTests = [
-      ( "testArrayBasedAPI_01", testArrayBasedAPI_01 )
-    , ( "testBlockEnumerationBasedAPI_01", testBlockEnumerationBasedAPI_01 )
-    , ( "testFirstMatchAPI_01", testFirstMatchAPI_01 )
-    ]
-  }
-
 fileprivate extension USAPhoneNumberTestCase {
   class USAPhoneNumberSamples {
     static let phoneNumber = "202-555-0136"
@@ -28,9 +20,15 @@ fileprivate extension USAPhoneNumberTestCase {
     }
   }
 
-fileprivate extension USAPhoneNumberTestCase {
+fileprivate class USAPhoneNumberTestCase: NSRegExNamedCaptureGroupTests {
 
-  func testArrayBasedAPI_01() {
+  static let allTests = [
+      ( "testArrayBasedAPI", testArrayBasedAPI )
+    , ( "testBlockEnumerationBasedAPI", testBlockEnumerationBasedAPI )
+    , ( "testFirstMatchAPI", testFirstMatchAPI )
+    ]
+
+  func testArrayBasedAPI() {
     let matches = USAPhoneNumberSamples.USAPhoneNumberPattern.matches(
         in: USAPhoneNumberSamples.phoneNumber
       , range: NSMakeRange( 0, USAPhoneNumberSamples.phoneNumber.utf16.count )
@@ -44,7 +42,7 @@ fileprivate extension USAPhoneNumberTestCase {
       }
     }
 
-  func testBlockEnumerationBasedAPI_01() {
+  func testBlockEnumerationBasedAPI() {
     USAPhoneNumberSamples.USAPhoneNumberPattern.enumerateMatches(
         in: USAPhoneNumberSamples.phoneNumber
       , range: NSMakeRange( 0, USAPhoneNumberSamples.phoneNumber.utf16.count )
@@ -63,7 +61,7 @@ fileprivate extension USAPhoneNumberTestCase {
       }
     }
 
-  func testFirstMatchAPI_01() {
+  func testFirstMatchAPI() {
     let result = USAPhoneNumberSamples.USAPhoneNumberPattern.firstMatch(
         in: USAPhoneNumberSamples.phoneNumber
       , range: NSMakeRange( 0, USAPhoneNumberSamples.phoneNumber.utf16.count ) )

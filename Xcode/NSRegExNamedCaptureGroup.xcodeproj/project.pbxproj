@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		831C5B7B1EF65D37004A937B /* NSRegExNamedCaptureGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C5B7A1EF65D37004A937B /* NSRegExNamedCaptureGroupTests.swift */; };
-		831C5B7C1EF65D37004A937B /* NSRegExNamedCaptureGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C5B7A1EF65D37004A937B /* NSRegExNamedCaptureGroupTests.swift */; };
-		831C5B7E1EF661B9004A937B /* DoubleWordProblemTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C5B7D1EF661B9004A937B /* DoubleWordProblemTestCase.swift */; };
-		831C5B7F1EF661B9004A937B /* DoubleWordProblemTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C5B7D1EF661B9004A937B /* DoubleWordProblemTestCase.swift */; };
+		831C5B881EF662ED004A937B /* DoubleWordProblemTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C5B841EF662ED004A937B /* DoubleWordProblemTestCase.swift */; };
+		831C5B891EF662ED004A937B /* DoubleWordProblemTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C5B841EF662ED004A937B /* DoubleWordProblemTestCase.swift */; };
+		831C5B8C1EF662ED004A937B /* NSRegExNamedCaptureGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C5B861EF662ED004A937B /* NSRegExNamedCaptureGroupTests.swift */; };
+		831C5B8D1EF662ED004A937B /* NSRegExNamedCaptureGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C5B861EF662ED004A937B /* NSRegExNamedCaptureGroupTests.swift */; };
+		831C5B8E1EF662ED004A937B /* USAPhoneNumberTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C5B871EF662ED004A937B /* USAPhoneNumberTestCase.swift */; };
+		831C5B8F1EF662ED004A937B /* USAPhoneNumberTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C5B871EF662ED004A937B /* USAPhoneNumberTestCase.swift */; };
+		831C5B931EF6636E004A937B /* dwp_corpus_01 in Resources */ = {isa = PBXBuildFile; fileRef = 831C5B921EF6636E004A937B /* dwp_corpus_01 */; };
+		831C5B941EF6636E004A937B /* dwp_corpus_01 in Resources */ = {isa = PBXBuildFile; fileRef = 831C5B921EF6636E004A937B /* dwp_corpus_01 */; };
+		831C5B971EF6641C004A937B /* dwp_corpus_02 in Resources */ = {isa = PBXBuildFile; fileRef = 831C5B961EF6641C004A937B /* dwp_corpus_02 */; };
+		831C5B981EF6641C004A937B /* dwp_corpus_02 in Resources */ = {isa = PBXBuildFile; fileRef = 831C5B961EF6641C004A937B /* dwp_corpus_02 */; };
+		831C5B9A1EF67099004A937B /* String+NSRegExNamedCaptureGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C5B991EF67099004A937B /* String+NSRegExNamedCaptureGroupTests.swift */; };
+		831C5B9B1EF67099004A937B /* String+NSRegExNamedCaptureGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C5B991EF67099004A937B /* String+NSRegExNamedCaptureGroupTests.swift */; };
 		8344BAA01EF40F4B001B5012 /* NSRegExNamedCaptureGroup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8344BA651EF40CC2001B5012 /* NSRegExNamedCaptureGroup.framework */; };
 		8344BAB11EF418D9001B5012 /* NSRegExNamedCaptureGroup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8344BA731EF40CD6001B5012 /* NSRegExNamedCaptureGroup.framework */; };
 		83EB95EF1EF628370061EC5D /* _Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB95EC1EF628370061EC5D /* _Core.swift */; };
 		83EB95F01EF628370061EC5D /* NSRegExNamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 83EB95ED1EF628370061EC5D /* NSRegExNamedCaptureGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83EB95F11EF628370061EC5D /* NSRegExNamedCaptureGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EB95EE1EF628370061EC5D /* NSRegExNamedCaptureGroup.m */; };
 		83EB95F21EF6284E0061EC5D /* NSRegExNamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 83EB95ED1EF628370061EC5D /* NSRegExNamedCaptureGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83EB95F41EF628560061EC5D /* USAPhoneNumberTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB95E71EF628070061EC5D /* USAPhoneNumberTestCase.swift */; };
-		83EB95F51EF628570061EC5D /* USAPhoneNumberTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB95E71EF628070061EC5D /* USAPhoneNumberTestCase.swift */; };
 		83EB95F61EF6285B0061EC5D /* _Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB95EC1EF628370061EC5D /* _Core.swift */; };
 		83EB95F71EF628620061EC5D /* NSRegExNamedCaptureGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EB95EE1EF628370061EC5D /* NSRegExNamedCaptureGroup.m */; };
 /* End PBXBuildFile section */
@@ -41,8 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		831C5B7A1EF65D37004A937B /* NSRegExNamedCaptureGroupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSRegExNamedCaptureGroupTests.swift; path = ../Tests/NSRegExNamedCaptureGroupTests.swift; sourceTree = "<group>"; };
-		831C5B7D1EF661B9004A937B /* DoubleWordProblemTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoubleWordProblemTestCase.swift; path = ../Tests/DoubleWordProblemTestCase.swift; sourceTree = "<group>"; };
+		831C5B841EF662ED004A937B /* DoubleWordProblemTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleWordProblemTestCase.swift; sourceTree = "<group>"; };
+		831C5B861EF662ED004A937B /* NSRegExNamedCaptureGroupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRegExNamedCaptureGroupTests.swift; sourceTree = "<group>"; };
+		831C5B871EF662ED004A937B /* USAPhoneNumberTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USAPhoneNumberTestCase.swift; sourceTree = "<group>"; };
+		831C5B921EF6636E004A937B /* dwp_corpus_01 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dwp_corpus_01; sourceTree = "<group>"; };
+		831C5B961EF6641C004A937B /* dwp_corpus_02 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dwp_corpus_02; sourceTree = "<group>"; };
+		831C5B991EF67099004A937B /* String+NSRegExNamedCaptureGroupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+NSRegExNamedCaptureGroupTests.swift"; sourceTree = "<group>"; };
 		8344BA651EF40CC2001B5012 /* NSRegExNamedCaptureGroup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8344BA731EF40CD6001B5012 /* NSRegExNamedCaptureGroup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8344BA9B1EF40F4B001B5012 /* NSRegExNamedCaptureGroup macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSRegExNamedCaptureGroup macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,7 +61,6 @@
 		8344BABD1EF41B9A001B5012 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "iOS Tests/Info.plist"; sourceTree = SOURCE_ROOT; };
 		8344BAC11EF4D45C001B5012 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = macOS/Info.plist; sourceTree = SOURCE_ROOT; };
 		8344BAC31EF4D466001B5012 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = iOS/Info.plist; sourceTree = SOURCE_ROOT; };
-		83EB95E71EF628070061EC5D /* USAPhoneNumberTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = USAPhoneNumberTestCase.swift; path = ../Tests/USAPhoneNumberTestCase.swift; sourceTree = "<group>"; };
 		83EB95EC1EF628370061EC5D /* _Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Core.swift; sourceTree = "<group>"; };
 		83EB95ED1EF628370061EC5D /* NSRegExNamedCaptureGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRegExNamedCaptureGroup.h; sourceTree = "<group>"; };
 		83EB95EE1EF628370061EC5D /* NSRegExNamedCaptureGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSRegExNamedCaptureGroup.m; sourceTree = "<group>"; };
@@ -91,11 +100,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		831C5B831EF662ED004A937B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				831C5B861EF662ED004A937B /* NSRegExNamedCaptureGroupTests.swift */,
+				831C5B9D1EF67233004A937B /* Extensions */,
+				831C5B901EF6636E004A937B /* Resources */,
+				831C5B871EF662ED004A937B /* USAPhoneNumberTestCase.swift */,
+				831C5B841EF662ED004A937B /* DoubleWordProblemTestCase.swift */,
+			);
+			name = Tests;
+			path = ../Tests;
+			sourceTree = "<group>";
+		};
+		831C5B901EF6636E004A937B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				831C5B911EF6636E004A937B /* Corpus */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		831C5B911EF6636E004A937B /* Corpus */ = {
+			isa = PBXGroup;
+			children = (
+				831C5B921EF6636E004A937B /* dwp_corpus_01 */,
+				831C5B961EF6641C004A937B /* dwp_corpus_02 */,
+			);
+			path = Corpus;
+			sourceTree = "<group>";
+		};
+		831C5B9D1EF67233004A937B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				831C5B991EF67099004A937B /* String+NSRegExNamedCaptureGroupTests.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		8344BA591EF40C7D001B5012 = {
 			isa = PBXGroup;
 			children = (
 				83EB95EB1EF628370061EC5D /* Sources */,
-				8344BA961EF40F1A001B5012 /* Tests */,
+				831C5B831EF662ED004A937B /* Tests */,
 				8344BA671EF40CC2001B5012 /* macOS */,
 				8344BA741EF40CD6001B5012 /* iOS */,
 				8344BA9C1EF40F4B001B5012 /* macOS Tests */,
@@ -133,16 +180,6 @@
 			);
 			name = iOS;
 			path = "NSRegExNamedCaptureGroup iOS";
-			sourceTree = "<group>";
-		};
-		8344BA961EF40F1A001B5012 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				831C5B7A1EF65D37004A937B /* NSRegExNamedCaptureGroupTests.swift */,
-				83EB95E71EF628070061EC5D /* USAPhoneNumberTestCase.swift */,
-				831C5B7D1EF661B9004A937B /* DoubleWordProblemTestCase.swift */,
-			);
-			name = Tests;
 			sourceTree = "<group>";
 		};
 		8344BA9C1EF40F4B001B5012 /* macOS Tests */ = {
@@ -338,6 +375,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831C5B931EF6636E004A937B /* dwp_corpus_01 in Resources */,
+				831C5B971EF6641C004A937B /* dwp_corpus_02 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +384,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831C5B941EF6636E004A937B /* dwp_corpus_01 in Resources */,
+				831C5B981EF6641C004A937B /* dwp_corpus_02 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,9 +414,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83EB95F41EF628560061EC5D /* USAPhoneNumberTestCase.swift in Sources */,
-				831C5B7B1EF65D37004A937B /* NSRegExNamedCaptureGroupTests.swift in Sources */,
-				831C5B7E1EF661B9004A937B /* DoubleWordProblemTestCase.swift in Sources */,
+				831C5B881EF662ED004A937B /* DoubleWordProblemTestCase.swift in Sources */,
+				831C5B9A1EF67099004A937B /* String+NSRegExNamedCaptureGroupTests.swift in Sources */,
+				831C5B8C1EF662ED004A937B /* NSRegExNamedCaptureGroupTests.swift in Sources */,
+				831C5B8E1EF662ED004A937B /* USAPhoneNumberTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,9 +425,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83EB95F51EF628570061EC5D /* USAPhoneNumberTestCase.swift in Sources */,
-				831C5B7C1EF65D37004A937B /* NSRegExNamedCaptureGroupTests.swift in Sources */,
-				831C5B7F1EF661B9004A937B /* DoubleWordProblemTestCase.swift in Sources */,
+				831C5B891EF662ED004A937B /* DoubleWordProblemTestCase.swift in Sources */,
+				831C5B9B1EF67099004A937B /* String+NSRegExNamedCaptureGroupTests.swift in Sources */,
+				831C5B8D1EF662ED004A937B /* NSRegExNamedCaptureGroupTests.swift in Sources */,
+				831C5B8F1EF662ED004A937B /* USAPhoneNumberTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
