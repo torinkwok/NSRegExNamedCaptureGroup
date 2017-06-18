@@ -38,3 +38,45 @@ That is to say, the only way of capturing group matching results exposed by `NSR
 This extension library aims at providing developers using `NSRegEx` 
 with an intuitive approach to deal with Named Capture Groups within
 their regular expressions.
+
+### Installation
+
+__Carthage__:
+
+If you use [Carthage](https://github.com/Carthage/Carthage) to manage your dependencies:
+
+1. Simply add *NSRegExNamedCaptureGroup* to your `Cartfile`:
+
+```
+github "TorinKwok/NSRegExNamedCaptureGroup" ~> 1.0.0
+```
+
+2. Click `File` -> `Add Files to "$PROJECT_NAME"` item in Xcode menu bar. Choose the `NSRegExNamedCaptureGroup.xcodeproj`
+
+3. Embed *NSRegExNamedCaptureGroup* in `General` panel
+
+__CocoaPods__:
+
+To install using [*CocoaPods*](https://github.com/cocoapods/cocoapods), add the following to your project Podfile:
+
+``` ruby
+pod 'NSRegExNamedCaptureGroup', '~>1.0.0'
+```
+
+__Git Submodule__:
+
+1. Clone and incorporate this repo into your project with `git submodule` command:
+
+``` shell
+git submodule add https://github.com/TorinKwok/NSRegExNamedCaptureGroup.git "$SRC_ROOT" --recursive`
+```
+
+2. The remaining steps are identical to the last two in **Carthage** section
+
+### Author
+
+Torin Kwok (torin@kwok.im)
+
+### License
+
+[Apache-2.0](./LICENSE).
