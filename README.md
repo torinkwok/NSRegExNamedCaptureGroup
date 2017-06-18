@@ -76,7 +76,56 @@ git submodule add https://github.com/TorinKwok/NSRegExNamedCaptureGroup.git "$SR
 ### Usage
 
 ```swift
+import NSRegExNamedCaptureGroup
 
+let phoneNumber = "202-555-0136"
+let pattern = try! NSRegularExpression( pattern: "(?<Area>\\d\\d\\d)-(?:\\d\\d\\d)-(?<Num>\\d\\d\\d\\d)", options: [] )
+```
+
+```swift
+let firstMatch = pattern.firstMatch( in: phoneNumber, range: range )
+print( NSStringFromRange( firstMatch!.rangeWith( "Area" ) ) )
+// Prints "{0, 3}"
+
+print( NSStringFromRange( firstMatch!.rangeWith( "Exch" ) ) )
+// Prints "{9223372036854775807, 0}"
+
+print( NSStringFromRange( firstMatch!.rangeWith( "Num" ) ) )
+// Prints "{8, 4}"
+
+```
+
+```swift
+pattern.enumerateMatches( in: phoneNumber, range: range ) {
+  match, _, stopToken in
+  guard let match = match else {
+    stopToken.pointee = ObjCBool( true )
+    return
+    }
+
+  print( NSStringFromRange( match.rangeWith( "Area" ) ) )
+  // Prints "{0, 3}"
+
+  print( NSStringFromRange( match.rangeWith( "Exch" ) ) )
+  // Prints "{9223372036854775807, 0}"
+
+  print( NSStringFromRange( match.rangeWith( "Num" ) ) )
+  // Prints "{8, 4}"
+  }
+```
+
+```swift
+let matches = pattern.matches( in: phoneNumber, range: range )
+for match in matches {
+  print( NSStringFromRange( match.rangeWith( "Area" ) ) )
+  // Prints "{0, 3}"
+
+  print( NSStringFromRange( match.rangeWith( "Exch" ) ) )
+  // Prints "{9223372036854775807, 0}"
+
+  print( NSStringFromRange( match.rangeWith( "Num" ) ) )
+  // Prints "{8, 4}"
+  }
 ```
 
 ### Author
