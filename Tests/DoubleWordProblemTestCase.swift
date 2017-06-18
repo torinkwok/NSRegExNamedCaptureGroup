@@ -30,7 +30,7 @@ fileprivate extension DoubleWordProblemTestCase {
         + "(?<Once> [a-z]+ )                                     \n"
 
         + "# Now need to allow any number of spaces and/or <TAGS>\n"
-        + "(?<Spaces>                                                     \n"
+        + "(?<Spaces>                                            \n"
         + "  # Whitespace (includes newline, which is good)      \n"
         + "  # or item like html <tags>                          \n"
         + "  (?<Tag>\\s | <[^>]+>)+                              \n"
