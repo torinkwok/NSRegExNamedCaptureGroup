@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		831C5B7B1EF65D37004A937B /* NSRegExNamedCaptureGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C5B7A1EF65D37004A937B /* NSRegExNamedCaptureGroupTests.swift */; };
 		831C5B7C1EF65D37004A937B /* NSRegExNamedCaptureGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C5B7A1EF65D37004A937B /* NSRegExNamedCaptureGroupTests.swift */; };
+		831C5B7E1EF661B9004A937B /* DoubleWordProblemTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C5B7D1EF661B9004A937B /* DoubleWordProblemTestCase.swift */; };
+		831C5B7F1EF661B9004A937B /* DoubleWordProblemTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C5B7D1EF661B9004A937B /* DoubleWordProblemTestCase.swift */; };
 		8344BAA01EF40F4B001B5012 /* NSRegExNamedCaptureGroup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8344BA651EF40CC2001B5012 /* NSRegExNamedCaptureGroup.framework */; };
 		8344BAB11EF418D9001B5012 /* NSRegExNamedCaptureGroup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8344BA731EF40CD6001B5012 /* NSRegExNamedCaptureGroup.framework */; };
 		83EB95EF1EF628370061EC5D /* _Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB95EC1EF628370061EC5D /* _Core.swift */; };
@@ -40,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		831C5B7A1EF65D37004A937B /* NSRegExNamedCaptureGroupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSRegExNamedCaptureGroupTests.swift; path = ../Tests/NSRegExNamedCaptureGroupTests.swift; sourceTree = "<group>"; };
+		831C5B7D1EF661B9004A937B /* DoubleWordProblemTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoubleWordProblemTestCase.swift; path = ../Tests/DoubleWordProblemTestCase.swift; sourceTree = "<group>"; };
 		8344BA651EF40CC2001B5012 /* NSRegExNamedCaptureGroup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8344BA731EF40CD6001B5012 /* NSRegExNamedCaptureGroup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8344BA9B1EF40F4B001B5012 /* NSRegExNamedCaptureGroup macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSRegExNamedCaptureGroup macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +140,7 @@
 			children = (
 				831C5B7A1EF65D37004A937B /* NSRegExNamedCaptureGroupTests.swift */,
 				83EB95E71EF628070061EC5D /* USAPhoneNumberTestCase.swift */,
+				831C5B7D1EF661B9004A937B /* DoubleWordProblemTestCase.swift */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -371,6 +375,7 @@
 			files = (
 				83EB95F41EF628560061EC5D /* USAPhoneNumberTestCase.swift in Sources */,
 				831C5B7B1EF65D37004A937B /* NSRegExNamedCaptureGroupTests.swift in Sources */,
+				831C5B7E1EF661B9004A937B /* DoubleWordProblemTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +385,7 @@
 			files = (
 				83EB95F51EF628570061EC5D /* USAPhoneNumberTestCase.swift in Sources */,
 				831C5B7C1EF65D37004A937B /* NSRegExNamedCaptureGroupTests.swift in Sources */,
+				831C5B7F1EF661B9004A937B /* DoubleWordProblemTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
