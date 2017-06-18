@@ -4,7 +4,7 @@ Nearly all modern regular expression engines support [numbered capturing groups]
 
 ## Good news
 
-Languages or libraries like Python, PHP's preg engine, and .NET languages support captures to *named* locations, we call which __Named Capture Groups__. One of the most important benefits of NCG is that assigning a human-readable name to each individual capture group may be less confusing later to someone reading the code who might otherwise be left wondering about which one number conrrepsponds which one capture group.
+Languages or libraries like Python, PHP's preg engine, and .NET languages support captures to *named* locations, that we called __Named Capture Groups__. One of the most important benefits of NCG is that assigning a human-readable name to each individual capture group may be less confusing later to someone reading the code who might otherwise be left wondering about which one number exactly conrrepsponds which one capture group.
 
 ## Bad news
 Named Capture Groups is great. [`NSRegularExpression`](https://developer.apple.com/documentation/foundation/nsregularexpression) does not support it.
@@ -31,8 +31,10 @@ However, Apple's own documentation for `NSRegEx` does not list the syntax for Na
 own documentation, suggesting that NCG are a recent
 addition and hence Cocoa's implementation has not integrated it yet.
 
-That is to say, the only way of capturing group matching results exposed by `NSRegEx` is currently by talking with `rangeAt(:_)` method within `NSTextCheckingResult` class, which is number-based.
+That is to say, the only way of capturing group matching results exposed by `NSRegEx` is currently by talking with `rangeAt(:_)` method within `NSTextCheckingResult` class, which is number-based. Come on, Cocoa.
 
- This extension library aims at providing developers using `NSRegEx` 
+## Happy are those who are sad ... - Matthew 5:4
+
+This extension library aims at providing developers using `NSRegEx` 
 with an intuitive approach to deal with Named Capture Groups within
 their regular expressions.
