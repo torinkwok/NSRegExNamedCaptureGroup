@@ -49,6 +49,11 @@ fileprivate typealias _GroupNamesSearchResult = (
   , _index: Int
   )
 
+/// This method is a by-product of tradeoff between interoperatablitiy 
+/// of Swift and ObjC, and Swift's sophisticated access control system.
+///
+/// It is an implementation detail of the lib's core and is subject to
+/// future changes; do not use it directly.
 public final class _ObjCGroupNamesSearchResult: NSObject {
   public let _outerOrdinaryCaptureGroup: NSTextCheckingResult
   public let _innerRefinedNamedCaptureGroup: NSTextCheckingResult
@@ -63,6 +68,11 @@ public final class _ObjCGroupNamesSearchResult: NSObject {
 
 public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
 
+  /// This method is a by-product of tradeoff between interoperatablitiy 
+  /// of Swift and ObjC, and Swift's sophisticated access control system.
+  ///
+  /// It is an implementation detail of the lib's core and is subject to
+  /// future changes; do not use it directly.
   @objc public func _resultsOfIntrospectingAboutNCGs_objc()
     -> [ String: _ObjCGroupNamesSearchResult ] {
     let results = _resultsOfIntrospectingAboutNCGs()
