@@ -20,6 +20,20 @@
                ReferencedContainer = "container:NSRegExNamedCaptureGroup.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8344BAAB1EF418D9001B5012"
+               BuildableName = "NSRegExNamedCaptureGroup iOS Tests.xctest"
+               BlueprintName = "NSRegExNamedCaptureGroup iOS Tests"
+               ReferencedContainer = "container:NSRegExNamedCaptureGroup.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,7 +42,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8344BAAB1EF418D9001B5012"
+               BuildableName = "NSRegExNamedCaptureGroup iOS Tests.xctest"
+               BlueprintName = "NSRegExNamedCaptureGroup iOS Tests"
+               ReferencedContainer = "container:NSRegExNamedCaptureGroup.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8344BA721EF40CD6001B5012"
+            BuildableName = "NSRegExNamedCaptureGroup.framework"
+            BlueprintName = "NSRegExNamedCaptureGroup iOS"
+            ReferencedContainer = "container:NSRegExNamedCaptureGroup.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

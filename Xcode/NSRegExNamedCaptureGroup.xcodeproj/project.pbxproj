@@ -349,8 +349,8 @@
 			projectRoot = "";
 			targets = (
 				8344BA641EF40CC2001B5012 /* NSRegExNamedCaptureGroup macOS */,
-				8344BA721EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS */,
 				8344BA9A1EF40F4B001B5012 /* NSRegExNamedCaptureGroup macOS Tests */,
+				8344BA721EF40CD6001B5012 /* NSRegExNamedCaptureGroup iOS */,
 				8344BAAB1EF418D9001B5012 /* NSRegExNamedCaptureGroup iOS Tests */,
 			);
 		};
