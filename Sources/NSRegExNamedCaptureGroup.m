@@ -9,7 +9,7 @@
 ///
 /// @return A dictionary containing the Named Capture Group expressions
 ///         plucked out and their corresponding indices.
-- ( nullable NSDictionary<NSString*, NSNumber*>* ) _indicesOfNamedCaptureGroupsWithError: ( NSError** )error;
+- ( nullable NSDictionary<NSString*, NSNumber*>* ) _indicesOfNamedCaptureGroups;
 
 /// Returns a dictionary, after introspecting regex's own pattern, 
 /// containing all the Named Capture Group expressions found in
@@ -77,11 +77,11 @@ _swizzling_enumerateMatchesInString: ( NSString* )string
 @implementation NSRegularExpression ( _Helpers )
 
 - ( NSDictionary<NSString*, NSNumber*>* )
-_indicesOfNamedCaptureGroupsWithError: ( NSError** )error {
+_indicesOfNamedCaptureGroups {
 
   NSMutableDictionary* groupNames = [ NSMutableDictionary dictionary ];
 
-  [ [ self _textCheckingResultsOfNamedCaptureGroups_objcAndReturnError: error ]
+  [ [ self _resultsOfIntrospectingAboutNCGs_objc ]
     enumerateKeysAndObjectsUsingBlock:
       ^( NSString* subexpr, _ObjCGroupNamesSearchResult* result, BOOL* stopToken ) {
       groupNames[ subexpr ] = @( result._index + 1 );
@@ -96,7 +96,7 @@ _rangesOfNamedCaptureGroupsInMatch: ( NSTextCheckingResult* )match
 
   NSMutableDictionary* groupNames = [ NSMutableDictionary dictionary ];
 
-  [ [ self _textCheckingResultsOfNamedCaptureGroups_objcAndReturnError: error ]
+  [ [ self _resultsOfIntrospectingAboutNCGs_objc ]
     enumerateKeysAndObjectsUsingBlock:
       ^( NSString* subexpr, _ObjCGroupNamesSearchResult* result, BOOL* stopToken ) {
       groupNames[ subexpr ] = [ NSValue valueWithRange: [ match rangeAtIndex: result._index + 1 ] ];

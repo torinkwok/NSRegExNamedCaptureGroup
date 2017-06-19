@@ -55,7 +55,7 @@ fileprivate extension DoubleWordProblemTestCase {
     }
   }
 
-fileprivate class DoubleWordProblemTestCase: NSRegExNamedCaptureGroupTests {
+fileprivate final class DoubleWordProblemTestCase: NSRegExNamedCaptureGroupTests {
 
   static let allTests = [
       ( "test_01", test_01 )
@@ -79,15 +79,10 @@ fileprivate class DoubleWordProblemTestCase: NSRegExNamedCaptureGroupTests {
         XCTAssert( _compareRange( in: match, byGroupName: "Once", with: 1 ) )
         XCTAssert( _compareRange( in: match, byGroupName: "Spaces", with: 2 ) )
         XCTAssert( _compareRange( in: match, byGroupName: "Tag", with: 3 ) )
-        XCTAssert( _compareRange( in: match, byGroupName: "Twice", with: 4 ) )
-        
-        print( "Range of (?<Once>): \(NSStringFromRange( match.rangeWith( "Once" ) ))" )
-        print( "Range of (?<Spaces>): \(NSStringFromRange( match.rangeWith( "Spaces" ) ))" )
-        print( "Range of (?<Tag>): \(NSStringFromRange( match.rangeWith( "Tag" ) ))" )
-        print( "Range of (?<Twice>): \(NSStringFromRange( match.rangeWith( "Twice" ) ))" )
+        XCTAssert( _compareRange( in: match, byGroupName: "Twice", with: 4 ) )       
         }
 
-      print( 
+      print(
         ( ( ( contents =~ samplePatterns.mainPattern )(
               "$1".highlightedInTerminal + "$2" + "$3".highlightedInTerminal
             ) =~ samplePatterns.cleanPattern )( "" ) =~ samplePatterns.formatPattern )(

@@ -1,4 +1,5 @@
 import XCTest
+import os.log
 @testable import NSRegExNamedCaptureGroup
 
 extension NSRegularExpression {
@@ -18,12 +19,18 @@ class NSRegExNamedCaptureGroupTests: XCTestCase {}
 extension NSRegExNamedCaptureGroupTests {
 
   func _compareRange(
-      in checkingResult: NSTextCheckingResult
+      in match: NSTextCheckingResult
     , byGroupName groupName: String?
     , with index: Int ) -> Bool {
 
-    let rangeByGroupName = checkingResult.rangeWith( groupName )
-    let rangeByIndex = checkingResult.rangeAt( index )
+    if let name = groupName {
+      os_log( "Range of result captured by (?<%@>): %@ )", name, NSStringFromRange( match.rangeWith( name ) ) )
+      } else {
+        os_log( "Overall range: %@", NSStringFromRange( match.rangeWith( nil ) ) )
+      }
+
+    let rangeByGroupName = match.rangeWith( groupName )
+    let rangeByIndex = match.rangeAt( index )
 
     return
       rangeByGroupName.location == rangeByIndex.location
@@ -31,10 +38,10 @@ extension NSRegExNamedCaptureGroupTests {
     }
 
   func _isRangeInvalid(
-      in checkingResult: NSTextCheckingResult
+      in match: NSTextCheckingResult
     , byGroupName groupName: String? ) -> Bool {
     
-    let rangeByGroupName = checkingResult.rangeWith( groupName )
+    let rangeByGroupName = match.rangeWith( groupName )
     return
       rangeByGroupName.location == NSNotFound
         && rangeByGroupName.length == 0

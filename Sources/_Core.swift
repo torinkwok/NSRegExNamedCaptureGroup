@@ -49,7 +49,7 @@ fileprivate typealias _GroupNamesSearchResult = (
   , _index: Int
   )
 
-public class _ObjCGroupNamesSearchResult: NSObject {
+public final class _ObjCGroupNamesSearchResult: NSObject {
   public let _outerOrdinaryCaptureGroup: NSTextCheckingResult
   public let _innerRefinedNamedCaptureGroup: NSTextCheckingResult
   public let _index: Int
@@ -63,9 +63,9 @@ public class _ObjCGroupNamesSearchResult: NSObject {
 
 public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
 
-  @objc public func _textCheckingResultsOfNamedCaptureGroups_objc() throws
+  @objc public func _resultsOfIntrospectingAboutNCGs_objc()
     -> [ String: _ObjCGroupNamesSearchResult ] {
-    let results = try _textCheckingResultsOfNamedCaptureGroups()
+    let results = _resultsOfIntrospectingAboutNCGs()
     var dictionary = [ String: _ObjCGroupNamesSearchResult ]()
     for ( expr, result ) in results {
       dictionary[ expr ] = _ObjCGroupNamesSearchResult( result )
@@ -99,7 +99,7 @@ public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
     curriedVendorsIMP( self, vendorsSel, text, options, range, block )
     }
 
-  fileprivate func _textCheckingResultsOfNamedCaptureGroups() throws
+  fileprivate func _resultsOfIntrospectingAboutNCGs()
     -> [ String: _GroupNamesSearchResult ] {
 
     var groupNames = [ String: _GroupNamesSearchResult ]()

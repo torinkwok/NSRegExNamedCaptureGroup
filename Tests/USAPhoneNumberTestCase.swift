@@ -20,7 +20,7 @@ fileprivate extension USAPhoneNumberTestCase {
     }
   }
 
-fileprivate class USAPhoneNumberTestCase: NSRegExNamedCaptureGroupTests {
+fileprivate final class USAPhoneNumberTestCase: NSRegExNamedCaptureGroupTests {
 
   static let allTests = [
       ( "testArrayBasedAPI", testArrayBasedAPI )
