@@ -18,6 +18,7 @@ env:
     - DESTINATION="arch=x86_64"                    SCHEME="$MACOS_FRAMEWORK_SCHEME"    RUN_TESTS="YES" POD_LINT="YES"
 before_install:
   - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
+  - gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
   - rvm get stable
 script:
   - set -o pipefail
