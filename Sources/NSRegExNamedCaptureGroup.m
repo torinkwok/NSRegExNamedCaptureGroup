@@ -76,7 +76,9 @@ _swizzling_enumerateMatchesInString: ( NSString* )string
 
 @implementation NSRegularExpression ( _Helpers )
 
-- ( NSDictionary<NSString*, NSNumber*>* ) _indicesOfNamedCaptureGroupsWithError: ( NSError** )error {
+- ( NSDictionary<NSString*, NSNumber*>* )
+_indicesOfNamedCaptureGroupsWithError: ( NSError** )error {
+
   NSMutableDictionary* groupNames = [ NSMutableDictionary dictionary ];
 
   [ [ self _textCheckingResultsOfNamedCaptureGroups_objcAndReturnError: error ]
@@ -88,7 +90,10 @@ _swizzling_enumerateMatchesInString: ( NSString* )string
   return groupNames;
   }
 
-- ( NSDictionary<NSString*, NSValue*>* ) _rangesOfNamedCaptureGroupsInMatch: ( NSTextCheckingResult* )match error: ( NSError** )error {
+- ( NSDictionary<NSString*, NSValue*>* )
+_rangesOfNamedCaptureGroupsInMatch: ( NSTextCheckingResult* )match 
+                             error: ( NSError** )error {
+
   NSMutableDictionary* groupNames = [ NSMutableDictionary dictionary ];
 
   [ [ self _textCheckingResultsOfNamedCaptureGroups_objcAndReturnError: error ]

@@ -32,14 +32,14 @@ fileprivate extension String {
 // conditional (? if then|else) and so on, except for
 // grouping-only parentheses (?: ... ).
 fileprivate let GenericCaptureGroupsPattern = try! NSRegularExpression(
-    pattern: "\\((?!\\?:)[^\\(\\)]*\\)"
+    pattern: "\\((?!\\?:).*?>"
   , options: .dotMatchesLineSeparators
   )
 
 // Further refinement.
 // We will only work on Named Capture Groups (?<Name> ... ).
 fileprivate let NamedCaptureGroupsPattern = try! NSRegularExpression(
-    pattern: "^\\(\\?<([\\w\\a_-]*)>.*\\)$"
+    pattern: "^\\(\\?<([\\w\\a_-]*)>$"
   , options: .dotMatchesLineSeparators
   )
 
@@ -131,20 +131,14 @@ public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
         let firstNamedCaptureGroup = namedCaptureGroupsMatched[ 0 ]
         let groupName: String = genericCaptureGroupExpr[ genericCaptureGroupExpr.range( from: firstNamedCaptureGroup.rangeAt( 1 ) )! ]
 
-        // In the case that `genericCaptureGroupExpr` is itself a NCG,
-        // contents of `namedCaptureExpr` is completely identical to 
-        // `genericCaptureGroupExpr`.
-        let namedCaptureExpr: String = genericCaptureGroupExpr[ genericCaptureGroupExpr.range( from: firstNamedCaptureGroup.range )! ]
-        print( namedCaptureExpr )
-
         groupNames[ groupName ] = (
             _outerOrdinaryCaptureGroup: ordiGroup
           , _innerRefinedNamedCaptureGroup: firstNamedCaptureGroup
           , _index: index
           )
-        }
 
-      index += 1
+        index += 1
+        }
       }
 
     return groupNames

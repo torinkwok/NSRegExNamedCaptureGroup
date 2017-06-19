@@ -77,7 +77,7 @@ fileprivate class DoubleWordProblemTestCase: NSRegExNamedCaptureGroupTests {
 
         XCTAssert( _compareRange( in: match, byGroupName: nil, with: 0 ) )
         XCTAssert( _compareRange( in: match, byGroupName: "Once", with: 1 ) )
-        // XCTAssert( _compareRange( in: match, byGroupName: "Spaces", with: 2 ) )
+        XCTAssert( _compareRange( in: match, byGroupName: "Spaces", with: 2 ) )
         XCTAssert( _compareRange( in: match, byGroupName: "Tag", with: 3 ) )
         XCTAssert( _compareRange( in: match, byGroupName: "Twice", with: 4 ) )
         
