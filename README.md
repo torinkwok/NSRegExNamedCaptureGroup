@@ -39,6 +39,9 @@ The extension library, __NSRegExNamedCaptureGroup__, aims at providing developer
 with an intuitive approach to deal with Named Capture Groups within
 their regular expressions.
 
+[![Build Status](https://travis-ci.org/TorinKwok/NSRegExNamedCaptureGroup.svg?branch=master)](https://travis-ci.org/TorinKwok/NSRegExNamedCaptureGroup)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 ### Installation
 
 __Carthage__:
