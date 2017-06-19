@@ -20,9 +20,6 @@ before_install:
   - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
 script:
   - set -o pipefail
-  - swiftenv versions
-  - swiftenv which swift
-  - swift --version
   - xcodebuild -version
   - xcodebuild -showsdks
 
