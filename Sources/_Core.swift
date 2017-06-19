@@ -49,7 +49,7 @@ fileprivate typealias _GroupNamesSearchResult = (
   , _index: Int
   )
 
-/// This class is a by-product of tradeoff between interoperatablitiy 
+/// This method is a by-product of tradeoff between interoperatablitiy 
 /// of Swift and ObjC, and Swift's sophisticated access control system.
 ///
 /// It is an implementation detail of the lib's core and is subject to
