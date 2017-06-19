@@ -4,7 +4,7 @@ Nearly all modern regular expression engines support [numbered capturing groups]
 
 ## Good news
 
-Languages or libraries like Python, PHP's preg engine, and .NET languages support captures to *named* locations, that we called __Named Capture Groups__. One of the most important benefits of NCG is that assigning a human-readable name to each individual capture group may be less confusing later to someone reading the code who might otherwise be left wondering about which one number exactly conrrepsponds which one capture group.
+Languages or libraries like Python, PHP's preg engine, and .NET languages support captures to *named* locations, that we called __Named Capture Groups__. One of the most important benefits of NCG is that assigning a human-readable name to each individual capture group may be less confusing later to someone reading the code who might otherwise be left wondering about which number exactly conrrepsponds which capture group.
 
 ## Bad news
 Named Capture Groups is great. [`NSRegularExpression`](https://developer.apple.com/documentation/foundation/nsregularexpression) does not support it.
