@@ -41,6 +41,8 @@ their regular expressions.
 
 [![Build Status](https://travis-ci.org/TorinKwok/NSRegExNamedCaptureGroup.svg?branch=master)](https://travis-ci.org/TorinKwok/NSRegExNamedCaptureGroup)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![CocoaPods Status](https://cocoapod-badges.herokuapp.com/v/NSRegExNamedCaptureGroup/badge.png)](https://cocoapods.org)
+[![License Badge](https://cocoapod-badges.herokuapp.com/l/NSRegExNamedCaptureGroup/badge.svg)](./LICENSE)
 
 ### Installation
 
