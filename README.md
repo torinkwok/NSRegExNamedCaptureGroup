@@ -161,6 +161,12 @@ for match in matches {
   }
 ```
 
+### Requirements
+
+* macOS 10.10+ / iOS 8.0+
+* Xcode 8.1, 8.2, 8.3 and 9.0
+* Swift 3.0, 3.1, 3.2, and 4.0
+
 ### Author
 
 [Torin Kwok](https://keybase.io/kwok).
