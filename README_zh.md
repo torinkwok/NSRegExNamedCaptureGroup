@@ -1,7 +1,7 @@
 ## 这是什么
-__NSRegExNamedCaptureGroup__ 由 [@TorinKwok](https://github.com/TorinKwok) 使用 Swift 和 Objective-C 语言开发。其通过直观的编程接口为 Cocoa 开发者提供对 .NET 风格的正则表达式__命名捕获分组（Named Capture Groups，以下简称 NCG）__的支持。
+__NSRegExNamedCaptureGroup__ 由 [@TorinKwok](https://github.com/TorinKwok) 使用 Swift 和 Objective-C 语言开发。其通过直观的编程接口为 Cocoa 开发者提供对 .NET 风格的正则表达式**命名捕获分组**（Named Capture Groups，以下简称 NCG）的支持。
 
-几乎所有现代的正则表达式实现都支持__索引捕获组（Numbered Capturing Groups）__和__索引向后引用（backreferences）__。但是带有大量这类捕获分组和向后引用的表达式会变得极难阅读与理解。所以很多编程语言的正则表达式实现（如 Python 的 re 模块，PHP 的 preg 引擎，以及 .NET 语言家族）都提供了带有自己风格的 NCG 的支持。通过使用 NCG，我们可以通过人类可读的（human-readable）的方式——而不是使用对计算机更友好的数字下标——来访问一段正则表达式匹配的结果。正则表达式可以变的更加可读，开发者也可以有效地避免错误。
+几乎所有现代的正则表达式实现都支持**索引捕获组**（Numbered Capturing Groups）和**索引向后引用**（backreferences）。但是带有大量这类捕获分组和向后引用的表达式会变得极难阅读与理解。所以很多编程语言的正则表达式实现（如 Python 的 re 模块，PHP 的 preg 引擎，以及 .NET 语言家族）都提供了带有自己风格的 NCG 的支持。通过使用 NCG，我们可以通过人类可读的（human-readable）的方式——而不是使用对计算机更友好的数字下标——来访问一段正则表达式匹配的结果。正则表达式可以变的更加可读，开发者也可以有效地避免错误。
 
 但一直以来，macOS 和 iOS 开发中首选的正则表达式实现 [`NSRegularExpression`](https://developer.apple.com/documentation/foundation/nsregularexpression) 类却不支持 NCG。
 
