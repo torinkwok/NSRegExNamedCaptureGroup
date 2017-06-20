@@ -22,7 +22,7 @@
 @end
 
 static void* _CaptureGroupsDictAssociatedKey;
-static void _swizzle( Class srcClass, SEL srcSelector, Class dstClass, SEL dstSelector );
+static void _swizzle( Class origiClass, SEL origiSelector, Class swizzClass, SEL swizzSelector );
 
 @implementation NSTextCheckingResult ( NSRegExNamedCaptureGroup )
 
@@ -59,17 +59,21 @@ _swizzling_enumerateMatchesInString: ( NSString* )string
         block( result, flags, stop );
       };
 
-  [ self _swizzling_enumerateMatchesInString: string
-                                     options: options
-                                       range: range
-                                  usingBlock: ourBlock ];
+  [ self 
+    _swizzling_enumerateMatchesInString: string 
+  /*    .     .     .     .  */ options: options 
+  /*    .     .     .     .    */ range: range
+  /*    .     .     .     */ usingBlock: ourBlock ];
   }
 
 + ( void ) load {
-  _swizzle(
-      [ NSRegularExpression class ], @selector( enumerateMatchesInString:options:range:usingBlock: )
-    , [ NSRegularExpression class ], @selector( _swizzling_enumerateMatchesInString:options:range:usingBlock: )
-    );
+  static dispatch_once_t onceToken;
+  dispatch_once( &onceToken, ^{
+    _swizzle(
+        [ NSRegularExpression class ], @selector( enumerateMatchesInString:options:range:usingBlock: )
+      , [ NSRegularExpression class ], @selector( _swizzling_enumerateMatchesInString:options:range:usingBlock: )
+      );
+    } );
   }
 
 @end
@@ -107,13 +111,24 @@ _rangesOfNamedCaptureGroupsInMatch: ( NSTextCheckingResult* )match
 
 @end
 
-void _swizzle( Class srcClass, SEL srcSelector, Class dstClass, SEL dstSelector ) {
-  Method srcMethod = class_getInstanceMethod( srcClass, srcSelector );
-  IMP srcImp = method_getImplementation( srcMethod );
+void _swizzle( Class origiClass, SEL origiSelector, Class swizzClass, SEL swizzSelector ) {
 
-  Method dstMethod = class_getInstanceMethod( dstClass, dstSelector );
-  IMP dstImp = method_getImplementation( dstMethod );
+  Method origiMethod = class_getInstanceMethod( origiClass, origiSelector );
+  IMP origiIMP = method_getImplementation( origiMethod );
 
-  method_setImplementation( srcMethod, dstImp );
-  method_setImplementation( dstMethod, srcImp );  
+  Method swizzMethod = class_getInstanceMethod( swizzClass, swizzSelector );
+  IMP swizzIMP = method_getImplementation( swizzMethod );
+
+  if ( class_addMethod(
+      origiClass
+    , origiSelector
+    , swizzIMP
+    , method_getTypeEncoding( swizzMethod )
+    ) ) {
+    // If the class does not contain a method implementation with that selector
+    class_replaceMethod(
+      swizzClass, swizzSelector, origiIMP, method_getTypeEncoding( origiMethod ) );
+    } else {
+      method_exchangeImplementations( origiMethod, swizzMethod );
+    }
   }
