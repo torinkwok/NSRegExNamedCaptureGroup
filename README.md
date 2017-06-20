@@ -53,7 +53,7 @@ If you use [Carthage](https://github.com/Carthage/Carthage) to manage your depen
 1. Simply add *NSRegExNamedCaptureGroup* to your `Cartfile`:
 
 ```
-github "TorinKwok/NSRegExNamedCaptureGroup" ~> 0.0.1
+github "TorinKwok/NSRegExNamedCaptureGroup" ~> 0.0.2
 ```
 
 2. Click `File` -> `Add Files to "$PROJECT_NAME"` item in Xcode menu bar. Choose the `NSRegExNamedCaptureGroup.xcodeproj`
@@ -65,7 +65,7 @@ __CocoaPods__:
 To install using [*CocoaPods*](https://github.com/cocoapods/cocoapods), add the following to your project Podfile:
 
 ``` ruby
-pod 'NSRegExNamedCaptureGroup', '~>0.0.1'
+pod 'NSRegExNamedCaptureGroup', '~>0.0.2'
 ```
 
 __Git Submodule__:
