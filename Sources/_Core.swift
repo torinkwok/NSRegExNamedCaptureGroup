@@ -1,4 +1,3 @@
-import ObjectiveC
 import Foundation
 
 /// Returns a range equivalent to the given `NSRange`,
@@ -84,30 +83,6 @@ public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
     return dictionary
     }
 
-  fileprivate func _vendors_enumerateMatches(
-      in text: String
-    , options: NSRegularExpression.MatchingOptions
-    , range: NSRange
-    , using block: ( NSTextCheckingResult?, NSRegularExpression.MatchingFlags, UnsafeMutablePointer<ObjCBool> ) -> Void ) {
-
-    let vendorsSel = Selector( ( "_swizzling_enumerateMatchesInString:options:range:usingBlock:" ) )
-    let imp = self.method( for: vendorsSel )
-
-    typealias VendorsIMP = @convention( c )(
-        AnyObject
-      , Selector
-      , String
-      , NSRegularExpression.MatchingOptions
-      , NSRange
-      , ( NSTextCheckingResult?
-        , NSRegularExpression.MatchingFlags
-        , UnsafeMutablePointer<ObjCBool>
-        ) -> ()
-      ) -> ()
-
-    let curriedVendorsIMP = unsafeBitCast( imp, to: VendorsIMP.self )
-    curriedVendorsIMP( self, vendorsSel, text, options, range, block )
-    }
 
   fileprivate func _resultsOfIntrospectingAboutNCGs()
     -> [ String: _GroupNamesSearchResult ] {
@@ -115,7 +90,7 @@ public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
     var groupNames = [ String: _GroupNamesSearchResult ]()
     var index = 0
 
-    GenericCaptureGroupsPattern._vendors_enumerateMatches(
+    GenericCaptureGroupsPattern.enumerateMatches(
         in: self.pattern
       , options: .withTransparentBounds
       , range: NSMakeRange( 0, self.pattern.utf16.count )
