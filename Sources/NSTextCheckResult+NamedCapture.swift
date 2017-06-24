@@ -28,28 +28,24 @@ extension NSTextCheckingResult {
   ///         Passing the method the value `nil` always returns
   ///         the value of the the `range` property. Additional ranges,
   ///         if any, can be retrieved through their capture group names.
-  var namedCaptures: [String : NSRange] {
-    var reval: [String : NSRange]? = objc_getAssociatedObject(self, AssociatedKeys.namedCaptures) as? [String : NSRange]
+  var namedCaptures: [String : Int] {
+    var reval: [String : Int]? = objc_getAssociatedObject(self, AssociatedKeys.namedCaptures) as? [String : Int]
     
     if reval == nil {
       
-      reval = [:]
-      
-      regularExpression?._resultsOfIntrospectingAboutNCGs_objc().forEach({ (name, result) in
-        reval![name] = self.rangeAt(result._index + 1)
-      })
-      
+      reval = regularExpression?._resultsOfNamedCaptures() ?? [:]
       objc_setAssociatedObject(self, AssociatedKeys.namedCaptures, reval, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
     }
     return reval!
   }
+  
   
   @objc(rangeWithGroupName:)
   public func rangeWith(_ name: String?) -> NSRange {
     
     guard let name = name else { return self.rangeAt(0) }
     
-    return namedCaptures[name] ?? NSRange(location: NSNotFound, length: 0)
+    return namedCaptures[name].map { rangeAt($0) } ?? NSRange(location: NSNotFound, length: 0)
   }
   
 }

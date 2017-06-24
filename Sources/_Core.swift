@@ -42,52 +42,13 @@ fileprivate let NamedCaptureGroupsPattern = try! NSRegularExpression(
   , options: .dotMatchesLineSeparators
   )
 
-fileprivate typealias _GroupNamesSearchResult = (
-    _outerOrdinaryCaptureGroup: NSTextCheckingResult
-  , _innerRefinedNamedCaptureGroup: NSTextCheckingResult
-  , _index: Int
-  )
-
-/// This class is a by-product of tradeoff between interoperatablitiy 
-/// of Swift and ObjC, and Swift's sophisticated access control system.
-///
-/// It is an implementation detail of the lib's core and is subject to
-/// future changes; do not use it directly.
-public final class _ObjCGroupNamesSearchResult: NSObject {
-  public let _outerOrdinaryCaptureGroup: NSTextCheckingResult
-  public let _innerRefinedNamedCaptureGroup: NSTextCheckingResult
-  public let _index: Int
-
-  @nonobjc fileprivate init( _ tuple: _GroupNamesSearchResult ) {
-    _outerOrdinaryCaptureGroup = tuple._outerOrdinaryCaptureGroup
-    _innerRefinedNamedCaptureGroup = tuple._innerRefinedNamedCaptureGroup
-    _index = tuple._index
-    }
-  }
 
 public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
 
-  /// This method is a by-product of tradeoff between interoperatablitiy 
-  /// of Swift and ObjC, and Swift's sophisticated access control system.
-  ///
-  /// It is an implementation detail of the lib's core and is subject to
-  /// future changes; do not use it directly.
-  @objc public func _resultsOfIntrospectingAboutNCGs_objc()
-    -> [ String: _ObjCGroupNamesSearchResult ] {
-    let results = _resultsOfIntrospectingAboutNCGs()
-    var dictionary = [ String: _ObjCGroupNamesSearchResult ]()
-    for ( expr, result ) in results {
-      dictionary[ expr ] = _ObjCGroupNamesSearchResult( result )
-      }
+  func _resultsOfNamedCaptures()
+    -> [ String: Int ] {
 
-    return dictionary
-    }
-
-
-  fileprivate func _resultsOfIntrospectingAboutNCGs()
-    -> [ String: _GroupNamesSearchResult ] {
-
-    var groupNames = [ String: _GroupNamesSearchResult ]()
+    var groupNames = [ String: Int ]()
     var index = 0
 
     GenericCaptureGroupsPattern.enumerateMatches(
@@ -116,11 +77,7 @@ public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
         let firstNamedCaptureGroup = namedCaptureGroupsMatched[ 0 ]
         let groupName: String = genericCaptureGroupExpr[ genericCaptureGroupExpr.range( from: firstNamedCaptureGroup.rangeAt( 1 ) )! ]
 
-        groupNames[ groupName ] = (
-            _outerOrdinaryCaptureGroup: ordiGroup
-          , _innerRefinedNamedCaptureGroup: firstNamedCaptureGroup
-          , _index: index
-          )
+        groupNames[ groupName ] = index + 1
 
         index += 1
         }
