@@ -6,7 +6,6 @@ FOUNDATION_EXPORT double NSRegExNamedCaptureGroupVersionNumber;
 //! Project version string for NSRegExNamedCaptureGroup.
 FOUNDATION_EXPORT const unsigned char NSRegExNamedCaptureGroupVersionString[];
 
-NS_ASSUME_NONNULL_BEGIN
 
 /// __Named Capture Groups__ is an useful feature. Languages or libraries 
 /// like Python, PHP's preg engine, and .NET languages support captures to 
@@ -34,20 +33,4 @@ NS_ASSUME_NONNULL_BEGIN
 /// This extension library aims at providing developers using NSRegEx's 
 /// with an elegant approach to deal with Named Capture Groups within
 /// their regular expressions.
-@interface NSTextCheckingResult ( NSRegExNamedCaptureGroup )
-/// Returns the result type that the range represents.
-/// A result must have at least one range, but may
-/// optionally have more (for example, to represent regular 
-/// expression capture groups).
-///
-/// @pram groupName The name of capture group that appears in the regex
-///       pattern. Passing the value `nil` if the overall range is expected.
-///
-/// @return The range of the result.
-///         Passing the method the value `nil` always returns
-///         the value of the the `range` property. Additional ranges,
-///         if any, can be retrieved through their capture group names.
-- ( NSRange ) rangeWithGroupName: ( nullable NSString* )groupName NS_SWIFT_NAME(rangeWith(_:));
-@end
 
-NS_ASSUME_NONNULL_END
