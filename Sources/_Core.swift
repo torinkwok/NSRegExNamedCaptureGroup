@@ -1,4 +1,3 @@
-import ObjectiveC
 import Foundation
 
 /// Returns a range equivalent to the given `NSRange`,
@@ -43,79 +42,16 @@ fileprivate let NamedCaptureGroupsPattern = try! NSRegularExpression(
   , options: .dotMatchesLineSeparators
   )
 
-fileprivate typealias _GroupNamesSearchResult = (
-    _outerOrdinaryCaptureGroup: NSTextCheckingResult
-  , _innerRefinedNamedCaptureGroup: NSTextCheckingResult
-  , _index: Int
-  )
 
-/// This class is a by-product of tradeoff between interoperatablitiy 
-/// of Swift and ObjC, and Swift's sophisticated access control system.
-///
-/// It is an implementation detail of the lib's core and is subject to
-/// future changes; do not use it directly.
-public final class _ObjCGroupNamesSearchResult: NSObject {
-  public let _outerOrdinaryCaptureGroup: NSTextCheckingResult
-  public let _innerRefinedNamedCaptureGroup: NSTextCheckingResult
-  public let _index: Int
+extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
 
-  @nonobjc fileprivate init( _ tuple: _GroupNamesSearchResult ) {
-    _outerOrdinaryCaptureGroup = tuple._outerOrdinaryCaptureGroup
-    _innerRefinedNamedCaptureGroup = tuple._innerRefinedNamedCaptureGroup
-    _index = tuple._index
-    }
-  }
+  func _resultsOfNamedCaptures()
+    -> [ String: Int ] {
 
-public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
-
-  /// This method is a by-product of tradeoff between interoperatablitiy 
-  /// of Swift and ObjC, and Swift's sophisticated access control system.
-  ///
-  /// It is an implementation detail of the lib's core and is subject to
-  /// future changes; do not use it directly.
-  @objc public func _resultsOfIntrospectingAboutNCGs_objc()
-    -> [ String: _ObjCGroupNamesSearchResult ] {
-    let results = _resultsOfIntrospectingAboutNCGs()
-    var dictionary = [ String: _ObjCGroupNamesSearchResult ]()
-    for ( expr, result ) in results {
-      dictionary[ expr ] = _ObjCGroupNamesSearchResult( result )
-      }
-
-    return dictionary
-    }
-
-  fileprivate func _vendors_enumerateMatches(
-      in text: String
-    , options: NSRegularExpression.MatchingOptions
-    , range: NSRange
-    , using block: ( NSTextCheckingResult?, NSRegularExpression.MatchingFlags, UnsafeMutablePointer<ObjCBool> ) -> Void ) {
-
-    let vendorsSel = Selector( ( "_swizzling_enumerateMatchesInString:options:range:usingBlock:" ) )
-    let imp = self.method( for: vendorsSel )
-
-    typealias VendorsIMP = @convention( c )(
-        AnyObject
-      , Selector
-      , String
-      , NSRegularExpression.MatchingOptions
-      , NSRange
-      , ( NSTextCheckingResult?
-        , NSRegularExpression.MatchingFlags
-        , UnsafeMutablePointer<ObjCBool>
-        ) -> ()
-      ) -> ()
-
-    let curriedVendorsIMP = unsafeBitCast( imp, to: VendorsIMP.self )
-    curriedVendorsIMP( self, vendorsSel, text, options, range, block )
-    }
-
-  fileprivate func _resultsOfIntrospectingAboutNCGs()
-    -> [ String: _GroupNamesSearchResult ] {
-
-    var groupNames = [ String: _GroupNamesSearchResult ]()
+    var groupNames = [ String: Int ]()
     var index = 0
 
-    GenericCaptureGroupsPattern._vendors_enumerateMatches(
+    GenericCaptureGroupsPattern.enumerateMatches(
         in: self.pattern
       , options: .withTransparentBounds
       , range: NSMakeRange( 0, self.pattern.utf16.count )
@@ -141,11 +77,7 @@ public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
         let firstNamedCaptureGroup = namedCaptureGroupsMatched[ 0 ]
         let groupName: String = genericCaptureGroupExpr[ genericCaptureGroupExpr.range( from: firstNamedCaptureGroup.rangeAt( 1 ) )! ]
 
-        groupNames[ groupName ] = (
-            _outerOrdinaryCaptureGroup: ordiGroup
-          , _innerRefinedNamedCaptureGroup: firstNamedCaptureGroup
-          , _index: index
-          )
+        groupNames[ groupName ] = index + 1
 
         index += 1
         }
