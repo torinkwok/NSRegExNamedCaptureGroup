@@ -1,8 +1,8 @@
 //
-//  NSTextCheckResult+NamedCapture.swift
+//  NSTextCheckResult+NamedCaptureGroup.swift
 //  NSRegExNamedCaptureGroup
 //
-//  Created by Rock Yang on 2017/6/24.
+//  Created by Rock Young on 2017/6/24.
 //
 //
 
@@ -17,17 +17,17 @@ extension NSTextCheckingResult {
   /// optionally have more (for example, to represent regular
   /// expression capture groups).
   ///
-  /// @pram groupName The name of capture group that appears in the regex
-  ///       pattern. Passing the value `nil` if the overall range is expected.
+  /// - Parameter groupName: The name of capture group that appears in the regex
+  ///         pattern. Passing the value `nil` if the overall range is expected.
   ///
-  /// @return The range of the result.
+  /// - Returns: The range of the result.
   ///         Passing the method the value `nil` always returns
   ///         the value of the the `range` property. Additional ranges,
   ///         if any, can be retrieved through their capture group names.
   @objc(rangeWithGroupName:)
-  public func rangeWith(_ name: String?) -> NSRange {
+  public func rangeWith(_ groupName: String?) -> NSRange {
     
-    guard let name = name else { return self.rangeAt(0) }
+    guard let name = groupName else { return self.rangeAt(0) }
     
     return regularExpression?._namedCaptures[name].map { rangeAt($0) } ?? NSRange(location: NSNotFound, length: 0)
   }
