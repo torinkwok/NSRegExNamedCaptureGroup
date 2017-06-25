@@ -40,7 +40,7 @@ extension NSRegularExpression {
     static var namedCaptures: String = "nc.namedCaptures"
   }
 
-  var _namedCaptures: [String : Int] {
+  fileprivate var _namedCaptures: [String : Int] {
   
     var reval: [String : Int]? = objc_getAssociatedObject(self, AssociatedKeys.namedCaptures) as? [String : Int]
     

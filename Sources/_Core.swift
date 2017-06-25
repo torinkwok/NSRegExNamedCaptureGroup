@@ -43,7 +43,7 @@ fileprivate let NamedCaptureGroupsPattern = try! NSRegularExpression(
   )
 
 
-public extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
+extension NSRegularExpression /* _NamedCaptureGroupsSupport */ {
 
   func _resultsOfNamedCaptures()
     -> [ String: Int ] {
