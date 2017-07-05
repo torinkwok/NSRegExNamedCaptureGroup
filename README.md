@@ -44,6 +44,12 @@ their regular expressions.
 [![CocoaPods Status](https://cocoapod-badges.herokuapp.com/v/NSRegExNamedCaptureGroup/badge.png)](https://cocoapods.org)
 [![License Badge](https://cocoapod-badges.herokuapp.com/l/NSRegExNamedCaptureGroup/badge.svg)](./LICENSE)
 
+### Availability
+
+* macOS 10.10+ / iOS 8.0+ / tvOS 9.0+ / watchOS 2.0+
+* Xcode 8.1, 8.2, 8.3 and 9.0
+* Swift 3.0, 3.1, 3.2, and 4.0
+
 ### Installation
 
 __Carthage__:
@@ -178,11 +184,9 @@ for match in matches {
   }
 ```
 
-### Requirements
+### 💉💣⚠️
 
-* macOS 10.10+ / iOS 8.0+ / tvOS 9.0+ / watchOS 2.0+
-* Xcode 8.1, 8.2, 8.3 and 9.0
-* Swift 3.0, 3.1, 3.2, and 4.0
+This is an experimental pre-processing to Cocoa's regex implementation. There’s every likelihood that I’ve broken something or ignored a better option, somehow. Feel free to [create an issue on GitHub](https://github.com/TorinKwok/NSRegExNamedCaptureGroup/issues) if you encounter any problems or have a suggestion for a better approach.
 
 ### Author
 
