@@ -86,6 +86,12 @@ dependencies: [
   ]
 ```
 
+Or, if you're using the `swift-tools-version:4.0` package manager, add the following to the `dependencies` array in your "Package.swift" file:
+
+```swift
+.package( url: "https://github.com/TorinKwok/NSRegExNamedCaptureGroup.git", majorVersion: 1 )
+```
+
 __Git Submodule__:
 
 1. Clone and incorporate this repo into your project with `git submodule` command:
