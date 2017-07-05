@@ -156,10 +156,7 @@ Working with `NSRegEx`'s block-enumeration-based API:
 ```swift
 pattern.enumerateMatches( in: phoneNumber, range: range ) {
   match, _, stopToken in
-  guard let match = match else {
-    stopToken.pointee = ObjCBool( true )
-    return
-    }
+  guard let match = match else { return }
 
   print( NSStringFromRange( match.rangeWith( "Area" ) ) )
   // prints "{0, 3}"
