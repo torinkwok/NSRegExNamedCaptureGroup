@@ -3,5 +3,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "NSRegExNamedCaptureGroup"
+    name: "NSRegExNamedCaptureGroup"
+  , dependencies : []
+  , exclude: [ "Tests" ]
   )
