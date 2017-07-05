@@ -11,11 +11,16 @@ env:
   - IOS_FRAMEWORK_SCHEME="NSRegExNamedCaptureGroup iOS"
   - MACOS_FRAMEWORK_SCHEME="NSRegExNamedCaptureGroup macOS"
   matrix:
-    - DESTINATION="platform=iOS Simulator,name=iPhone 7 Plus"     SCHEME="$IOS_FRAMEWORK_SCHEME"      RUN_TESTS="YES" POD_LINT="NO"
+    - DESTINATION="platform=iOS Simulator,name=iPhone 7 Plus"     SCHEME="$IOS_FRAMEWORK_SCHEME"      RUN_TESTS="YES" POD_LINT="YES"
     - DESTINATION="platform=iOS Simulator,name=iPhone 6"          SCHEME="$IOS_FRAMEWORK_SCHEME"      RUN_TESTS="YES" POD_LINT="NO"
     - DESTINATION="platform=iOS Simulator,name=iPhone 5S"         SCHEME="$IOS_FRAMEWORK_SCHEME"      RUN_TESTS="YES" POD_LINT="NO"
 
-    - DESTINATION="arch=x86_64"                    SCHEME="$MACOS_FRAMEWORK_SCHEME"    RUN_TESTS="YES" POD_LINT="YES"
+    - DESTINATION="OS=2.0,name=Apple Watch - 42mm" SCHEME="$WATCHOS_FRAMEWORK_SCHEME"  RUN_TESTS="NO" POD_LINT="NO"
+
+    - DESTINATION="OS=10.2,name=Apple TV 1080p"    SCHEME="$TVOS_FRAMEWORK_SCHEME"     RUN_TESTS="YES" POD_LINT="NO"
+    - DESTINATION="OS=9.0,name=Apple TV 1080p"     SCHEME="$TVOS_FRAMEWORK_SCHEME"     RUN_TESTS="YES" POD_LINT="NO"
+
+    - DESTINATION="arch=x86_64"                    SCHEME="$MACOS_FRAMEWORK_SCHEME"    RUN_TESTS="YES" POD_LINT="NO"
 before_install:
   - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
   - command curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
