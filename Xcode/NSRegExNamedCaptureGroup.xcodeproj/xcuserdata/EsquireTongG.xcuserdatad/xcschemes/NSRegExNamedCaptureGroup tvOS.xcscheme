@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8316B9AF1F0CDE6400B35D00"
-               BuildableName = "NSRegExNamedCaptureGroup.framework"
-               BlueprintName = "NSRegExNamedCaptureGroup watchOS"
+               BlueprintIdentifier = "8316B9BF1F0CDF4300B35D00"
+               BuildableName = "NSRegExNamedCaptureGroup tvOS.framework"
+               BlueprintName = "NSRegExNamedCaptureGroup tvOS"
                ReferencedContainer = "container:NSRegExNamedCaptureGroup.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8316B9AF1F0CDE6400B35D00"
-            BuildableName = "NSRegExNamedCaptureGroup.framework"
-            BlueprintName = "NSRegExNamedCaptureGroup watchOS"
+            BlueprintIdentifier = "8316B9BF1F0CDF4300B35D00"
+            BuildableName = "NSRegExNamedCaptureGroup tvOS.framework"
+            BlueprintName = "NSRegExNamedCaptureGroup tvOS"
             ReferencedContainer = "container:NSRegExNamedCaptureGroup.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8316B9AF1F0CDE6400B35D00"
-            BuildableName = "NSRegExNamedCaptureGroup.framework"
-            BlueprintName = "NSRegExNamedCaptureGroup watchOS"
+            BlueprintIdentifier = "8316B9BF1F0CDF4300B35D00"
+            BuildableName = "NSRegExNamedCaptureGroup tvOS.framework"
+            BlueprintName = "NSRegExNamedCaptureGroup tvOS"
             ReferencedContainer = "container:NSRegExNamedCaptureGroup.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
