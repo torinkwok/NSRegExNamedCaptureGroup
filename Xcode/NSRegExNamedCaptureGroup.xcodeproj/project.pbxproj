@@ -22,8 +22,6 @@
 		8344BAA01EF40F4B001B5012 /* NSRegExNamedCaptureGroup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8344BA651EF40CC2001B5012 /* NSRegExNamedCaptureGroup.framework */; };
 		8344BAB11EF418D9001B5012 /* NSRegExNamedCaptureGroup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8344BA731EF40CD6001B5012 /* NSRegExNamedCaptureGroup.framework */; };
 		83EB95EF1EF628370061EC5D /* _Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB95EC1EF628370061EC5D /* _Core.swift */; };
-		83EB95F01EF628370061EC5D /* NSRegExNamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 83EB95ED1EF628370061EC5D /* NSRegExNamedCaptureGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83EB95F21EF6284E0061EC5D /* NSRegExNamedCaptureGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 83EB95ED1EF628370061EC5D /* NSRegExNamedCaptureGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83EB95F61EF6285B0061EC5D /* _Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB95EC1EF628370061EC5D /* _Core.swift */; };
 		9D2A41F31EFE941F00CD8219 /* NSTextCheckResult+NamedCaptureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A41F21EFE941F00CD8219 /* NSTextCheckResult+NamedCaptureGroup.swift */; };
 		9D2A41F41EFE942300CD8219 /* NSTextCheckResult+NamedCaptureGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A41F21EFE941F00CD8219 /* NSTextCheckResult+NamedCaptureGroup.swift */; };
@@ -62,7 +60,6 @@
 		8344BAC11EF4D45C001B5012 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = macOS/Info.plist; sourceTree = SOURCE_ROOT; };
 		8344BAC31EF4D466001B5012 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = iOS/Info.plist; sourceTree = SOURCE_ROOT; };
 		83EB95EC1EF628370061EC5D /* _Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _Core.swift; sourceTree = "<group>"; };
-		83EB95ED1EF628370061EC5D /* NSRegExNamedCaptureGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSRegExNamedCaptureGroup.h; sourceTree = "<group>"; };
 		9D2A41F21EFE941F00CD8219 /* NSTextCheckResult+NamedCaptureGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextCheckResult+NamedCaptureGroup.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,7 +201,6 @@
 			isa = PBXGroup;
 			children = (
 				83EB95EC1EF628370061EC5D /* _Core.swift */,
-				83EB95ED1EF628370061EC5D /* NSRegExNamedCaptureGroup.h */,
 				9D2A41F21EFE941F00CD8219 /* NSTextCheckResult+NamedCaptureGroup.swift */,
 			);
 			name = Sources;
@@ -218,7 +214,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83EB95F01EF628370061EC5D /* NSRegExNamedCaptureGroup.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +221,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83EB95F21EF6284E0061EC5D /* NSRegExNamedCaptureGroup.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
