@@ -53,7 +53,7 @@ If you use [Carthage](https://github.com/Carthage/Carthage) to manage your depen
 1. Simply add *NSRegExNamedCaptureGroup* to your `Cartfile`:
 
 ```
-github "TorinKwok/NSRegExNamedCaptureGroup" ~> 0.0.3
+github "TorinKwok/NSRegExNamedCaptureGroup" ~> 1.0.0
 ```
 
 2. Click `File` -> `Add Files to "$PROJECT_NAME"` item in Xcode menu bar. Choose the `NSRegExNamedCaptureGroup.xcodeproj`
@@ -65,7 +65,19 @@ __CocoaPods__:
 To install using [*CocoaPods*](https://github.com/cocoapods/cocoapods), add the following to your project Podfile:
 
 ``` ruby
-pod 'NSRegExNamedCaptureGroup', '~>0.0.3'
+pod 'NSRegExNamedCaptureGroup', '~>1.0.0'
+```
+
+__Swift Package Manager__:
+
+> The Swift Package Manager is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
+
+Once you have your Swift package set up, adding the framework as a dependency is as easy as adding it to the dependencies value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .Package( url: "https://github.com/TorinKwok/NSRegExNamedCaptureGroup.git", majorVersion: 1 )
+  ]
 ```
 
 __Git Submodule__:
@@ -168,7 +180,7 @@ for match in matches {
 
 ### Requirements
 
-* macOS 10.10+ / iOS 8.0+
+* macOS 10.10+ / iOS 8.0+ / tvOS 9.0+ / watchOS 2.0+
 * Xcode 8.1, 8.2, 8.3 and 9.0
 * Swift 3.0, 3.1, 3.2, and 4.0
 
