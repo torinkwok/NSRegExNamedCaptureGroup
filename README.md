@@ -184,7 +184,7 @@ for match in matches {
   }
 ```
 
-### 💉💣⚠️
+### ⚠️
 
 This is an experimental pre-processing to Cocoa's regex implementation. There’s every likelihood that I’ve broken something or ignored a better option, somehow. Feel free to [create an issue on GitHub](https://github.com/TorinKwok/NSRegExNamedCaptureGroup/issues) if you encounter any problems or have a suggestion for a better approach.
 
