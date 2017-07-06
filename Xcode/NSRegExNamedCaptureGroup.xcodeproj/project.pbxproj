@@ -64,17 +64,17 @@
 
 /* Begin PBXFileReference section */
 		8316B9B01F0CDE6400B35D00 /* NSRegExNamedCaptureGroup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8316B9B31F0CDE6400B35D00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8316B9C01F0CDF4300B35D00 /* NSRegExNamedCaptureGroup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8316B9C31F0CDF4300B35D00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8316B9CE1F0CDFB000B35D00 /* NSRegExNamedCaptureGroup tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSRegExNamedCaptureGroup tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8316B9D21F0CDFB000B35D00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		831C5B841EF662ED004A937B /* DoubleWordProblemTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleWordProblemTestCase.swift; sourceTree = "<group>"; };
 		831C5B861EF662ED004A937B /* NSRegExNamedCaptureGroupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRegExNamedCaptureGroupTests.swift; sourceTree = "<group>"; };
 		831C5B871EF662ED004A937B /* USAPhoneNumberTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USAPhoneNumberTestCase.swift; sourceTree = "<group>"; };
 		831C5B921EF6636E004A937B /* dwp_corpus_01 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dwp_corpus_01; sourceTree = "<group>"; };
 		831C5B961EF6641C004A937B /* dwp_corpus_02 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dwp_corpus_02; sourceTree = "<group>"; };
 		831C5B991EF67099004A937B /* String+NSRegExNamedCaptureGroupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+NSRegExNamedCaptureGroupTests.swift"; sourceTree = "<group>"; };
+		833810EF1F0E0CF100B32C06 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		833810F11F0E0CF100B32C06 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		833810F31F0E0CF100B32C06 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8344BA651EF40CC2001B5012 /* NSRegExNamedCaptureGroup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8344BA731EF40CD6001B5012 /* NSRegExNamedCaptureGroup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSRegExNamedCaptureGroup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8344BA9B1EF40F4B001B5012 /* NSRegExNamedCaptureGroup macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSRegExNamedCaptureGroup macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,33 +143,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8316B9B11F0CDE6400B35D00 /* watchOS */ = {
-			isa = PBXGroup;
-			children = (
-				8316B9B31F0CDE6400B35D00 /* Info.plist */,
-			);
-			name = watchOS;
-			path = "NSRegExNamedCaptureGroup watchOS";
-			sourceTree = "<group>";
-		};
-		8316B9C11F0CDF4300B35D00 /* tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				8316B9C31F0CDF4300B35D00 /* Info.plist */,
-			);
-			name = tvOS;
-			path = "NSRegExNamedCaptureGroup tvOS";
-			sourceTree = "<group>";
-		};
-		8316B9CF1F0CDFB000B35D00 /* tvOS Tests */ = {
-			isa = PBXGroup;
-			children = (
-				8316B9D21F0CDFB000B35D00 /* Info.plist */,
-			);
-			name = "tvOS Tests";
-			path = "NSRegExNamedCaptureGroup tvOS Tests";
-			sourceTree = "<group>";
-		};
 		831C5B831EF662ED004A937B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +181,30 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		833810EE1F0E0CF100B32C06 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				833810EF1F0E0CF100B32C06 /* Info.plist */,
+			);
+			path = watchOS;
+			sourceTree = "<group>";
+		};
+		833810F01F0E0CF100B32C06 /* tvOS Tests */ = {
+			isa = PBXGroup;
+			children = (
+				833810F11F0E0CF100B32C06 /* Info.plist */,
+			);
+			path = "tvOS Tests";
+			sourceTree = "<group>";
+		};
+		833810F21F0E0CF100B32C06 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				833810F31F0E0CF100B32C06 /* Info.plist */,
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
 		8344BA591EF40C7D001B5012 = {
 			isa = PBXGroup;
 			children = (
@@ -215,11 +212,11 @@
 				831C5B831EF662ED004A937B /* Tests */,
 				8344BA671EF40CC2001B5012 /* macOS */,
 				8344BA741EF40CD6001B5012 /* iOS */,
-				8316B9B11F0CDE6400B35D00 /* watchOS */,
-				8316B9C11F0CDF4300B35D00 /* tvOS */,
+				833810EE1F0E0CF100B32C06 /* watchOS */,
+				833810F21F0E0CF100B32C06 /* tvOS */,
 				8344BA9C1EF40F4B001B5012 /* macOS Tests */,
 				8344BAAD1EF418D9001B5012 /* iOS Tests */,
-				8316B9CF1F0CDFB000B35D00 /* tvOS Tests */,
+				833810F01F0E0CF100B32C06 /* tvOS Tests */,
 				8344BA661EF40CC2001B5012 /* Products */,
 			);
 			indentWidth = 2;
@@ -707,7 +704,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "NSRegExNamedCaptureGroup watchOS/Info.plist";
+				INFOPLIST_FILE = watchOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -768,7 +765,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "NSRegExNamedCaptureGroup watchOS/Info.plist";
+				INFOPLIST_FILE = watchOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -833,7 +830,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "NSRegExNamedCaptureGroup tvOS/Info.plist";
+				INFOPLIST_FILE = tvOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -894,7 +891,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "NSRegExNamedCaptureGroup tvOS/Info.plist";
+				INFOPLIST_FILE = tvOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -954,7 +951,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "NSRegExNamedCaptureGroup tvOS Tests/Info.plist";
+				INFOPLIST_FILE = "tvOS Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1004,7 +1001,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "NSRegExNamedCaptureGroup tvOS Tests/Info.plist";
+				INFOPLIST_FILE = "tvOS Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "indiv.TorinKwok.NSRegExNamedCaptureGroup-tvOS-Tests";
@@ -1511,6 +1508,7 @@
 				8316B9B71F0CDE6400B35D00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8316B9C51F0CDF4300B35D00 /* Build configuration list for PBXNativeTarget "NSRegExNamedCaptureGroup tvOS" */ = {
 			isa = XCConfigurationList;
@@ -1519,6 +1517,7 @@
 				8316B9C71F0CDF4300B35D00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8316B9D61F0CDFB000B35D00 /* Build configuration list for PBXNativeTarget "NSRegExNamedCaptureGroup tvOS Tests" */ = {
 			isa = XCConfigurationList;
@@ -1527,6 +1526,7 @@
 				8316B9D81F0CDFB000B35D00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8344BA5D1EF40C7D001B5012 /* Build configuration list for PBXProject "NSRegExNamedCaptureGroup" */ = {
 			isa = XCConfigurationList;
