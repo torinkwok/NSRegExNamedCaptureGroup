@@ -114,7 +114,7 @@ let phoneNumber = "202-555-0136"
 // deal with the matching results (instances of NSTextCheckingResult)
 // through passing the Numberd Capture Group API: 
 // `rangeAt(:_)` a series of magic numbers: 0, 1, 2, 3 ...
-// That's rather inconvenient, confusing, and, as a result, error prune.
+// That's rather inconvenient, confusing, and, as a result, error prone.
 let pattern = "(?<Area>\\d\\d\\d)-(?:\\d\\d\\d)-(?<Num>\\d\\d\\d\\d)"
 
 let pattern = try! NSRegularExpression( pattern: pattern, options: [] )
