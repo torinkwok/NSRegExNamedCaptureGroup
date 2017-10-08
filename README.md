@@ -2,9 +2,9 @@
 
 Nearly all modern regular expression engines support [numbered capturing groups](http://www.regular-expressions.info/brackets.html) and numbered [backreferences](http://www.regular-expressions.info/backref.html). Long regular expressions with lots of groups and backreferences may be hard to read. They can be particularly difficult to maintain as adding or removing a capturing group in the middle of the regex upsets the numbers of all the groups that follow the added or removed group.
 
-## Good news
+## Named Capture Groups to the rescue!
 
-Languages or libraries like Python, PHP's preg engine, and .NET languages support captures to *named* locations, that we called __Named Capture Groups__. One of the most important benefits of NCG is that assigning a human-readable name to each individual capture group may be less confusing later to someone reading the code who might otherwise be left wondering about which number exactly conrrepsponds which capture group.
+Languages or libraries like Python, PHP's preg engine, and .NET languages support captures to *named* locations, that we called __Named Capture Groups__. One of the most important benefits of NCG is that assigning a human-readable name to each individual capture group may be less confusing later to someone (perhaps yourself in six months) reading the code who might otherwise be left wondering about which number exactly conrrepsponds which capture group.
 
 ## Bad news
 Named Capture Groups is great. [`NSRegularExpression`](https://developer.apple.com/documentation/foundation/nsregularexpression) does not support it.
@@ -44,6 +44,12 @@ their regular expressions.
 [![CocoaPods Status](https://cocoapod-badges.herokuapp.com/v/NSRegExNamedCaptureGroup/badge.png)](https://cocoapods.org)
 [![License Badge](https://cocoapod-badges.herokuapp.com/l/NSRegExNamedCaptureGroup/badge.svg)](./LICENSE)
 
+### Availability
+
+* macOS 10.10+ / iOS 8.0+ / tvOS 9.0+ / watchOS 2.0+
+* Xcode 8.1, 8.2, 8.3 and 9.0
+* Swift 3.0, 3.1, 3.2, and 4.0
+
 ### Installation
 
 __Carthage__:
@@ -53,7 +59,7 @@ If you use [Carthage](https://github.com/Carthage/Carthage) to manage your depen
 1. Simply add *NSRegExNamedCaptureGroup* to your `Cartfile`:
 
 ```
-github "TorinKwok/NSRegExNamedCaptureGroup" ~> 0.0.3
+github "TorinKwok/NSRegExNamedCaptureGroup" ~> 1.0.0
 ```
 
 2. Click `File` -> `Add Files to "$PROJECT_NAME"` item in Xcode menu bar. Choose the `NSRegExNamedCaptureGroup.xcodeproj`
@@ -65,7 +71,25 @@ __CocoaPods__:
 To install using [*CocoaPods*](https://github.com/cocoapods/cocoapods), add the following to your project Podfile:
 
 ``` ruby
-pod 'NSRegExNamedCaptureGroup', '~>0.0.3'
+pod 'NSRegExNamedCaptureGroup', '~>1.0.0'
+```
+
+__Swift Package Manager__:
+
+> The Swift Package Manager is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
+
+Once you have your Swift package set up, adding the framework as a dependency is as easy as adding it to the dependencies value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .Package( url: "https://github.com/TorinKwok/NSRegExNamedCaptureGroup.git", majorVersion: 1 )
+  ]
+```
+
+Or, if you're using the `swift-tools-version:4.0` package manager, add the following to the `dependencies` array in your "Package.swift" file:
+
+```swift
+.package( url: "https://github.com/TorinKwok/NSRegExNamedCaptureGroup.git", majorVersion: 1 )
 ```
 
 __Git Submodule__:
@@ -90,7 +114,7 @@ let phoneNumber = "202-555-0136"
 // deal with the matching results (instances of NSTextCheckingResult)
 // through passing the Numberd Capture Group API: 
 // `rangeAt(:_)` a series of magic numbers: 0, 1, 2, 3 ...
-// That's rather inconvenient, confusing, and, as a result, error prune.
+// That's rather inconvenient, confusing, and, as a result, error prone.
 let pattern = "(?<Area>\\d\\d\\d)-(?:\\d\\d\\d)-(?<Num>\\d\\d\\d\\d)"
 
 let pattern = try! NSRegularExpression( pattern: pattern, options: [] )
@@ -132,10 +156,7 @@ Working with `NSRegEx`'s block-enumeration-based API:
 ```swift
 pattern.enumerateMatches( in: phoneNumber, range: range ) {
   match, _, stopToken in
-  guard let match = match else {
-    stopToken.pointee = ObjCBool( true )
-    return
-    }
+  guard let match = match else { return }
 
   print( NSStringFromRange( match.rangeWith( "Area" ) ) )
   // prints "{0, 3}"
@@ -166,11 +187,9 @@ for match in matches {
   }
 ```
 
-### Requirements
+### ⚠️
 
-* macOS 10.10+ / iOS 8.0+
-* Xcode 8.1, 8.2, 8.3 and 9.0
-* Swift 3.0, 3.1, 3.2, and 4.0
+This is an experimental pre-processing to Cocoa's regex implementation. There’s every likelihood that I’ve broken something or ignored a better option, somehow. Feel free to [create an issue on GitHub](https://github.com/TorinKwok/NSRegExNamedCaptureGroup/issues) if you encounter any problems or have a suggestion for a better approach.
 
 ### Author
 
